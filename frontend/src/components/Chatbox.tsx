@@ -8,46 +8,46 @@ interface Message {
 
 const Chatbox = () => {
 
-  const [loadingSession, setLoadingSession] = useState<boolean>(true)
-  const [error, setError] = useState<string | null>(null)
+  const [loadingSession, setLoadingSession] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
 
-  useEffect(() => {   // load session id
+  useEffect(() => {   // Load session id
 
     const getFrechSessionId = async () => {
       const response = await apiService.freshSessionId();
-      const frechResponse = response.data.session_id
-      if (frechResponse !== null) {
-        localStorage.setItem("session-id", frechResponse)
-        setSessionId(frechResponse)
-        console.log(`Got new session id from backend: ${frechResponse}`)
+      const frechResponse = response.data.session_id;
+      if (frechResponse) {
+        localStorage.setItem('session-id', frechResponse);
+        setSessionId(frechResponse);
+        //Console.log(`Got new session id from backend: ${frechResponse}`);
       } else {
-        setError("Session-id could not be loaded!")
+        setError('Session-id could not be loaded!');
       }
       setLoadingSession(false);
-    }
+    };
 
     const getLocalSessionId = async (maybeSessionId: string) => {
-      console.log(`Session id found in localStorage: ${maybeSessionId}`)
+      //Console.log(`Session id found in localStorage: ${maybeSessionId}`);
       const response = await apiService.checkSessionId(maybeSessionId);
       if (response.data.found) {
-        console.log("Same session id found in database")
-        setSessionId(maybeSessionId)
+        //Console.log('Same session id found in database');
+        setSessionId(maybeSessionId);
         setLoadingSession(false);
       } else {
-        console.log("Session id not found in database")
-        getFrechSessionId()
+        //Console.log('Session id not found in database');
+        getFrechSessionId();
       }
-    }
+    };
 
-    const storedSessionId = localStorage.getItem("session-id");
+    const storedSessionId = localStorage.getItem('session-id');
     if (storedSessionId === null) {
-      getFrechSessionId()
+      getFrechSessionId();
     } else {
-      getLocalSessionId(storedSessionId)
+      getLocalSessionId(storedSessionId);
     }
 
-  }, [])
+  }, []);
 
   const [input, setInput] = useState('');       // To hold user input
   const [messages, setMessages] = useState<Message[]>([]); // To hold the conversation history
@@ -63,14 +63,14 @@ const Chatbox = () => {
 
     // Send the input to the FastAPI backend
     try {
-      console.log(sessionId)
-      if (sessionId === null) throw new Error('sessionId was null!');
+      //Console.log(sessionId);
+      if (sessionId === null) {throw new Error('sessionId was null!');}
 
       const response = await apiService.sendQuery(input, sessionId);
     
       responseMessage.text = JSON.stringify(response.data);
-    } catch (e) {
-      console.log(e)
+    } catch {
+      //Console.log(e);
       responseMessage.text = 'Error: Something went wrong';
     }
   
