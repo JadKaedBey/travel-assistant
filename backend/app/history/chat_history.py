@@ -1,3 +1,17 @@
+"""
+This file contains all the logic for communicating with the database with regard to chat history messages.
+Chat messages are managed using a session key and set to expire after some time if not used.
+
+Author: Ruben Vandamme
+Date: 05 November 2024
+Usage:
+    - add_message           : save a message
+    - get_chat_history      : get messages using a session key
+    - (refresh_session)     : refresh messages TTL of a session
+    - find_session_id       : check if a session id is present
+    - generate_session_id   : generate an unique session id
+"""
+
 from pymongo import MongoClient
 from pymongo import ASCENDING
 import datetime
