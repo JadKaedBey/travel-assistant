@@ -11,6 +11,7 @@ from app.history.chat_history import (
     find_session_id,
     generate_session_id
 )
+from app.api.opentripmap import query_opentripmap
 
 app = FastAPI()
 
@@ -39,6 +40,7 @@ def read_root():
 # endpoint accepts a JSON body via Pydantic model
 @app.post("/query/")
 def process_query(query: QueryRequest):
+    print(f"Query: {query}")
     try:
         add_message(
             InsertMessage(
@@ -50,6 +52,7 @@ def process_query(query: QueryRequest):
 
         # Step 1: NLP extraction (city, date, keywords)
         info = nlp.extract_info(query.user_input)  # Use query.user_input from the model
+        print(f"NLP extraction: {info}")
 
         # Step 2: Check if any pinned events exist
         city = info.get('city')
@@ -61,8 +64,8 @@ def process_query(query: QueryRequest):
         if pinned_events:
             return {"result": f"Prioritized event: {pinned_events}"}
 
-        # Step 3: Fetch events from Eventbrite
-        event_results = events.query_eventbrite(city, date, keywords)
+        # Step 3: Fetch events from OpenTripMap
+        event_results = query_opentripmap(city, kinds=keywords)
 
         # Step 4: Fetch weather from OpenWeatherMap
         weather_info = weather.query_weather(city, date)
