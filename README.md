@@ -1,9 +1,13 @@
 # travel-assistant
 
-# Steps to run code: - Jad 
+# Steps to run code: - Jad, Ruben
 
 - **Setup spaCy Language Model**: 
     - `python -m spacy download en_core_web_sm`
+
+- **Setup Database**
+    - **Install MongoDB**: https://www.mongodb.com/try/download/community
+    - Create default connection. 
 
 - **Setup Backend**
     - `cd backend`
