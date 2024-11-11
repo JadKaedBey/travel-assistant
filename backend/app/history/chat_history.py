@@ -16,13 +16,13 @@ from pymongo import MongoClient
 from pymongo import ASCENDING
 import datetime
 from pydantic import BaseModel
-from typing import List
 from enum import StrEnum
 import secrets
 import string
+import os
 
 # setup connection
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient(os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/'))
 db = client['chat_db']
 chat_collection = db['chat_history']
 chat_collection.create_index([("created_at", ASCENDING)], expireAfterSeconds=3600)
@@ -55,7 +55,7 @@ def add_message(message_info: InsertMessage):
 def get_chat_history(
     session_id  : str, 
     limit       : int   = 4     # choose even so that user query always comes first
-) -> List[RetrieveMessage]:
+) -> list[RetrieveMessage]:
     refresh_session(session_id)
     items = chat_collection.find({"session_id": session_id}).sort("created_at", ASCENDING).limit(limit)
     return [RetrieveMessage(
@@ -74,11 +74,11 @@ def refresh_session(session_id: str):
 def find_session_id(session_id: str) -> bool:
     refresh_session(session_id)
     found = chat_collection.find_one({"session_id": session_id})
-    return found != None
+    return found is not None
 
 alphabet = string.ascii_letters + string.digits
 def generate_session_id():
     possible_id = None
-    while (possible_id == None or find_session_id(possible_id)):
+    while (possible_id is None or find_session_id(possible_id)):
         possible_id = ''.join(secrets.choice(alphabet) for _ in range(32))
     return possible_id

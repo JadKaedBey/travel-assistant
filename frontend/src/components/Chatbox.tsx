@@ -12,6 +12,9 @@ const Chatbox = () => {
   const [error, setError] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
 
+  const [input, setInput] = useState('');       // To hold user input
+  const [messages, setMessages] = useState<Message[]>([]); // To hold the conversation history
+
   useEffect(() => {   // Load session id
 
     const getFrechSessionId = async () => {
@@ -48,9 +51,6 @@ const Chatbox = () => {
     }
 
   }, []);
-
-  const [input, setInput] = useState('');       // To hold user input
-  const [messages, setMessages] = useState<Message[]>([]); // To hold the conversation history
 
   // Function to send the user's query to the backend
   const sendMessage = async () => {
