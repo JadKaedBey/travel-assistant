@@ -3,14 +3,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.api import nlp, events, weather
-from app.history.chat_history import (
-    UserOrChatbot, 
-    InsertMessage, 
-    RetrieveMessage, 
-    add_message, 
-    find_session_id,
-    generate_session_id
-)
 from app.api.opentripmap import query_opentripmap
 from app.history.chat_history import (
     UserOrChatbot, 
