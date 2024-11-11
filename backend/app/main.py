@@ -12,6 +12,14 @@ from app.history.chat_history import (
     generate_session_id
 )
 from app.api.opentripmap import query_opentripmap
+from app.history.chat_history import (
+    UserOrChatbot, 
+    InsertMessage, 
+    RetrieveMessage, 
+    add_message, 
+    find_session_id,
+    generate_session_id
+)
 
 app = FastAPI()
 
