@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.api import nlp, events, weather, overpass
-from app.api.opentripmap import query_opentripmap
+from app.api.opentripmap import OpenTripMapModel, query_opentripmap
 from app.history.chat_history import (
     UserOrChatbot, 
     InsertMessage, 
@@ -65,7 +65,7 @@ def process_query(query: QueryRequest):
             return {"result": f"Prioritized event: {pinned_events}"}
 
         # Step 3: Fetch events from OpenTripMap
-        event_results = query_opentripmap(city, kinds=keywords)
+        event_results = query_opentripmap(OpenTripMapModel(placename=city, kinds=keywords))
 
         # Step 4: Fetch weather from OpenWeatherMap
         weather_info = weather.query_weather(city, date)
