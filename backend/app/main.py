@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.api import nlp, events, weather, overpass
 from app.api.opentripmap import OpenTripMapModel, query_opentripmap
+from app.api.lmstudio import lm_studio_request
 from app.history.chat_history import (
     UserOrChatbot, 
     InsertMessage, 
@@ -84,10 +85,16 @@ def process_query(query: QueryRequest):
             InsertMessage(
                 session_id          = query.session_id,
                 user_or_chatbot     = UserOrChatbot.CHATBOT,
-                message             = str(answer)
+                message             = str(answer) # TODO: pass this message through assistant AI to make it "human-like"
             )
         )
         return answer
+    
+    except AttributeError as e:
+        estr = str(e)
+        res = lm_studio_request([{ "role": "system", "content": "You are application assistant. Explain the bug in simple words"}, {"role": "user", "content": estr}])
+        return {"result": res}
+
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)  # Log the error details
         raise HTTPException(status_code=500, detail="Internal Server Error")
