@@ -53,6 +53,7 @@ def query_eventbrite(city: str, date: str, keywords: List[str]) -> List[Event]:
     
     return events
 
+# TODO: fix if city or date is None
 def check_pinned_events(city, date):
     # Read from the pinned events CSV
     with open('app/data/events.csv', 'r') as csvfile:
