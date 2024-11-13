@@ -29,7 +29,6 @@ def lm_studio_request(messages: list[Message]) -> str:
 
     if response.status_code == 200:
         json_repsonse = response.json()
-        print(json_repsonse)
         return json_repsonse['choices'][0]['message']['content']
     else:
         raise Exception(f"""

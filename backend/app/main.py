@@ -81,19 +81,21 @@ def process_query(query: QueryRequest):
             "weather": weather_info,
             "pois": poi_results
         }
+
+        # Step 6: Post-process with LLM to get more human-like response
+        ans = lm_studio_request([
+            { "role": "system", "content": "You are application assistant. Based on given JSON tell what person can visit. Answer in human way like chat assistant talking to a person." },
+            { "role": "user", "content": str(answer) }
+        ])
+
         add_message(
             InsertMessage(
                 session_id          = query.session_id,
                 user_or_chatbot     = UserOrChatbot.CHATBOT,
-                message             = str(answer) # TODO: pass this message through assistant AI to make it "human-like"
+                message             = ans
             )
         )
-        return answer
-    
-    except AttributeError as e:
-        estr = str(e)
-        res = lm_studio_request([{ "role": "system", "content": "You are application assistant. Explain the bug in simple words"}, {"role": "user", "content": estr}])
-        return {"result": res}
+        return ans
 
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)  # Log the error details
