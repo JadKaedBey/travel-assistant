@@ -87,7 +87,7 @@ def load_valid_kinds(query_kinds: list[str]):
         valid_set = set(line.strip() for line in file)
 
     kinds = [kind.lower().replace(" ", "_") for kind in query_kinds]
-    valid_kinds = []
+    valid_kinds: list[str] = []
     for kind in kinds:
         if kind in valid_set:
             valid_kinds.append(kind)
@@ -150,24 +150,25 @@ def query_opentripmap(query: OpenTripMapModel):
         "lat":      str(result['lat']),
         "radius":   str(query.radius),
         "limit":    str(query.limit),
-        "kinds":    ','.join(valid_kinds),
         "format":   'json'
     }
+
+    if len(valid_kinds) != 0:
+        query_params["kinds"] = ','.join(valid_kinds)
     
     # next, get the POI
     if query.filter is not None:
         query_params["name"] = query.filter
-        result = make_request(
-            endpoint="en/places/autosuggest",
-            query_params=query_params
-        )
-        events = [create_event(obj, query.placename) for obj in result]
+        endpoint = "en/places/autosuggest"
     else:
-        result = make_request(
-            endpoint="en/places/radius",
-            query_params=query_params
-        )
-        events = [create_event(obj["properties"], query.placename) for obj in result["features"]]
+        endpoint="en/places/radius"
+
+    result = make_request(
+        endpoint=endpoint,
+        query_params=query_params
+    )
+    
+    events = [create_event(obj, query.placename) for obj in result]
 
     return events
     
