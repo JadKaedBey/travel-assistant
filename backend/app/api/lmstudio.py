@@ -1,11 +1,11 @@
-from typing import TypedDict
+from typing import Literal, TypedDict
 import requests
 import json
 
 from app.config import LMSTUDIO_HOST, LMSTUDIO_ENDPOINT, LMSTUDIO_MODEL
 
 class Message(TypedDict):
-    role: str
+    role: Literal['user', 'assistant', 'system']
     content: str
 
 def lm_studio_request(messages: list[Message]) -> str:

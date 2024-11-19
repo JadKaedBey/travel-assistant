@@ -95,18 +95,6 @@ def load_valid_kinds(query_kinds: list[str]):
             print(f"{kind} is not a valid kind. It will be ignored.")
     return valid_kinds
 
-def create_event(obj, placename: str):
-    return Event(
-        id          = obj['xid'],
-        name        = obj['name'],
-        location    = placename,        # opentripmap returns the exact coordinates as well
-        #category    = obj['kinds'],    # opentripmap returns a list of relevant categories
-        category=None,
-        description=None,
-        date=None,
-        url=None
-    )
-
 def query_opentripmap(query: OpenTripMapModel):
     """Fetch events from OpenTripMap API.
     https://dev.opentripmap.org/docs#/Objects%20list/getListOfPlacesBySuggestions.
@@ -168,7 +156,12 @@ def query_opentripmap(query: OpenTripMapModel):
         query_params=query_params
     )
     
-    events = [create_event(obj, query.placename) for obj in result]
+    events = [Event(
+        id          = obj['xid'],
+        name        = obj['name'],
+        location    = query.placename,  # opentripmap returns the exact coordinates as well
+        #category    = obj['kinds'],    # opentripmap returns a list of relevant categories
+    ) for obj in result]
 
     return events
     

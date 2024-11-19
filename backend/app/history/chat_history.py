@@ -21,7 +21,7 @@ import string
 import os
 
 # setup connection
-client = MongoClient(os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/'))
+client: MongoClient = MongoClient(os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/'))
 db = client['chat_db']
 chat_collection = db['chat_history']
 chat_collection.create_index([("created_at", ASCENDING)], expireAfterSeconds=3600)
