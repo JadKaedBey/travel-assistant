@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Box, TextField, IconButton, Typography, Paper, List, ListItem, ListItemText } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 import apiService from '../services/apiService';
 
 interface Message {
@@ -79,35 +81,52 @@ const Chatbox = () => {
     setInput('');  // Clear the input field
   };
 
-  return (
-    <div className="chatbox">
-      { !error && !loadingSession && (<>
-        <div className="chat-messages">
-          {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.sender}`}>
-              {msg.text}
-            </div>
-          ))}
-        </div>
-        <div className="input-section">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => { setInput(e.target.value); }}
-            onKeyDown={async (e) => e.key === 'Enter' && sendMessage()}
-            placeholder="Ask me something..."
-          />
-          <button onClick={sendMessage}>Send</button>
-        </div>
-      </>)}
+  return <Box
+    height="100%"
+    width="100%"
+    padding={3}
+    display="flex"
+    flexDirection="column"
+    justifyContent="space-between"
+    alignItems="center"
+    boxSizing="border-box"
+    bgcolor="#333"
+  >
+    <Paper
+      style={{ height: '100%', overflow: 'auto', width: '80%', padding: '10px', boxSizing: 'border-box' }}
+      elevation={3}
+    >
+      { !error && !loadingSession && (<List>
+        {messages.map((msg, index) => (
+          <ListItem key={index} alignItems="flex-start">
+            <ListItemText
+              primary={<Typography variant="body1" color="primary">{msg.sender}</Typography>}
+              secondary={<Typography variant="body2">{msg.text}</Typography>}
+            />
+          </ListItem>
+        ))}
+      </List>)}
       { error && <div>
         {error}
       </div>}
       { loadingSession && <div>
-        Loading...
+          Loading...
       </div>}
-    </div>
-  );
+    </Paper>
+    <Box display="flex" width="80%" mt={2} alignItems="center">
+      <TextField
+        fullWidth
+        variant="outlined"
+        placeholder="Type a message"
+        value={input}
+        onChange={(e) => { setInput(e.target.value); }}
+        onKeyDown={async (e) => e.key === 'Enter' && sendMessage()}
+      />
+      <IconButton color="primary" onClick={sendMessage}>
+        <SendIcon />
+      </IconButton>
+    </Box>
+  </Box>;
 };
 
 export default Chatbox;

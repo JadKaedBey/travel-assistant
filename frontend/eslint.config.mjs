@@ -74,6 +74,7 @@ export default [{
       format: ['camelCase', 'PascalCase'],
     }],
 
+    'no-duplicate-imports': 'off', // breaks `import type` and `import` from same source
     'new-cap': 'off',
     'no-ternary': 'off',
     'no-undefined': 'off',
