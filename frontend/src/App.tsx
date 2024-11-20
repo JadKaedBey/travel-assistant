@@ -4,9 +4,18 @@ import { createTheme } from '@mui/material/styles';
 import { AppProvider } from '@toolpad/core/react-router-dom';
 import type { Navigation } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
-import Chatbox from './components/Chatbox';
+import { Outlet } from 'react-router-dom';
+import logo from './travelassistant.png';
 
 const NAVIGATION: Navigation = [
+  {
+    kind: 'header',
+    title: 'Admin',
+  },
+  {
+    segment: 'admin',
+    title: 'Admin',
+  },
   {
     kind: 'header',
     title: 'Main items',
@@ -16,17 +25,17 @@ const NAVIGATION: Navigation = [
     title: 'New',
   },
   {
-    segment: 'test',
+    segment: 'chat/123124',
     title: 'test',
   },
   {
-    segment: 'test2',
+    segment: 'chat/12315324',
     title: 'test 2 ',
   },
   {
-    segment: 'test3',
+    segment: 'chat/12323124',
     title: 'test 3',
-  }
+  },
 ];
 
 const darkTheme = createTheme({
@@ -39,9 +48,15 @@ const darkTheme = createTheme({
 });
 
 const App = () => (
-  <AppProvider theme={darkTheme} navigation={NAVIGATION}>
+  <AppProvider
+    branding={{
+      logo: <img src={logo} />,
+      title: 'Travel Assistant',
+    }}
+    theme={darkTheme}
+    navigation={NAVIGATION}>
     <DashboardLayout>
-      <Chatbox />
+      <Outlet />
     </DashboardLayout>
   </AppProvider>
 );
