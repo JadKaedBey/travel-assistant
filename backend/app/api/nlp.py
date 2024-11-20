@@ -3,7 +3,7 @@ import spacy
 
 nlp = spacy.load("en_core_web_sm")
 
-def extract_info(user_input):
+def extract_info(user_input: str):
     doc = nlp(user_input)
     entities = {ent.label_: ent.text for ent in doc.ents}
     

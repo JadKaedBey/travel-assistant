@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default [{
-  ignores: ['**/dist/**/*.js', 'vite.config.js', 'eslint.config.mjs'],
+  ignores: ['**/dist/**/*.js', 'vite.config.js', 'eslint.config.mjs', 'api.d.ts'],
 }, ...fixupConfigRules(compat.extends(
   'eslint:all',
   'plugin:@typescript-eslint/all',

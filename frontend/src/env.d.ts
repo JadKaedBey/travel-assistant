@@ -1,7 +1,5 @@
 interface ImportMetaEnv {
-    VITE_SENDQUERY_URI: string;
-    VITE_CHECKSESSIONID_URI: string;
-    VITE_FRESHSESSIONID_URI: string;
+    VITE_BACKEND_URL: string;
 }
   
 interface ImportMeta {

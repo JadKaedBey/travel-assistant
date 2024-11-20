@@ -1,132 +1,151 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Box, TextField, IconButton, Typography, Paper, List, ListItem, ListItemText } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import apiService from '../services/apiService';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { client } from '../services/apiService';
+import type { components } from '../services/api';
+import { useNavigationContext } from '../navigation';
 
-interface Message {
-  sender: string;
-  text: string;
-}
+type Message = components['schemas']['ChatMessage'];
 
-const Chatbox = () => {
-
-  const [loadingSession, setLoadingSession] = useState<boolean>(true);
+const Chatbox: React.FC = () => {
+  const [loadingSession, setLoadingSession] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [sessionId, setSessionId] = useState<string | null>(null);
+  const {pathname} = useLocation();
+  const navigate = useNavigate();
+  const { addItem } = useNavigationContext();
+  
+  const sessionId = pathname === '/' ? '/' : pathname.split('/')[2] ?? '/';
 
-  const [input, setInput] = useState('');       // To hold user input
-  const [messages, setMessages] = useState<Message[]>([]); // To hold the conversation history
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState<Message[]>([]);
 
-  useEffect(() => {   // Load session id
+  // Helper to update messages list
+  const addMessage = useCallback((message: Message) => {
+    setMessages((prev) => [...prev, message]);
+  }, []);
 
-    const getFrechSessionId = async () => {
-      const response = await apiService.freshSessionId();
-      const frechResponse = response.data.session_id;
-      if (frechResponse) {
-        localStorage.setItem('session-id', frechResponse);
-        setSessionId(frechResponse);
-        //Console.log(`Got new session id from backend: ${frechResponse}`);
+  useEffect(() => {
+    const initializeSession = async () => {
+      if (sessionId === '/') {
+        setMessages([]);
+        setLoadingSession(false);
+        return;
+      }
+      const response = await client.GET('/get-chat/', { params: { query: { session_id: sessionId }}});
+      if (response.error) {
+        setError('something went wrong');
+      }
+      const { data } = response;
+      if (data) {
+        setMessages(data.messages);
       } else {
-        setError('Session-id could not be loaded!');
+        setError('the chat doesn\'t exist');
       }
       setLoadingSession(false);
     };
 
-    const getLocalSessionId = async (maybeSessionId: string) => {
-      //Console.log(`Session id found in localStorage: ${maybeSessionId}`);
-      const response = await apiService.checkSessionId(maybeSessionId);
-      if (response.data.found) {
-        //Console.log('Same session id found in database');
-        setSessionId(maybeSessionId);
-        setLoadingSession(false);
-      } else {
-        //Console.log('Session id not found in database');
-        getFrechSessionId();
-      }
-    };
+    initializeSession();
+  }, [sessionId]);
 
-    const storedSessionId = localStorage.getItem('session-id');
-    if (storedSessionId === null) {
-      getFrechSessionId();
-    } else {
-      getLocalSessionId(storedSessionId);
-    }
-
-  }, []);
-
-  // Function to send the user's query to the backend
   const sendMessage = async () => {
-    if (input.trim() === '') {return;}
-    
-    const userMessage = { sender: 'user', text: input };
-    setMessages([...messages, userMessage]);
-    
-    const responseMessage = { sender: 'bot', text: '' };
+    if (!input.trim()) {return;}
 
-    // Send the input to the FastAPI backend
-    try {
-      //Console.log(sessionId);
-      if (sessionId === null) {throw new Error('sessionId was null!');}
+    const userMessage: Message = { user_or_chatbot: 'user', message: input };
+    addMessage(userMessage);
+    setInput('');
 
-      const response = await apiService.sendQuery(input, sessionId);
-    
-      responseMessage.text = JSON.stringify(response.data);
-    } catch {
-      //Console.log(e);
-      responseMessage.text = 'Error: Something went wrong';
+    const response = await client.POST('/query/', { body: { user_input: input, session_id: sessionId }});
+    if (response.error) {
+      const errorMessage: Message = { user_or_chatbot: 'chatbot', message: 'Error: Unable to send message' };
+      addMessage(errorMessage);
     }
-  
-    setMessages([...messages, userMessage, responseMessage]);
-    
-    setInput('');  // Clear the input field
+    const { data } = response;
+    if (data) {
+      const botResponse: Message = { user_or_chatbot: 'chatbot', message: data.message };
+      addMessage(botResponse);
+      addItem({
+        segment: `/chat/${data.id}`,
+        title: data.id,
+      }, 4);
+      navigate(`/chat/${data.id}`, { replace: true });
+    }
   };
 
-  return <Box
-    height="100%"
-    width="100%"
-    padding={3}
-    display="flex"
-    flexDirection="column"
-    justifyContent="space-between"
-    alignItems="center"
-    boxSizing="border-box"
-    bgcolor="#333"
-  >
-    <Paper
-      style={{ height: '100%', overflow: 'auto', width: '80%', padding: '10px', boxSizing: 'border-box' }}
-      elevation={3}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { setInput(e.target.value); };
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {sendMessage();}
+  };
+
+  if (loadingSession) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <Typography variant="h6">Loading session...</Typography>
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <Typography variant="h6" color="error">
+          {error}
+        </Typography>
+      </Box>
+    );
+  }
+
+  return (
+    <Box
+      height="100%"
+      width="100%"
+      p={3}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      alignItems="center"
+      bgcolor="#333"
     >
-      { !error && !loadingSession && (<List>
-        {messages.map((msg, index) => (
-          <ListItem key={index} alignItems="flex-start">
-            <ListItemText
-              primary={<Typography variant="body1" color="primary">{msg.sender}</Typography>}
-              secondary={<Typography variant="body2">{msg.text}</Typography>}
-            />
-          </ListItem>
-        ))}
-      </List>)}
-      { error && <div>
-        {error}
-      </div>}
-      { loadingSession && <div>
-          Loading...
-      </div>}
-    </Paper>
-    <Box display="flex" width="80%" mt={2} alignItems="center">
-      <TextField
-        fullWidth
-        variant="outlined"
-        placeholder="Type a message"
-        value={input}
-        onChange={(e) => { setInput(e.target.value); }}
-        onKeyDown={async (e) => e.key === 'Enter' && sendMessage()}
-      />
-      <IconButton color="primary" onClick={sendMessage}>
-        <SendIcon />
-      </IconButton>
+      <Paper
+        style={{
+          height: '100%',
+          overflow: 'auto',
+          width: '80%',
+          padding: '10px',
+          boxSizing: 'border-box',
+        }}
+        elevation={3}
+      >
+        <List>
+          {messages.map((msg, index) => (
+            <ListItem key={index} alignItems="flex-start">
+              <ListItemText
+                primary={
+                  <Typography variant="body1" color={msg.user_or_chatbot === 'user' ? 'primary' : 'secondary'}>
+                    {msg.user_or_chatbot}
+                  </Typography>
+                }
+                secondary={<Typography variant="body2">{msg.message}</Typography>}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Paper>
+      <Box display="flex" width="80%" mt={2} alignItems="center">
+        <TextField
+          fullWidth
+          variant="outlined"
+          placeholder="Type a message"
+          value={input}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyPress}
+        />
+        <IconButton color="primary" onClick={sendMessage}>
+          <SendIcon />
+        </IconButton>
+      </Box>
     </Box>
-  </Box>;
+  );
 };
 
 export default Chatbox;

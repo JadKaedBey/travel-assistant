@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Chatbox from './components/Chatbox';
 import { AdminPage } from './pages/AdminPage';
+import { NavigationProvider } from './navigation';
 
 const domNode = document.getElementById('root')!;
 const root = createRoot(domNode);
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <NavigationProvider>
+      <RouterProvider router={router} />
+    </NavigationProvider>
   </React.StrictMode>
 );

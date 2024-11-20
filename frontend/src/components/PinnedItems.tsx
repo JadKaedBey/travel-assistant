@@ -13,8 +13,12 @@ const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
     setLoading(true);
     setError(null);
     try {
-      const events = await axios.get('/admin/pinned_events');
-      const locations = await axios.get('/admin/pinned_locations');
+      const events = await axios.get('/admin/pinned_events', {
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      });
+      const locations = await axios.get('/admin/pinned_locations', {
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      });
       setPinnedEvents(events.data.pinned_events || []);
       setPinnedLocations(locations.data.pinned_locations || []);
     } catch (error) {
@@ -30,12 +34,16 @@ const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
   }, []);
 
   const unpinEvent = async (id) => {
-    await axios.delete(`/admin/unpin_event/${id}`);
+    await axios.delete(`/admin/unpin_event/${id}`, {
+      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+    });
     fetchPinnedItems();
   };
 
   const unpinLocation = async (id) => {
-    await axios.delete(`/admin/unpin_location/${id}`);
+    await axios.delete(`/admin/unpin_location/${id}`, {
+      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+    });
     fetchPinnedItems();
   };
 

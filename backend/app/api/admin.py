@@ -1,5 +1,5 @@
 import csv
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from typing import List
 from app.models.event_model import Event
 from app.models.location_model import Location

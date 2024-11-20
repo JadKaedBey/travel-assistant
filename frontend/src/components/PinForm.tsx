@@ -11,12 +11,16 @@ const PinForm = ({ onRefresh }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { id: Date.now().toString(), name, city, amenity };
+    const data = { id: Date.now().toString(), name, location: city, amenity };
 
     if (pinType === 'event') {
-      await axios.post('/admin/pin_event', data);
+      await axios.post('/admin/pin_event', data, {
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      });
     } else {
-      await axios.post('/admin/pin_location', data);
+      await axios.post('/admin/pin_location', data, {
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      });
     }
 
     onRefresh();

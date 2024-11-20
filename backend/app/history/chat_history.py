@@ -11,20 +11,20 @@ Usage:
     - generate_session_id   : generate an unique session id
 """
 
+from typing import TypedDict
 from pymongo import MongoClient
-from pymongo import ASCENDING
+from pymongo import DESCENDING
 import datetime
+from bson.objectid import ObjectId
 from pydantic import BaseModel
 from enum import StrEnum
-import secrets
-import string
 import os
 
 # setup connection
 client: MongoClient = MongoClient(os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/'))
 db = client['chat_db']
-chat_collection = db['chat_history']
-chat_collection.create_index([("created_at", ASCENDING)], expireAfterSeconds=3600)
+chats_collection = db['chat_history']
+chats_collection.create_index([("last_updated", DESCENDING)])
 
 # models
 class UserOrChatbot(StrEnum):
@@ -40,44 +40,48 @@ class RetrieveMessage(BaseModel):
     message             : str
     created_at          : datetime.datetime
 
-# interaction functions
-def add_message(message_info: InsertMessage):
-    refresh_session(message_info.session_id)
-    chat_message = {
-        "session_id"        : message_info.session_id,
-        "user_or_chatbot"   : message_info.user_or_chatbot,
-        "message"           : message_info.message,
-        "created_at"        : datetime.datetime.now(datetime.timezone.utc)
+class ChatMessage(TypedDict):
+    user_or_chatbot     : UserOrChatbot
+    message             : str
+
+class Chat(TypedDict):
+    id: str
+    last_updated: datetime.datetime
+    messages: list[ChatMessage]
+
+# Function to get all chat IDs
+def get_all_chats():
+    chats = chats_collection.find().sort("last_updated", DESCENDING)
+    return [str(chat["_id"]) for chat in chats]
+
+# Function to read an entire chat by ID
+def read_entire_chat(chat_id: str) -> Chat | None:
+    chat = chats_collection.find_one({"_id": ObjectId(chat_id)})
+    if chat:
+        return {"id": str(chat["_id"]), "messages": chat["messages"], "last_updated": chat["last_updated"]}
+    else:
+        return None
+
+
+# Function to create a new chat and send the first message
+def create_new_chat(message: str):
+    chat = {
+        "messages": [{"user_or_chatbot": "user", "message": message}],
+        "last_updated": datetime.datetime.now(datetime.timezone.utc)
     }
-    chat_collection.insert_one(chat_message)
+    result = chats_collection.insert_one(chat)
+    return str(result.inserted_id)
 
-def get_chat_history(
-    session_id  : str, 
-    limit       : int   = 4     # choose even so that user query always comes first
-) -> list[RetrieveMessage]:
-    refresh_session(session_id)
-    items = chat_collection.find({"session_id": session_id}).sort("created_at", ASCENDING).limit(limit)
-    return [RetrieveMessage(
-        session_id          = item.session_id,
-        user_or_chatbot     = item.user_or_chatbot,
-        message             = item.message,
-        created_at          = item.created_at
-    ) for item in items]
-
-def refresh_session(session_id: str):
-    chat_collection.update_many(
-        {"session_id": session_id},
-        {"$set": {"created_at": datetime.datetime.now(datetime.timezone.utc)}}
-    )
-
-def find_session_id(session_id: str) -> bool:
-    refresh_session(session_id)
-    found = chat_collection.find_one({"session_id": session_id})
-    return found is not None
-
-alphabet = string.ascii_letters + string.digits
-def generate_session_id():
-    possible_id = None
-    while (possible_id is None or find_session_id(possible_id)):
-        possible_id = ''.join(secrets.choice(alphabet) for _ in range(32))
-    return possible_id
+def add_message(message_info: InsertMessage):
+    chat = chats_collection.find_one({"_id": ObjectId(message_info.session_id)})
+    if chat:
+        chats_collection.update_one(
+            {"_id": ObjectId(message_info.session_id)},
+            {
+                "$push": {"messages": {"user_or_chatbot": message_info.user_or_chatbot, "message": message_info.message}},
+                "$set": {"last_updated": datetime.datetime.now(datetime.timezone.utc)}
+            }
+        )
+        return True
+    else:
+        return False

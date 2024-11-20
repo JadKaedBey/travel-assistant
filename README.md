@@ -17,6 +17,7 @@
 - **Setting up Frontend**:
     - `cd frontend`
     - `npm install`
+    - `npm run build-api` - run each time you do changes to API routes
 
 - **Running Backend**: 
     - `cd backend`
