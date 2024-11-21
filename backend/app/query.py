@@ -57,7 +57,7 @@ def run_query(query: QueryRequest):
             )
         )
         return QueryResponse(id=query.session_id, message=CITY_NOT_FOUND)
-    pinned_events = events.check_pinned_events(city, date)
+    pinned_events = events.check_pinned_events(city, date, keywords)
 
     if pinned_events:
         return QueryResponse(id=query.session_id, message=f"Prioritized event: {pinned_events}")

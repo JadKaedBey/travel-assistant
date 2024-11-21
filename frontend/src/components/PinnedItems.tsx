@@ -1,9 +1,19 @@
-// Src/components/PinnedItems.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardActions,
+  Button,
+  CircularProgress,
+  Alert,
+  Box,
+  Divider,
+} from '@mui/material';
 
-const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
+const PinnedItems = ({ isAdmin }) => {
   const [pinnedEvents, setPinnedEvents] = useState([]);
   const [pinnedLocations, setPinnedLocations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,10 +24,10 @@ const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
     setError(null);
     try {
       const events = await axios.get('/admin/pinned_events', {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
       });
       const locations = await axios.get('/admin/pinned_locations', {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
       });
       setPinnedEvents(events.data.pinned_events || []);
       setPinnedLocations(locations.data.pinned_locations || []);
@@ -35,84 +45,147 @@ const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
 
   const unpinEvent = async (id) => {
     await axios.delete(`/admin/unpin_event/${id}`, {
-      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
     });
     fetchPinnedItems();
   };
 
   const unpinLocation = async (id) => {
     await axios.delete(`/admin/unpin_location/${id}`, {
-      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
+      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
     });
     fetchPinnedItems();
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Pinned Items</h2>
-            
-      {loading && <p>Loading...</p>}
-      {error && <p className="text-red-500">{error}</p>}
-            
+    <Box sx={{ p: 4 }}>
+      <Typography variant="h4" gutterBottom>
+        Pinned Items
+      </Typography>
+
+      {loading && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+          <CircularProgress />
+        </Box>
+      )}
+      {error && (
+        <Alert severity="error" sx={{ mt: 4 }}>
+          {error}
+        </Alert>
+      )}
+
       {!loading && !error && (
         <>
           {/* Pinned Events Section */}
-          <section className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">Pinned Events</h3>
+          <Box sx={{ mt: 4 }}>
+            <Typography variant="h5" gutterBottom>
+              Pinned Events
+            </Typography>
+            <Divider sx={{ mb: 2 }} />
             {pinnedEvents.length > 0 ? (
-              <ul className="space-y-2">
+              <Grid container spacing={3}>
                 {pinnedEvents.map((event) => (
-                  <li key={event.id} className="p-4 bg-gray-100 rounded flex justify-between items-center">
-                    <div>
-                      <p className="font-medium">{event.name}</p>
-                      <p className="text-sm text-gray-500">{event.city}</p>
-                    </div>
-                    {isAdmin && (
-                      <button
-                        onClick={async () => unpinEvent(event.id)}
-                        className="px-2 py-1 text-red-500 border border-red-500 rounded hover:bg-red-500 hover:text-white"
-                      >
-                                                Unpin
-                      </button>
-                    )}
-                  </li>
+                  <Grid item xs={12} sm={6} md={4} key={event.id}>
+                    <Card variant="outlined">
+                      <CardContent>
+                        <Typography variant="h6" gutterBottom>
+                          {event.name}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          {event.location}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
+                          {event.description || 'No description available.'}
+                        </Typography>
+                        {event.date && (
+                          <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            sx={{ mt: 1 }}
+                          >
+                            {new Date(event.date).toLocaleDateString('en-US', {
+                              weekday: 'short',
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </Typography>
+                        )}
+                      </CardContent>
+                      {isAdmin && (
+                        <CardActions>
+                          <Button
+                            size="small"
+                            color="error"
+                            onClick={() => unpinEvent(event.id)}
+                          >
+                            Unpin
+                          </Button>
+                        </CardActions>
+                      )}
+                    </Card>
+                  </Grid>
                 ))}
-              </ul>
+              </Grid>
             ) : (
-              <p className="text-gray-500">No pinned events.</p>
+              <Typography variant="body2" color="textSecondary">
+                No pinned events.
+              </Typography>
             )}
-          </section>
+          </Box>
 
           {/* Pinned Locations Section */}
-          <section>
-            <h3 className="text-lg font-semibold mb-2">Pinned Locations</h3>
+          <Box sx={{ mt: 6 }}>
+            <Typography variant="h5" gutterBottom>
+              Pinned Locations
+            </Typography>
+            <Divider sx={{ mb: 2 }} />
             {pinnedLocations.length > 0 ? (
-              <ul className="space-y-2">
+              <Grid container spacing={3}>
                 {pinnedLocations.map((location) => (
-                  <li key={location.id} className="p-4 bg-gray-100 rounded flex justify-between items-center">
-                    <div>
-                      <p className="font-medium">{location.name}</p>
-                      <p className="text-sm text-gray-500">{location.city}</p>
-                      <p className="text-xs text-gray-400">{location.amenity}</p>
-                    </div>
-                    {isAdmin && (
-                      <button
-                        onClick={async () => unpinLocation(location.id)}
-                        className="px-2 py-1 text-red-500 border border-red-500 rounded hover:bg-red-500 hover:text-white"
-                      >
-                                                Unpin
-                      </button>
-                    )}
-                  </li>
+                  <Grid item xs={12} sm={6} md={4} key={location.id}>
+                    <Card variant="outlined">
+                      <CardContent>
+                        <Typography variant="h6" gutterBottom>
+                          {location.name}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          {location.city}
+                        </Typography>
+                        {location.amenity && (
+                          <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            sx={{ mt: 1 }}
+                          >
+                            Amenity: {location.amenity}
+                          </Typography>
+                        )}
+                      </CardContent>
+                      {isAdmin && (
+                        <CardActions>
+                          <Button
+                            size="small"
+                            color="error"
+                            onClick={() => unpinLocation(location.id)}
+                          >
+                            Unpin
+                          </Button>
+                        </CardActions>
+                      )}
+                    </Card>
+                  </Grid>
                 ))}
-              </ul>
+              </Grid>
             ) : (
-              <p className="text-gray-500">No pinned locations.</p>
+              <Typography variant="body2" color="textSecondary">
+                No pinned locations.
+              </Typography>
             )}
-          </section>
+          </Box>
         </>
       )}
-    </div>
+    </Box>
   );
 };
 

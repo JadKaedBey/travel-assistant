@@ -1,79 +1,97 @@
-import csv
+# admin_routes.py
+import os
+import json
+from datetime import datetime
 from fastapi import APIRouter
-from typing import List
 from app.models.event_model import Event
 from app.models.location_model import Location
 
-router = APIRouter()
+# Create a router for admin endpoints
+router = APIRouter(prefix="/admin", tags=["Admin"])
 
-# Define file paths for pinned data
-PINNED_EVENTS_CSV = '../data/pinned_events.csv'
-PINNED_LOCATIONS_CSV = '../data/pinned_locations.csv'
+# file paths for pinned data
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))  # Go up one directory from the current file's location
+PINNED_EVENTS_JSON = os.path.join(BASE_DIR, 'data', 'pinned_events.json')
+PINNED_LOCATIONS_JSON = os.path.join(BASE_DIR, 'data', 'pinned_locations.json')
+
 
 # Helper functions
-def save_to_csv(file_path: str, fieldnames: List[str], data: dict):
-    """Helper function to save a row of data to a CSV file."""
-    with open(file_path, 'a', newline='') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        if csvfile.tell() == 0:
-            writer.writeheader()  # Write header only if file is empty
-        writer.writerow(data)
+def save_to_json(file_path: str, data: dict):
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as jsonfile:
+            file_data = json.load(jsonfile)
+    else:
+        file_data = {"pinned_events": []} if "events" in file_path else {"pinned_locations": []}
 
-def read_from_csv(file_path: str):
-    """Helper function to read all rows from a CSV file."""
+    key = "pinned_events" if "events" in file_path else "pinned_locations"
+    file_data[key].append(data)
+
+    with open(file_path, 'w', encoding='utf-8') as jsonfile:
+        json.dump(file_data, jsonfile, indent=4, default=_datetime_handler)
+
+def _datetime_handler(obj):
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError(f"Type {type(obj)} not serializable")
+
+def read_events_from_json(file_path: str):
     try:
-        with open(file_path, 'r') as csvfile:
-            reader = csv.DictReader(csvfile)
-            return list(reader)
-    except FileNotFoundError:
+        with open(file_path, 'r', encoding='utf-8') as jsonfile:
+            data = json.load(jsonfile)
+            return data['pinned_events']
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
-def delete_from_csv(file_path: str, key: str, value: str):
-    """Helper function to delete a row from a CSV file based on a key-value match."""
-    rows = read_from_csv(file_path)
-    rows = [row for row in rows if row.get(key) != value]
-    with open(file_path, 'w', newline='') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=rows[0].keys())
-        writer.writeheader()
-        writer.writerows(rows)
+def read_locations_from_json(file_path: str):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as jsonfile:
+            data = json.load(jsonfile)
+            return data['pinned_locations']
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def delete_from_json(file_path: str, key: str, value: str):
+    if not os.path.exists(file_path):
+        return
+
+    with open(file_path, 'r', encoding='utf-8') as jsonfile:
+        file_data = json.load(jsonfile)
+
+    data_key = "pinned_events" if "events" in file_path else "pinned_locations"
+    file_data[data_key] = [item for item in file_data[data_key] if item.get(key) != value]
+
+    with open(file_path, 'w', encoding='utf-8') as jsonfile:
+        json.dump(file_data, jsonfile, indent=4)
 
 # Admin API Routes
-
-@router.post("/admin/pin_event")
+@router.post("/pin_event")
 def pin_event(event: Event):
-    """Pin an event to prioritize it for suggestions."""
-    event_data = event.dict()
-    save_to_csv(PINNED_EVENTS_CSV, fieldnames=event_data.keys(), data=event_data)
+    event_data = event.model_dump()
+    save_to_json(PINNED_EVENTS_JSON, data=event_data)
     return {"message": "Event pinned successfully", "event": event_data}
 
-@router.post("/admin/pin_location")
+@router.post("/pin_location")
 def pin_location(location: Location):
-    """Pin a location to prioritize it for suggestions."""
-    location_data = location.dict()
-    save_to_csv(PINNED_LOCATIONS_CSV, fieldnames=location_data.keys(), data=location_data)
+    location_data = location.model_dump()
+    save_to_json(PINNED_LOCATIONS_JSON, data=location_data)
     return {"message": "Location pinned successfully", "location": location_data}
 
-@router.get("/admin/pinned_events")
+@router.get("/pinned_events")
 def get_pinned_events():
-    """Retrieve all pinned events."""
-    pinned_events = read_from_csv(PINNED_EVENTS_CSV)
-    print(pinned_events)
+    pinned_events = read_events_from_json(PINNED_EVENTS_JSON)
     return {"pinned_events": pinned_events}
 
-@router.get("/admin/pinned_locations")
+@router.get("/pinned_locations")
 def get_pinned_locations():
-    """Retrieve all pinned locations."""
-    pinned_locations = read_from_csv(PINNED_LOCATIONS_CSV)
+    pinned_locations = read_locations_from_json(PINNED_LOCATIONS_JSON)
     return {"pinned_locations": pinned_locations}
 
-@router.delete("/admin/unpin_event/{event_id}")
+@router.delete("/unpin_event/{event_id}")
 def unpin_event(event_id: str):
-    """Unpin an event based on its ID."""
-    delete_from_csv(PINNED_EVENTS_CSV, key="id", value=event_id)
+    delete_from_json(PINNED_EVENTS_JSON, key="id", value=event_id)
     return {"message": f"Event with ID {event_id} unpinned successfully"}
 
-@router.delete("/admin/unpin_location/{location_id}")
+@router.delete("/unpin_location/{location_id}")
 def unpin_location(location_id: str):
-    """Unpin a location based on its ID."""
-    delete_from_csv(PINNED_LOCATIONS_CSV, key="id", value=location_id)
+    delete_from_json(PINNED_LOCATIONS_JSON, key="id", value=location_id)
     return {"message": f"Location with ID {location_id} unpinned successfully"}

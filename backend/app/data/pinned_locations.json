@@ -1,0 +1,40 @@
+{
+    "pinned_locations": [
+        {
+            "id": "103",
+            "name": "Napa Valley Vineyard",
+            "city": "Napa Valley",
+            "amenity": "winery",
+            "lat": 38.2975,
+            "lon": -122.2869,
+            "description": "A beautiful vineyard offering wine tastings and tours."
+        },
+        {
+            "id": "104",
+            "name": "Millennium Park",
+            "city": "Chicago",
+            "amenity": "park",
+            "lat": 41.8827,
+            "lon": -87.6233,
+            "description": "Large public park known for its art installations, including the famous Bean sculpture."
+        },
+        {
+            "id": "105",
+            "name": "Hollywood Walk of Fame",
+            "city": "Los Angeles",
+            "amenity": "tourist attraction",
+            "lat": 34.1015,
+            "lon": -118.3269,
+            "description": "Famous sidewalk featuring stars dedicated to celebrities in the entertainment industry."
+        },
+        {
+            "id": "1732175570593",
+            "name": "Party in Kaunas",
+            "city": "Kaunas",
+            "amenity": "cafe",
+            "lat": 123.0,
+            "lon": 123.0,
+            "description": ""
+        }
+    ]
+}
