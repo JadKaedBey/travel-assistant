@@ -62,24 +62,28 @@ def run_query(query: QueryRequest):
     if pinned_events:
         return QueryResponse(id=query.session_id, message=f"Prioritized event: {pinned_events}")
 
+    event_results = []
     # Step 3: Fetch events from OpenTripMap
     event_results = query_opentripmap(OpenTripMapModel(placename=city, kinds=keywords))
 
-    # Step 4: Fetch weather from OpenWeatherMap
+    # Step 4: Fetch dynamic events from Ticketmaster and append them to OpenTripMap results
+    event_results.append(events.query_ticketmaster(city, date, keywords))
+
+    # Step 5: Fetch weather from OpenWeatherMap
     weather_info = weather.query_weather(city, date)
     
     # TODO Implement ammenities keywords extraction in nlp
     amenity = keywords[0] if keywords else "cafe"  # Use first keyword as amenity type or default to "cafe"
     poi_results = overpass.get_poi_data(city, amenity)
     
-    # Step 5: Return the compiled response
+    # Step 6: Return the compiled response
     answer = {
         "events": event_results,
         "weather": weather_info,
         "pois": poi_results
     }
 
-    # Step 6: Post-process with LLM to get more human-like response
+    # Step 7: Post-process with LLM to get more human-like response
     ans = lm_studio_request([
         { "role": "system", "content": "You are application assistant. Based on given JSON tell what person can visit. Answer in human way like chat assistant talking to a person." },
         { "role": "user", "content": str(answer) }
