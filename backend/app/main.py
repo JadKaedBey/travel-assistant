@@ -3,7 +3,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.api import nlp, events, weather, overpass,localdatasets
-from app.api.opentripmap import query_opentripmap
+from app.api.opentripmap import OpenTripMapModel, query_opentripmap
+from app.api.lmstudio import lm_studio_request
 from app.history.chat_history import (
     UserOrChatbot, 
     InsertMessage, 
@@ -59,9 +60,6 @@ def process_query(query: QueryRequest):
         date = info.get('date')
         keywords = info.get('keywords')
 
-        print(city)
-        print(keywords)
-
         pinned_events = events.check_pinned_events(city, date)
 
         if pinned_events:
@@ -92,14 +90,22 @@ def process_query(query: QueryRequest):
             "hotels_motels":hotels_motels,
             "historic_places":historic_places
         }
+
+        # Step 6: Post-process with LLM to get more human-like response
+        ans = lm_studio_request([
+            { "role": "system", "content": "You are application assistant. Based on given JSON tell what person can visit. Answer in human way like chat assistant talking to a person." },
+            { "role": "user", "content": str(answer) }
+        ])
+
         add_message(
             InsertMessage(
                 session_id          = query.session_id,
                 user_or_chatbot     = UserOrChatbot.CHATBOT,
-                message             = str(answer)
+                message             = ans
             )
         )
-        return answer
+        return ans 
+
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)  # Log the error details
         raise HTTPException(status_code=500, detail="Internal Server Error")

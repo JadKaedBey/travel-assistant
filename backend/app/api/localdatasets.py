@@ -2,7 +2,7 @@ import logging
 import csv
 from typing import List
 
-DATA_PATH='../data/'
+DATA_PATH='app/data/'
 output_max=10
 def get_unesco_sites(gpe: str):
     with open(DATA_PATH+'unesco_sites.csv', 'r') as csvfile:
