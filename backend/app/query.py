@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from app.api import nlp, events, weather, overpass
+from app.api import nlp, events, weather, overpass, localdatasets
 from app.api.opentripmap import OpenTripMapModel, query_opentripmap
 from app.api.lmstudio import lm_studio_request
 from app.history.chat_history import (
@@ -71,6 +71,11 @@ def run_query(query: QueryRequest):
     # Step 5: Fetch weather from OpenWeatherMap
     weather_info = weather.query_weather(city, date)
     
+    if city and city.strip():  
+        unesco_sites = localdatasets.get_unesco_sites(city)
+        hotels_motels = localdatasets.get_hotels_motels(city)
+        historic_places = localdatasets.get_historical_places(city)
+    
     # TODO Implement ammenities keywords extraction in nlp
     amenity = keywords[0] if keywords else "cafe"  # Use first keyword as amenity type or default to "cafe"
     poi_results = overpass.get_poi_data(city, amenity)
@@ -79,7 +84,10 @@ def run_query(query: QueryRequest):
     answer = {
         "events": event_results,
         "weather": weather_info,
-        "pois": poi_results
+        "pois": poi_results,
+        "unesco_sites": unesco_sites,
+        "hotels_motels": hotels_motels,
+        "historic_places": historic_places
     }
 
     # Step 7: Post-process with LLM to get more human-like response

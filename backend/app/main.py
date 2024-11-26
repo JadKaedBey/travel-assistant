@@ -8,8 +8,6 @@ from app.history.chat_history import (
 )
 from app.api.admin import router as admin_router
 from app.query import QueryResponse, run_query, QueryRequest
-from app.models.event_model import Event
-from app.models.location_model import Location
 
 app = FastAPI()
 
@@ -38,7 +36,6 @@ def process_query(query: QueryRequest) -> QueryResponse:
     logger.info(f"Query: {query}")
     try:
         return run_query(query)
-
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)  # Log the error details
         raise HTTPException(status_code=500, detail="Internal Server Error")
