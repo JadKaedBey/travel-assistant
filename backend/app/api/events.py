@@ -6,7 +6,6 @@ from app.config import EVENTBRITE_API_KEY, TICKETMASTER_API_KEY
 from fastapi import APIRouter, HTTPException, Depends
 from app.models.event_model import Event
 from app.models.user_model import User
-from typing import List
 import json
 
 load_dotenv()
@@ -18,7 +17,7 @@ EVENTBRITE_API_URL = "https://www.eventbriteapi.com/v3/events/search/"
 TICKETMASTER_API_URL = "https://app.ticketmaster.com/discovery/v2/events"
 PINNED_EVENTS_CSV = 'app/data/pinned_events.csv'
 
-def query_eventbrite(city: str, date: str, keywords: List[str]) -> List[Event]:
+def query_eventbrite(city: str, date: str, keywords: list[str]) -> list[Event]:
     """Fetch events from Eventbrite API."""
     
     print(f"Querying Eventbrite: city={city}, date={date}, keywords={keywords}")
@@ -56,34 +55,32 @@ def query_eventbrite(city: str, date: str, keywords: List[str]) -> List[Event]:
     
     return events
 
+def get_start_end_date(parsed_date):
+  start_date = parsed_date.replace(hour=0, minute=0, second=0, microsecond=0)
+  end_date = parsed_date.replace(hour=23, minute=59, second=59, microsecond=0)
+  return start_date.isoformat(), end_date.isoformat()
+
 def get_formatted_date(date_entity): 
     current_date = datetime.now() 
     # Handle relative dates like "today" or "tomorrow"
-    if date_entity:
-        date_entity = date_entity.lower()
-        if "today" in date_entity:
-            return current_date.replace(hour=0, minute=0, second=0, microsecond=0).isoformat(), current_date.replace(hour=23, minute=59, second=59, microsecond=0).isoformat()
-        elif "tomorrow" in date_entity:
-            start = current_date.replace(hour=0, minute=0, second=0, microsecond=0)+ timedelta(days=1)
-            end = current_date.replace(hour=23, minute=59, second=59, microsecond=0)+ timedelta(days=1)
-            return start.isoformat(), end.isoformat()
-        else:
-            # Handle YYYY-MM-DD format
+    if not date_entity:
+        return None, None
+    date_entity = date_entity.lower()
+    if "today" in date_entity:
+        return get_start_end_date(datetime.now())
+    elif "tomorrow" in date_entity:
+        return get_start_end_date(datetime.now() + timedelta(days=1))
+    else:
+        # Handle YYYY-MM-DD format
+        try:
+            return get_start_end_date(datetime.strptime(date_entity, "%Y-%m-%d"))
+        except ValueError:
+            # Handle specific formats like "23-11" (dd-mm)
             try:
-                parsed_date = datetime.strptime(date_entity, "%Y-%m-%d")
-                start_date = parsed_date.replace(hour=0, minute=0, second=0, microsecond=0)
-                end_date = parsed_date.replace(hour=23, minute=59, second=59, microsecond=0)
-                return start_date.isoformat(), end_date.isoformat()
+                return get_start_end_date(datetime.strptime(date_entity, "%d-%m").replace(year=current_date.year))
             except ValueError:
-                # Handle specific formats like "23-11" (dd-mm)
-                try:
-                    parsed_date = datetime.strptime(date_entity, "%d-%m").replace(year=current_date.year)
-                    start_date = parsed_date.replace(hour=0, minute=0, second=0, microsecond=0)
-                    end_date = parsed_date.replace(hour=23, minute=59, second=59, microsecond=0)
-                    return start_date.isoformat(), end_date.isoformat()
-                except ValueError:
-                    return None, None
-                
+                return None, None
+            
 def query_ticketmaster(city: str, date: str, keywords: List[str]) -> List[Event]:
     """Fetch events from Ticketmaster API."""
     # Remove the date and city from keywords to avoid confusion using API
@@ -120,8 +117,7 @@ def query_ticketmaster(city: str, date: str, keywords: List[str]) -> List[Event]
             category = event_data.get("classifications", [])[0].get("segment", {}).get("name", "Unknown Category")
         )
         events.append(event)
-    if events == []:
-        return "No events found."
+
     return events
 
 def check_pinned_events(city: str = None, date: str = None, keywords: list[str] = None):

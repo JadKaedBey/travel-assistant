@@ -62,12 +62,11 @@ def run_query(query: QueryRequest):
     if pinned_events:
         return QueryResponse(id=query.session_id, message=f"Prioritized event: {pinned_events}")
 
-    event_results = []
     # Step 3: Fetch events from OpenTripMap
     event_results = query_opentripmap(OpenTripMapModel(placename=city, kinds=keywords))
 
     # Step 4: Fetch dynamic events from Ticketmaster and append them to OpenTripMap results
-    event_results.append(events.query_ticketmaster(city, date, keywords))
+    event_results.extend(events.query_ticketmaster(city, date, keywords))
 
     # Step 5: Fetch weather from OpenWeatherMap
     weather_info = weather.query_weather(city, date)
