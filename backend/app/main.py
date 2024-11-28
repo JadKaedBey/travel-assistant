@@ -2,7 +2,7 @@ import logging
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from app.api import nlp, events, weather, overpass,localdatasets
+from app.api import nlp, events, weather, overpass, localdatasets
 from app.api.opentripmap import OpenTripMapModel, query_opentripmap
 from app.api.lmstudio import lm_studio_request
 from app.history.chat_history import (
@@ -72,10 +72,10 @@ def process_query(query: QueryRequest):
         weather_info = weather.query_weather(city, date)
         
         # Extract available datas from given GPE
-        if city and city.strip():  
+        if city and city.strip():
             unesco_sites = localdatasets.get_unesco_sites(city)
-            hotels_motels= localdatasets.get_hotels_motels(city)
-            historic_places=localdatasets.get_historical_places(city)
+            hotels_motels = localdatasets.get_hotels_motels(city)
+            historic_places = localdatasets.get_historical_places(city)
 
         # TODO Implement ammenities keywords extraction in nlp
         amenity = keywords[0] if keywords else "cafe"  # Use first keyword as amenity type or default to "cafe"
@@ -86,9 +86,9 @@ def process_query(query: QueryRequest):
             "events": event_results,
             "weather": weather_info,
             "pois": poi_results,
-            "unesco_sites":unesco_sites,
-            "hotels_motels":hotels_motels,
-            "historic_places":historic_places
+            "unesco_sites": unesco_sites,
+            "hotels_motels": hotels_motels,
+            "historic_places": historic_places
         }
 
         # Step 6: Post-process with LLM to get more human-like response
@@ -104,7 +104,7 @@ def process_query(query: QueryRequest):
                 message             = ans
             )
         )
-        return ans 
+        return ans
 
     except Exception as e:
         logger.error(f"Error processing query: {e}", exc_info=True)  # Log the error details
