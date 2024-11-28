@@ -87,6 +87,8 @@ def query_ticketmaster(city: str, date: str, keywords: List[str]) -> List[Event]
     filtered_keywords = [kw for kw in keywords if kw.lower() != city.lower() and kw.lower() != date.lower()]
     # Set the day start and end, handle cases like "tomorrow", "today"
     date, end_date = get_formatted_date(date)
+    if date == None or end_date == None:
+        return []
     print(f"Querying Ticketmaster: city={city}, date={date}, endDate={end_date}, keywords={filtered_keywords}")
 
     params = {
