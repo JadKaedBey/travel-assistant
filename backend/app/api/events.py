@@ -81,7 +81,7 @@ def get_formatted_date(date_entity):
             except ValueError:
                 return None, None
             
-def query_ticketmaster(city: str, date: str, keywords: List[str]) -> List[Event]:
+def query_ticketmaster(city: str, date: str, keywords: list[str]) -> list[Event]:
     """Fetch events from Ticketmaster API."""
     # Remove the date and city from keywords to avoid confusion using API
     filtered_keywords = [kw for kw in keywords if kw.lower() != city.lower() and kw.lower() != date.lower()]
