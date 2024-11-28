@@ -1,43 +1,33 @@
-import logging
+"""
+Author: Yogesh Kumar Srinivasan
+Date: 24 November 2024
+Usage:
+    - Implementation of extracting the local data available against the GPE provided
+"""
 import csv
 from typing import List
 
-DATA_PATH='../data/'
-output_max=10
-def get_unesco_sites(gpe: str):
-    with open(DATA_PATH+'unesco_sites.csv', 'r') as csvfile:
-        reader = csv.DictReader(csvfile,delimiter=';')
-        data_list:list = []
+DATA_PATH = 'app/data/'
+#To limit the output max to 10
+OUTPUT_MAX = 10
+
+def get_data(file_name: str, key: str, value: str, result_key: str) -> List[str]:
+    file_path = f"{DATA_PATH}{file_name}.csv"
+    data_list = []
+    with open(file_path, 'r') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=';')
         for row in reader:
-            if 'Country' in row:
-                if row['Country'].lower() == gpe.lower() :
-                    data_list.append(row['Site Name'])
-                if len(data_list) >= output_max:
-                        break
+            if key in row and row[key].lower() == value.lower():
+                data_list.append(row[result_key])
+                if len(data_list) >= OUTPUT_MAX:
+                    break
     return data_list
 
+def get_unesco_sites(gpe: str) -> List[str]:
+    return get_data('unesco_sites', 'Country', gpe, 'Site Name')
 
-def get_historical_places(gpe:str):
-     with open(DATA_PATH+'US_Historic_Places.csv', 'r') as csvfile:
-        reader = csv.DictReader(csvfile,delimiter=';')
-        data_list:list = []
-        for row in reader:
-            if 'County' in row:
-                if row['County'].lower() == gpe.lower() :
-                    data_list.append(row['Resource_Name'])
-                if len(data_list) >= output_max:
-                        break
-        return data_list
-     
-def get_hotels_motels(gpe:str):
-     with open(DATA_PATH+'Hotels_Motels_LA.csv', 'r') as csvfile:
-        reader = csv.DictReader(csvfile,delimiter=';')
-        data_list:list = []
-        for row in reader:
-            if 'City' in row:
-                if row['City'].lower() == gpe.lower() :
-                    data_list.append(row['Business_Name']+row['Business_Type'])
-                if len(data_list) >= output_max:
-                        break
-        return data_list
-     
+def get_historical_places(gpe: str) -> List[str]:
+    return get_data('US_Historic_Places', 'County', gpe, 'Resource_Name')
+
+def get_hotels_motels(gpe: str) -> List[str]:
+    return get_data('Hotels_Motels_LA', 'City', gpe, 'Business_Name')
