@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import {
   Typography,
   Grid,
@@ -12,27 +11,26 @@ import {
   Box,
   Divider,
 } from '@mui/material';
+import { client } from '../services/apiService';
+import type { components } from '../services/api';
 
-const PinnedItems = ({ isAdmin }) => {
-  const [pinnedEvents, setPinnedEvents] = useState([]);
-  const [pinnedLocations, setPinnedLocations] = useState([]);
+const PinnedItems = ({ isAdmin } : { isAdmin: boolean }) => {
+  const [pinnedEvents, setPinnedEvents] = useState<components['schemas']['Event'][]>([]);
+  const [pinnedLocations, setPinnedLocations] = useState<components['schemas']['Location'][]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchPinnedItems = async () => {
     setLoading(true);
     setError(null);
     try {
-      const events = await axios.get('/admin/pinned_events', {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-      });
-      const locations = await axios.get('/admin/pinned_locations', {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-      });
-      setPinnedEvents(events.data.pinned_events || []);
-      setPinnedLocations(locations.data.pinned_locations || []);
-    } catch (error) {
-      console.error('Error fetching pinned items:', error);
+      const events = await client.GET('/admin/pinned_events', {});
+      const locations = await client.GET('/admin/pinned_locations', {});
+      setPinnedEvents(events.data?.pinned_events ?? []);
+      setPinnedLocations(locations.data?.pinned_locations ?? []);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Error fetching pinned items:', err);
       setError('Failed to load pinned items.');
     } finally {
       setLoading(false);
@@ -43,17 +41,13 @@ const PinnedItems = ({ isAdmin }) => {
     fetchPinnedItems();
   }, []);
 
-  const unpinEvent = async (id) => {
-    await axios.delete(`/admin/unpin_event/${id}`, {
-      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-    });
+  const unpinEvent = async (id: string) => {
+    await client.DELETE('/admin/unpin_event/{event_id}', { params: { path: { event_id: id }} });
     fetchPinnedItems();
   };
 
-  const unpinLocation = async (id) => {
-    await axios.delete(`/admin/unpin_location/${id}`, {
-      baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-    });
+  const unpinLocation = async (id: string) => {
+    await client.DELETE('/admin/unpin_location/{location_id}', { params: { path: { location_id: id }} });
     fetchPinnedItems();
   };
 
@@ -95,7 +89,7 @@ const PinnedItems = ({ isAdmin }) => {
                           {event.location}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-                          {event.description || 'No description available.'}
+                          {event.description ?? 'No description available.'}
                         </Typography>
                         {event.date && (
                           <Typography
@@ -117,7 +111,7 @@ const PinnedItems = ({ isAdmin }) => {
                           <Button
                             size="small"
                             color="error"
-                            onClick={() => unpinEvent(event.id)}
+                            onClick={async () => unpinEvent(event.id)}
                           >
                             Unpin
                           </Button>
@@ -167,7 +161,7 @@ const PinnedItems = ({ isAdmin }) => {
                           <Button
                             size="small"
                             color="error"
-                            onClick={() => unpinLocation(location.id)}
+                            onClick={async () => unpinLocation(location.id)}
                           >
                             Unpin
                           </Button>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import {
   TextField,
   Select,
@@ -11,8 +10,9 @@ import {
   InputLabel,
   FormControl,
 } from '@mui/material';
+import { client } from '../services/apiService';
 
-const PinForm = ({ onRefresh }) => {
+const PinForm = ({ onRefresh } : { onRefresh: () => void }) => {
   const [pinType, setPinType] = useState('event');
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
@@ -23,14 +23,13 @@ const PinForm = ({ onRefresh }) => {
   const [lat, setLat] = useState('');
   const [lon, setLon] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const id = Date.now().toString(); // Generate unique ID
-    let data;
 
     if (pinType === 'event') {
-      data = {
+      const eventData = {
         id,
         name,
         location: city,
@@ -40,26 +39,25 @@ const PinForm = ({ onRefresh }) => {
         priority: 0,
         pinned: true,
       };
-      await axios.post('/admin/pin_event', data, {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-      });
+      await client.POST('/admin/pin_event', { body: eventData });
     } else {
-      if (isNaN(lat) || isNaN(lon)) {
+      const latFloat = parseFloat(lat);
+      const lonFloat = parseFloat(lon);
+      if (isNaN(latFloat) || isNaN(lonFloat)) {
+        // eslint-disable-next-line no-alert
         alert('Please enter valid latitude and longitude coordinates.');
         return;
       }
-      data = {
+      const locationData = {
         id,
         name,
         city,
         amenity,
-        lat: parseFloat(lat),
-        lon: parseFloat(lon),
+        lat: latFloat,
+        lon: lonFloat,
         description,
       };
-      await axios.post('/admin/pin_location', data, {
-        baseURL: import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000',
-      });
+      await client.POST('/admin/pin_location', { body: locationData });
     }
 
     onRefresh();
@@ -82,7 +80,7 @@ const PinForm = ({ onRefresh }) => {
         backgroundColor: 'black',
         boxShadow: 3,
         borderRadius: 2,
-        borderColor: "white",
+        borderColor: 'white',
         maxWidth: 600,
         mx: 'auto',
       }}
@@ -97,7 +95,7 @@ const PinForm = ({ onRefresh }) => {
         <Select
           labelId="pin-type-label"
           value={pinType}
-          onChange={(e) => setPinType(e.target.value)}
+          onChange={(e) => { setPinType(e.target.value); }}
           fullWidth
         >
           <MenuItem value="event">Event</MenuItem>
@@ -111,7 +109,7 @@ const PinForm = ({ onRefresh }) => {
           <TextField
             label="Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => { setName(e.target.value); }}
             fullWidth
             required
           />
@@ -120,7 +118,7 @@ const PinForm = ({ onRefresh }) => {
           <TextField
             label="City"
             value={city}
-            onChange={(e) => setCity(e.target.value)}
+            onChange={(e) => { setCity(e.target.value); }}
             fullWidth
             required
           />
@@ -134,7 +132,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Description"
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => { setDescription(e.target.value); }}
               fullWidth
               multiline
               rows={3}
@@ -145,7 +143,7 @@ const PinForm = ({ onRefresh }) => {
               label="Date"
               type="date"
               value={date}
-              onChange={(e) => setDate(e.target.value)}
+              onChange={(e) => { setDate(e.target.value); }}
               fullWidth
               InputLabelProps={{ shrink: true }}
             />
@@ -154,7 +152,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Category"
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e) => { setCategory(e.target.value); }}
               fullWidth
             />
           </Grid>
@@ -168,7 +166,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Amenity Type"
               value={amenity}
-              onChange={(e) => setAmenity(e.target.value)}
+              onChange={(e) => { setAmenity(e.target.value); }}
               fullWidth
               required
             />
@@ -177,7 +175,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Latitude"
               value={lat}
-              onChange={(e) => setLat(e.target.value)}
+              onChange={(e) => { setLat(e.target.value); }}
               fullWidth
               required
             />
@@ -186,7 +184,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Longitude"
               value={lon}
-              onChange={(e) => setLon(e.target.value)}
+              onChange={(e) => { setLon(e.target.value); }}
               fullWidth
               required
             />
@@ -195,7 +193,7 @@ const PinForm = ({ onRefresh }) => {
             <TextField
               label="Description"
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => { setDescription(e.target.value); }}
               fullWidth
               multiline
               rows={3}
