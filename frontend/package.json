@@ -9,8 +9,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint": "eslint",
+    "lint-fix": "eslint --fix"
   },
   "dependencies": {
     "@emotion/react": "11.13.3",

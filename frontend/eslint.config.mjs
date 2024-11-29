@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default [{
-  ignores: ['**/dist/**/*.js', 'vite.config.js', 'eslint.config.mjs', 'api.d.ts'],
+  ignores: ['**/dist/**/*.js', 'vite.config.js', 'eslint.config.mjs', '**/api.d.ts'],
 }, ...fixupConfigRules(compat.extends(
   'eslint:all',
   'plugin:@typescript-eslint/all',
@@ -68,6 +68,8 @@ export default [{
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+
+    '@typescript-eslint/no-deprecated': 'off',
 
     '@typescript-eslint/naming-convention': ['error', {
       selector: 'function',
