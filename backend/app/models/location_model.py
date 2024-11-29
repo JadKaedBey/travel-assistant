@@ -13,7 +13,7 @@ class Location(BaseModel):
     description: Optional[str] = Field(None, description="Optional description or additional details about the location")
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "id": "123abc",
                 "name": "Central Park Cafe",

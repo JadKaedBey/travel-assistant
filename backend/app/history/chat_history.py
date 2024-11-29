@@ -11,13 +11,13 @@ Usage:
     - generate_session_id   : generate an unique session id
 """
 
-from typing import TypedDict
+from typing_extensions import TypedDict
 from pymongo import MongoClient
 from pymongo import DESCENDING
 import datetime
 from bson.objectid import ObjectId
 from pydantic import BaseModel
-from enum import StrEnum
+from enum import Enum
 import os
 
 # setup connection
@@ -27,7 +27,7 @@ chats_collection = db['chat_history']
 chats_collection.create_index([("last_updated", DESCENDING)])
 
 # models
-class UserOrChatbot(StrEnum):
+class UserOrChatbot(Enum):
     USER                = "user"
     CHATBOT             = "chatbot"
 class InsertMessage(BaseModel):

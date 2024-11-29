@@ -2,6 +2,7 @@
 import os
 import json
 from datetime import datetime
+from typing_extensions import TypedDict
 from fastapi import APIRouter
 from app.models.event_model import Event
 from app.models.location_model import Location
@@ -63,35 +64,50 @@ def delete_from_json(file_path: str, key: str, value: str):
     with open(file_path, 'w', encoding='utf-8') as jsonfile:
         json.dump(file_data, jsonfile, indent=4)
 
+class Message(TypedDict):
+    message: str
+    
+class EventMessage(Message):
+    event: Event
+
+class LocationMessage(Message):
+    location: Location
+
+class PinnedEvents(TypedDict):
+    pinned_events: list[Event]
+
+class PinnedLocations(TypedDict):
+    pinned_locations: list[Location]
+
 # Admin API Routes
 @router.post("/pin_event")
-def pin_event(event: Event):
+def pin_event(event: Event) -> EventMessage:
     event_data = event.model_dump()
     save_to_json(PINNED_EVENTS_JSON, data=event_data)
-    return {"message": "Event pinned successfully", "event": event_data}
+    return {"message": "Event pinned successfully", "event": event}
 
 @router.post("/pin_location")
-def pin_location(location: Location):
+def pin_location(location: Location) -> LocationMessage:
     location_data = location.model_dump()
     save_to_json(PINNED_LOCATIONS_JSON, data=location_data)
     return {"message": "Location pinned successfully", "location": location_data}
 
 @router.get("/pinned_events")
-def get_pinned_events():
+def get_pinned_events() -> PinnedEvents:
     pinned_events = read_events_from_json(PINNED_EVENTS_JSON)
     return {"pinned_events": pinned_events}
 
 @router.get("/pinned_locations")
-def get_pinned_locations():
+def get_pinned_locations() -> PinnedLocations:
     pinned_locations = read_locations_from_json(PINNED_LOCATIONS_JSON)
     return {"pinned_locations": pinned_locations}
 
 @router.delete("/unpin_event/{event_id}")
-def unpin_event(event_id: str):
+def unpin_event(event_id: str) -> Message:
     delete_from_json(PINNED_EVENTS_JSON, key="id", value=event_id)
     return {"message": f"Event with ID {event_id} unpinned successfully"}
 
 @router.delete("/unpin_location/{location_id}")
-def unpin_location(location_id: str):
+def unpin_location(location_id: str) -> Message:
     delete_from_json(PINNED_LOCATIONS_JSON, key="id", value=location_id)
     return {"message": f"Location with ID {location_id} unpinned successfully"}
