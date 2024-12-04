@@ -12,7 +12,6 @@ class Message(TypedDict):
     content: str
 
 def lm_studio_request(message: Answer) -> str:
-    print("lm activated")
     full_url = f"http://{LMSTUDIO_HOST}/{LMSTUDIO_ENDPOINT}"
     
     messages = [

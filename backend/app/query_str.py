@@ -7,7 +7,9 @@ def generate_ai_style_response(events: list[Event], weather: str) -> str:
   sorted_events = sorted(events, key=lambda x: (-x.pinned, -x.priority, x.date or datetime.max))
   
   # Start the response with the weather
-  response = f"{weather}\n\n"
+  response = ""
+  if weather != "":
+    response = f"{weather}\n\n"
   
   # Check if there are any events
   if not sorted_events:

@@ -7,6 +7,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from app.models.event_model import Event
 from app.models.user_model import User
 import json
+from app.dateparser import parse_date, get_start_end_date
 
 load_dotenv()
 
@@ -55,45 +56,15 @@ def query_eventbrite(city: str, date: str, keywords: list[str]) -> list[Event]:
         events.append(event)
     
     return events
-
-def get_start_end_date(parsed_date):
-  start_date = parsed_date.replace(hour=0, minute=0, second=0, microsecond=0)
-  end_date = parsed_date.replace(hour=23, minute=59, second=59, microsecond=0)
-  return start_date.isoformat(), end_date.isoformat()
-
-def get_formatted_date(date_entity): 
-    current_date = datetime.now() 
-    # Handle relative dates like "today" or "tomorrow"
-    if not date_entity:
-        return None, None
-    date_entity = date_entity.lower()
-    if "today" in date_entity:
-        return get_start_end_date(datetime.now())
-    elif "tomorrow" in date_entity:
-        return get_start_end_date(datetime.now() + timedelta(days=1))
-    else:
-        # Handle YYYY-MM-DD format
-        try:
-            return get_start_end_date(datetime.strptime(date_entity, "%Y-%m-%d"))
-        except ValueError:
-            # Handle specific formats like "23-11" (dd-mm)
-            try:
-                return get_start_end_date(datetime.strptime(date_entity, "%d-%m").replace(year=current_date.year))
-            except ValueError:
-                return None, None
             
-def query_ticketmaster(city: str, date: str, keywords: list[str]) -> list[Event]:
+def query_ticketmaster(city: str, date: datetime.date, keywords: list[str]) -> list[Event]:
     """Fetch events from Ticketmaster API."""
-    # Remove the date and city from keywords to avoid confusion using API
-    filtered_keywords = [kw for kw in keywords if kw.lower() != city.lower() and kw.lower() != date.lower()]
-    # Set the day start and end, handle cases like "tomorrow", "today"
-    date, end_date = get_formatted_date(date)
-    if date == None or end_date == None:
-        return []
-    print(f"Querying Ticketmaster: city={city}, date={date}, endDate={end_date}, keywords={filtered_keywords}")
+
+    date, end_date = get_start_end_date(datetime.combine(date, datetime.min.time()))
+    print(f"Querying Ticketmaster: city={city}, date={date}, endDate={end_date}, keywords={keywords}")
 
     params = {
-        "keyword": " ".join(filtered_keywords),
+        "keyword": " ".join(keywords),
         "city": f"{city}",
         "sort": "date,asc",
         "startDateTime": date + "+00:00",
@@ -123,7 +94,7 @@ def query_ticketmaster(city: str, date: str, keywords: list[str]) -> list[Event]
 
     return events
 
-def check_pinned_events(city: str = None, date: str = None, keywords: list[str] = None):
+def check_pinned_events(city: str = None, date: datetime.date = None, keywords: list[str] = None):
     """Check for pinned events and locations matching the given city, date, and keywords."""
     # Check in pinned events
     with open(PINNED_EVENTS_PATH, 'r', encoding='utf-8') as events_file:
@@ -131,7 +102,7 @@ def check_pinned_events(city: str = None, date: str = None, keywords: list[str] 
         for event in pinned_events:
             if (
                 (city is None or event['location'].lower() == city.lower()) and
-                (date is None or event['date'] == date) and
+                (date is None or parse_date(event['date']) == date) and
                 (keywords is None or any(keyword.lower() in event.get('category', '').lower() for keyword in keywords))
             ):
                 return {"type": "event", "data": event}

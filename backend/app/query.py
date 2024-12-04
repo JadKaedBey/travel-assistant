@@ -11,6 +11,9 @@ from app.history.chat_history import (
     create_new_chat
 )
 from app.answer import Answer
+from app.dateparser import parse_date
+
+CITY_NOT_FOUND = "You seem to have not provided the city correctly. Please double check it"
 
 class QueryRequest(BaseModel):
     user_input: str
@@ -46,15 +49,11 @@ def run_query(query: QueryRequest):
     info = nlp.extract_info(query.user_input)  # Use query.user_input from the model
     print(f"NLP extraction: {info}")
 
-    # Step 2: Check if any pinned events exist
+    # Step 1.5: 
+    # --CITY--
     city = info.get('city')
-    date = info.get('date')
-    if date is None:
-        date = datetime.today().strftime('%Y-%m-%d')
 
-    keywords = info.get('keywords')
-    if city is None or date is None:
-        CITY_NOT_FOUND = "You seem to have not provided the city or date correctly. Please double check it"
+    if city is None:
         add_message(
             InsertMessage(
                 session_id          = query.session_id,
@@ -63,6 +62,20 @@ def run_query(query: QueryRequest):
             )
         )
         return QueryResponse(id=query.session_id, message=CITY_NOT_FOUND)
+    
+    # --DATE--
+    date = info.get('date')
+    try:
+        date = parse_date(date)
+    except:
+        date = datetime.today().date()
+    if date is None:
+        date = datetime.today().date()
+    
+    # --KEYWORDS--
+    keywords = info.get('keywords')
+
+    # Step 2: Check if any pinned events exist
     pinned_events = events.check_pinned_events(city, date, keywords)
 
     if pinned_events:
@@ -76,10 +89,12 @@ def run_query(query: QueryRequest):
     event_results.extend(events.query_ticketmaster(city, date, keywords))
 
     # Step 5: Fetch weather from OpenWeatherMap
-    weather_query = WeatherQueryModel(
-        city=city,
-    )
-    weather_info = query_weather(weather_query)
+    weather_info = ""
+    if date == datetime.today().date():
+        weather_query = WeatherQueryModel(
+            city=city,
+        )
+        weather_info = query_weather(weather_query)
 
     unesco_sites = localdatasets.get_unesco_sites(city)
     hotels_motels = localdatasets.get_hotels_motels(city)

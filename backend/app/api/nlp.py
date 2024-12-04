@@ -14,5 +14,7 @@ def extract_info(user_input: str):
     return {
         "city": city,
         "date": date,
-        "keywords": [token.text for token in doc if token.pos_ in ["NOUN", "PROPN"]]  # Nouns/Proper Nouns
+        "keywords": [token.text for token in doc if token.pos_ in ["NOUN", "PROPN"] if (
+            (city is None or token.text.lower() != city.lower()) and (date is None or token.text.lower() not in date.split(" "))
+        )]  # Nouns/Proper Nouns
     }
