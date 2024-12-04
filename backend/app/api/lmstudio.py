@@ -40,4 +40,8 @@ def lm_studio_request(message: Answer) -> str:
             json_repsonse = response.json()
             return json_repsonse['choices'][0]['message']['content']
     finally:  # noqa: E722
-        return generate_ai_style_response(message["events"], message["weather"])
+        print(message)
+        return generate_ai_style_response(
+        message.get("events", []) if isinstance(message, dict) else [],
+        message.get("weather", "") if isinstance(message, dict) else ""
+    )

@@ -50,22 +50,19 @@ def run_query(query: QueryRequest):
     city = info.get('city')
     date = info.get('date') or datetime.today()
     keywords = info.get('keywords')
-    if city is None or date is None:
-        CITY_NOT_FOUND = "You seem to have not provided the city or date correctly. Please double check it"
+    
+    pinned_message = events.get_pinned_data(city, date, keywords)
+
+    if pinned_message:
         add_message(
             InsertMessage(
-                session_id          = query.session_id,
-                user_or_chatbot     = UserOrChatbot.CHATBOT,
-                message             = CITY_NOT_FOUND
+                session_id=query.session_id,
+                user_or_chatbot=UserOrChatbot.CHATBOT,
+                message=pinned_message
             )
         )
-        return QueryResponse(id=query.session_id, message=CITY_NOT_FOUND)
-    pinned_events = events.check_pinned_events(city, date, keywords)
+        return QueryResponse(id=query.session_id, message=pinned_message)
 
-    if pinned_events:
-        pinned_answer = lm_studio_request(pinned_events)
-        return QueryResponse(id=query.session_id, message=pinned_answer)
-    
     # Step 3: Fetch events from OpenTripMap
     event_results = query_opentripmap(OpenTripMapModel(placename=city, kinds=keywords))
 

@@ -125,22 +125,52 @@ def query_ticketmaster(city: str, date: str, keywords: list[str]) -> list[Event]
 
 def check_pinned_events(city: str = None, date: str = None, keywords: list[str] = None):
     """Check for pinned events and locations matching the given city, date, and keywords."""
+    matched_events = []
+
     # Check in pinned events
     with open(PINNED_EVENTS_PATH, 'r', encoding='utf-8') as events_file:
         pinned_events = json.load(events_file).get('pinned_events', [])
         for event in pinned_events:
             if (
-                (city is None or event['location'].lower() == city.lower()) and
-                (date is None or event['date'] == date) and
+                (city is None or event['location'].strip().lower() == city.strip().lower()) and
+                (date is None or event['date'].startswith(date)) and
                 (keywords is None or any(keyword.lower() in event.get('category', '').lower() for keyword in keywords))
             ):
-                return {"type": "event", "data": event}
+                matched_events.append(event)
 
-    # Check in pinned locations
+    return matched_events
+
+from typing import Optional, List, Dict, Any
+
+def get_pinned_data(city: str, date: str, keywords: Optional[List[str]] = None) -> Optional[str]:
+    """
+    Retrieves and processes pinned events or locations for a given city, date, and keywords.
+    Returns a string message compatible with `add_message`.
+    """
+    with open(PINNED_EVENTS_PATH, 'r', encoding='utf-8') as events_file:
+        pinned_events = json.load(events_file).get('pinned_events', [])
+        for event in pinned_events:
+            if (
+                (city is None or event['location'].strip().lower() == city.strip().lower()) and
+                (date is None or event['date'].startswith(date)) and
+                (keywords is None or any(keyword.lower() in event.get('category', '').lower() for keyword in keywords))
+            ):
+                # Found a matching pinned event
+                if all(key in event for key in ["pinned", "priority", "date"]):
+                    return (
+                        f"Found a pinned event: {event['name']} happening on "
+                        f"{event['date']} at {event['location']}. Description: {event.get('description', 'No description')}."
+                    )
+
     with open(PINNED_LOCATIONS_PATH, 'r', encoding='utf-8') as locations_file:
         pinned_locations = json.load(locations_file).get('pinned_locations', [])
         for location in pinned_locations:
-            if city is None or location['city'].lower() == city.lower():
-                return {"type": "location", "data": location}
+            if city is None or location['city'].strip().lower() == city.strip().lower():
+                # Found a matching pinned location
+                return (
+                    f"Found a pinned location: {location['name']} in {location['city']}. "
+                    f"Description: {location.get('description', 'No description')}."
+                )
 
+    # If no events or locations match, return None
     return None
