@@ -9,6 +9,7 @@ from app.history.chat_history import (
     add_message,
     create_new_chat
 )
+from app.answer import Answer
 
 class QueryRequest(BaseModel):
     user_input: str
@@ -74,18 +75,17 @@ def run_query(query: QueryRequest):
         city=city,
     )
     weather_info = query_weather(weather_query)
-     
-    if city and city.strip():  
-        unesco_sites = localdatasets.get_unesco_sites(city)
-        hotels_motels = localdatasets.get_hotels_motels(city)
-        historic_places = localdatasets.get_historical_places(city)
+
+    unesco_sites = localdatasets.get_unesco_sites(city)
+    hotels_motels = localdatasets.get_hotels_motels(city)
+    historic_places = localdatasets.get_historical_places(city)
     
     # TODO Implement ammenities keywords extraction in nlp
     amenity = keywords[0] if keywords else "cafe"  # Use first keyword as amenity type or default to "cafe"
     poi_results = overpass.get_poi_data(city, amenity)
     
     # Step 6: Return the compiled response
-    answer = {
+    answer: Answer = {
         "events": event_results,
         "weather": weather_info,
         "pois": poi_results,
@@ -95,10 +95,7 @@ def run_query(query: QueryRequest):
     }
 
     # Step 7: Post-process with LLM to get more human-like response
-    ans = lm_studio_request([
-        { "role": "system", "content": "You are application assistant. Based on given JSON tell what person can visit. Answer in human way like chat assistant talking to a person." },
-        { "role": "user", "content": str(answer) }
-    ])
+    ans = lm_studio_request(answer)
 
     add_message(
         InsertMessage(
