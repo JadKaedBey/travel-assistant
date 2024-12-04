@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from app.api import nlp, events, weather, overpass, localdatasets
 from app.api.opentripmap import OpenTripMapModel, query_opentripmap
+from app.api.weather import query_weather, WeatherQueryModel
 from app.api.lmstudio import lm_studio_request
 from app.history.chat_history import (
     UserOrChatbot, 
@@ -69,8 +70,11 @@ def run_query(query: QueryRequest):
     event_results.extend(events.query_ticketmaster(city, date, keywords))
 
     # Step 5: Fetch weather from OpenWeatherMap
-    weather_info = weather.query_weather(city, date)
-    
+    weather_query = WeatherQueryModel(
+        city=city,
+    )
+    weather_info = query_weather(weather_query)
+     
     if city and city.strip():  
         unesco_sites = localdatasets.get_unesco_sites(city)
         hotels_motels = localdatasets.get_hotels_motels(city)
