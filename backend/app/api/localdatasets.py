@@ -13,7 +13,7 @@ OUTPUT_MAX = 10
 def get_data(file_name: str, key: str, value: str, result_key: str) -> list[str]:
     file_path = f"{DATA_PATH}{file_name}.csv"
     data_list = []
-    with open(file_path, 'r') as csvfile:
+    with open(file_path, 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
         for row in reader:
             if key in row and row[key].lower() == value.lower():

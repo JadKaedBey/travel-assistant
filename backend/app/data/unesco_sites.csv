@@ -1,1225 +1,1225 @@
 Sno;Site Name;Country
-0;Galapagos Islands;Ecuador
- 1;Quito;Ecuador;
- 2;Aachen Cathedral;Germany;
- 3;L'Anse aux Meadows;Canada;
- 4;Ichkeul National Park;Tunisia;
- 5;Simien National Park;Ethiopia;
- 6;Lower Valley of the Awash;Ethiopia;
- 7;Tiya;Ethiopia;
- 8;Melka Kunture and Balchit;Ethiopia;
- 9;Aksum;Ethiopia;
-10;Lower Valley of the Omo;Ethiopia;
-11;Lalibela;Ethiopia;
-12;Fasil Ghebbi;Ethiopia;
-13;Damascus;Syria;
-14;Aleppo;Syria;
-15;Bosra;Syria;
-16;Palmyra;Syria;
-17;Nahanni National Park;Canada;
-18;Djoudj;Senegal;
-19;Island of Gor�e;Senegal;
-20;Mesa Verde;United States of America;
-21;Yellowstone;United States of America;
-22;Krak�w;Poland;
-23;Warsaw;Poland;
-24;Auschwitz Birkenau;Poland;
-25;Wieliczka and Bochnia Royal Salt Mines;Poland;
-26;Bia?owie?a Forest;Poland;
-27;Forts and Castles Gold Coast;Ghana;
-28;Asante Traditional Buildings;Ghana;
-29;Medina of Tunis;Tunisia;
-30;Carthage;Tunisia;
-31;Amphitheater of El Jem;Tunisia;
-32;Ngorongoro;Tanzania;
-33;Boyana Church;Bulgaria;
-34;Madara Rider;Bulgaria;
-35;Thracian tomb of Kazanlak;Bulgaria;
-36;Rock-hewn Churches of Ivanovo;Bulgaria;
-37;R�ros;Norway;
-38;Urnes Stave Church;Norway;
-39;Bryggen;Norway;
-40;Virunga National Park;Congo (Democratic Republic);
-41;Tikal National Park;Guatemala;
-42;Antigua Guatemala;Guatemala;
-43;Dinosaur Provincial Park;Canada;
-44;Glacier parks;Canada;
-45;Grand Canyon;United States of America;
-46;Everglades;United States of America;
-47;Independence Hall;United States of America;
-48;Paphos;Cyprus;
-49;Mont-Saint-Michel;France;
-50;Chartres Cathedral;France;
-51;Versailles;France;
-52;V�zelay;France;
-53;V�z�re Valley;France;
-54;Pyramids (Memphis);Egypt;
-55;Ancient Thebes;Egypt;
-56;Nubian Monuments;Egypt;
-57;Historic Cairo;Egypt;
-58;Abu Mena;Egypt;
-59;Rome;Holy See;
-60;Santa Maria delle Grazie;Italy;
-61;Rock Drawings in Valcamonica;Italy;
-62;Dubrovnik;Croatia;
-63;Stari Ras and Sopocani;Serbia;
-64;Split;Croatia;
-65;Plitvice Lakes;Croatia;
-66;Ohrid Region;North Macedonia;
-67;Durmitor National Park;Montenegro;
-68;Al Qal'a of Beni Hammad;Algeria;
-69;Bale Mountains National Park;Ethiopia;
-70;Tchogha Zanbil;Iran;
-71;Persepolis;Iran;
-72;Meidan Emam, Esfahan;Iran;
-73;Djenn�;Mali;
-74;Timbuktu;Mali;
-75;Sagarmatha National Park;Nepal;
-76;Kathmandu Valley;Nepal;
-77;Ouro Preto;Brazil;
-78;Kotor;Montenegro;
-79;Cop�n;Honduras;
-80;Hal Saflieni Hypogeum;Malta;
-81;Valletta;Malta;
-82;Megalithic Temples of Malta;Malta;
-83;Redwood;United States of America;
-84;Portobelo-San Lorenzo;Panama;
-85;Garamba National Park;Congo (Democratic Republic);
-86;Kahuzi-Biega National Park;Congo (Democratic Republic);
-87;Moenjodaro;Pakistan;
-88;Taxila;Pakistan;
-89;Takht-i-Bahi;Pakistan;
-90;Makli, Thatta;Pakistan;
-91;Ruins of Kilwa Kisiwani and Songo Mnara;Tanzania;
-92;Los Glaciares;Argentina;
-93;Kakadu National Park;Australia;
-94;Old City of Jerusalem;Israel;
-95;Quirigua;Guatemala;
-96;Mammoth Cave;United States of America;
-97;Olympic National Park;United States of America;
-98;Niokolo-Koba National Park;Senegal;
-99;Great Barrier Reef;Australia;
- 100;Mount Nimba;C�te d'Ivoire;
- 101;Serengeti;Tanzania;
- 102;SGang Gwaay;Canada;
- 103;Head-Smashed-In Buffalo Jump;Canada;
- 104;Darien National Park;Panama;
- 105;Fontainebleau;France;
- 106;Amiens Cathedral;France;
- 107;Orange;France;
- 108;Arles;France;
- 109;Cistercian Abbey of Fontenay;France;
- 110;Sydney Opera House;Australia;
- 111;Willandra Lakes;Australia;
- 112;Speyer Cathedral;Germany;
- 113;W�rzburg Residence;Germany;
- 114;Medina of Fez;Morocco;
- 115;Fort and Shalamar Gardens;Pakistan;
- 116;Stone Town of Zanzibar;Tanzania;
- 117;Florence;Italy;
- 118;Medici Villas and Gardens;Italy;
- 119;Tassili n'Ajjer;Algeria;
- 120;National History Park;Haiti;
- 121;Tasmanian Wilderness;Australia;
- 122;Leptis Magna;Libya;
- 123;Sabratha;Libya;
- 124;Aldabra Atoll;Seychelles;
- 125;Lord Howe Island;Australia;
- 126;Hildesheim Cathedral and Church;Germany;
- 127;M'Zab Valley;Algeria;
- 128;Olinda;Brazil;
- 129;Cyrene;Libya;
- 130;Dj�mila;Algeria;
- 131;Shibam;Yemen;
- 132;Tipasa;Algeria;
- 133;Timgad;Algeria;
- 134;Ta� National Park;C�te d'Ivoire;
- 135;Rio Platano Biosphere Reserve;Honduras;
- 136;Cahokia Mounds;United States of America;
- 137;Selous Game Reserve;Tanzania;
- 138;Anuradhapura;Sri Lanka;
- 139;Polonnaruva;Sri Lanka;
- 140;Sigiriya;Sri Lanka;
- 141;Royal Saltworks of Arc-et-Senans;France;
- 142;Old Havana;Cuba;
- 143;Talamanca Range-La Amistad Reserves;Costa Rica;
- 144;Angra do Heroismo;Portugal;
- 145;Bamiyan Valley;Afghanistan;
- 146;Minaret of Jam;Afghanistan;
- 147;Rila Monastery;Bulgaria;
- 148;Nessebar;Bulgaria;
- 149;Srebarna Nature Reserve;Bulgaria;
- 150;Pirin National Park;Bulgaria;
- 151;Como� National Park;C�te d'Ivoire;
- 152;Avignon;France;
- 153;Nancy;France;
- 154;Saint-Savin sur Gartempe;France;
- 155;Red Fort;India;
- 156;Humayun's Tomb;India;
- 157;Qutb Minar;India;
- 158;Churches and Convents of Goa;India;
- 159;Pattadakal;India;
- 160;Khajuraho Group of Monuments;India;
- 161;Hampi;India;
- 162;Ajanta Caves;India;
- 163;Ellora Caves;India;
- 164;Elephanta Caves;India;
- 165;Sun Temple, Konarak;India;
- 166;Hill Forts of Rajasthan;India;
- 167;Mahabalipuram;India;
- 168;Chola Temples;India;
- 169;Agra Fort;India;
- 170;Taj Mahal;India;
- 171;Fatehpur Sikri;India;
- 172;Wood Buffalo National Park;Canada;
- 173;Gulf of Porto;France;
- 174;Great Smoky Mountains;United States of America;
- 175;Sangay National Park;Ecuador;
- 176;Vall�e de Mai;Seychelles;
- 177;Sanganeb;Sudan;
- 178;Belem;Portugal;
- 179;Monastery of Batalha;Portugal;
- 180;Convent of Christ in Tomar;Portugal;
- 181;La Fortaleza and San Juan;United States of America;
- 182;Old City of Berne;Switzerland;
- 183;Abbey of St Gall;Switzerland;
- 184;Benedictine Convent of St. John;Switzerland;
- 185;Pilgrimage Church of Wies;Germany;
- 186;L�beck;Germany;
- 187;Cuzco;Peru;
- 188;Machu Picchu;Peru;
- 189;Jesuit Missions of the Guaranis;Brazil;
- 190;Samarra;Iraq;
- 191;Hatra;Iraq;
- 192;Babylon;Iraq;
- 193;Salonga National Park;Congo (Democratic Republic);
- 194;Chitwan National Park;Nepal;
- 195;Cartagena;Colombia;
- 196;Vatican City;Holy See;
- 197;Tadrart Acacus;Libya;
- 198;Castles of Augustusburg and Falkenlust;Germany;
- 199;Lake Malawi;Malawi;
- 200;Cologne Cathedral;Germany;
- 201;Anjar;Lebanon;
- 202;Baalbek;Lebanon;
- 203;Byblos;Lebanon;
- 204;Tyre;Lebanon;
- 205;Qu�bec;Canada;
- 206;Mana Pools;Zimbabwe;
- 207;Iguazu National Park;Argentina;
- 208;Canadian Rocky Mountain Parks;Canada;
- 209;Matobo Hills;Zimbabwe;
- 210;Statue of Liberty;United States of America;
- 211;Yosemite National Park;United States of America;
- 212;Salvador de Bahia;Brazil;
- 213;Altamira Cave;Spain;
- 214;Segovia;Spain;
- 215;Asturian Monuments;Spain;
- 216;Cordoba;Spain;
- 217;Granada;Spain;
- 218;Burgos Cathedral;Spain;
- 219;El Escurial;Spain;
- 220;Works of Antoni Gaud�;Spain;
- 221;Bagerhat;Bangladesh;
- 222;Buddhist Vihara at Paharpur;Bangladesh;
- 223;Royal Palaces of Abomey;Benin;
- 224;Petra;Jordan;
- 225;Quseir Amra;Jordan;
- 226;Chavin;Peru;
- 227;Medina of Marrakesh;Morocco;
- 228;Kerkuane;Tunisia;
- 229;Huascaran National Park;Peru;
- 230;Congonhas;Brazil;
- 231;Nanda Devi and Valley of Flowers;India;
- 232;Kaziranga National Park;India;
- 233;Manas Wildlife Sanctuary;India;
- 234;Keoladeo National Park;India;
- 235;Pont du Gard;France;
- 236;Fortified City of Carcassonne;France;
- 237;Santiago de Compostela;Spain;
- 238;Avila;Spain;
- 239;Painted Churches in the Tro�dos Region;Cyprus;
- 240;Rock Art of Alta;Norway;
- 241;Chaco Culture;United States of America;
- 242;Waterton Glacier International Peace Park;Canada;
- 243;Iguacu;Brazil;
- 244;Istanbul;Turkiye;
- 245;G�reme NP;Turkiye;
- 246;Divrigi;Turkiye;
- 247;Thracian tomb of Sveshtari;Bulgaria;
- 248;Evora;Portugal;
- 249;Ghadames;Libya;
- 250;Great Zimbabwe;Zimbabwe;
- 251;Khami Ruins;Zimbabwe;
- 252;Chan Chan;Peru;
- 253;Trier;Germany;
- 254;Gondwana Rainforests;Australia;
- 255;Giant's Causeway;United Kingdom;
- 256;Durham Castle and Cathedral;United Kingdom;
- 257;Ironbridge Gorge;United Kingdom;
- 258;Studley Royal Park;United Kingdom;
- 259;Stonehenge;United Kingdom;
- 260;Gwynedd Castles;United Kingdom;
- 261;Hattusha;Turkiye;
- 262;Mudejar Architecture of Aragon;Spain;
- 263;Toledo;Spain;
- 264;Garajonay;Spain;
- 265;Salamanca;Spain;
- 266;Seville;Spain;
- 267;Caceres;Spain;
- 268;Sana'a;Yemen;
- 269;St. Kilda;United Kingdom;
- 270;Studenica Monastery;Serbia;
- 271;Skocjan Caves;Slovenia;
- 272;Temple of Apollo Epicurius at Bassae;Greece;
- 273;Archaeological Site of Delphi;Greece;
- 274;Venice and its Lagoon;Italy;
- 275;Piazza del Duomo (Pisa);Italy;
- 276;Castel del Monte;Italy;
- 277;Budapest;Hungary;
- 278;Holl�k�;Hungary;
- 279;Manu National Park;Peru;
- 280;Kilimanjaro National Park;Tanzania;
- 281;Acropolis;Greece;
- 282;Sinharaja Forest;Sri Lanka;
- 283;Dja Faunal Reserve;Cameroon;
- 284;Hawaii Volcanoes;United States of America;
- 285;Sian Ka'an;Mexico;
- 286;Palenque;Mexico;
- 287;Mexico City and Xochimilco;Mexico;
- 288;Teotihuacan;Mexico;
- 289;Oaxaca and Monte Alban;Mexico;
- 290;Puebla;Mexico;
- 291;Ibiza;Spain;
- 292;Gros Morne National Park;Canada;
- 293;Potosi;Bolivia;
- 294;Tongariro National Park;New Zealand;
- 295;Lake District;United Kingdom;
- 296;Blenheim Palace;United Kingdom;
- 297;Westminster;United Kingdom;
- 298;City of Bath;United Kingdom;
- 299;New Lanark;United Kingdom;
- 300;Frontiers of the Roman Empire;United Kingdom;
- 301;Bahla Fort;Oman;
- 302;Bat, Al-Khutm and Al-Ayn;Oman;
- 303;Mount Taishan;China;
- 304;Great Wall;China;
- 305;Imperial Palace;China;
- 306;Mogao Caves;China;
- 307;Mausoleum of the First Qin Emperor;China;
- 308;Monticello;United States of America;
- 309;Ksar of A�t Ben Haddou;Morocco;
- 310;Brasilia;Brazil;
- 311;Uluru;Australia;
- 312;Nemrut Dag;Turkiye;
- 313;Peking Man Site;China;
- 314;Kandy;Sri Lanka;
- 315;Old Town of Galle;Sri Lanka;
- 316;Sundarbans National Park;India;
- 317;Mount Athos;Greece;
- 318;Meteora;Greece;
- 319;Thessalonika;Greece;
- 320;Trinidad and the Valley de los Ingenios;Cuba;
- 321;Hortob�gy;Hungary;
- 322;Manovo-Gounda St. Floris;Central African Republic;
- 323;Chongoni Rock Art;Malawi;
- 324;Luang Prabang;Laos;
- 325;Vat Phou;Laos;
- 326;Guanajuato;Mexico;
- 327;Chichen-Itza;Mexico;
- 328;Xanthos-Letoon;Turkiye;
- 329;Hierapolis-Pamukkale;Turkiye;
- 330;Wet Tropics of Queensland;Australia;
- 331;Henderson Island;United Kingdom;
- 332;Tower of London;United Kingdom;
- 333;Epidaurus;Greece;
- 334;Taos Pueblo;United States of America;
- 335;Rhodes;Greece;
- 336;Andrefana Dry Forests;Madagascar;
- 337;Strasbourg;France;
- 338;Canterbury;United Kingdom;
- 339;Medina of Sousse;Tunisia;
- 340;Kairouan;Tunisia;
- 341;Lima;Peru;
- 342;Vigan;Philippines;
- 343;Monastery of Alcoba�a;Portugal;
- 344;Banc d'Arguin;Mauritania;
- 345;Victoria Falls;Zambia;
- 346;Mystras;Greece;
- 347;Neolithic Orkney;United Kingdom;
- 348;Abbey and Altenm�nster of Lorsch;Germany;
- 349;Cliff of Bandiagara;Mali;
- 350;Olympia;Greece;
- 351;Poblet Monastery;Spain;
- 352;�beda and Baeza;Spain;
- 353;Sanchi;India;
- 354;Santo Domingo;Dominican Republic;
- 355;Kyiv Cathedral and Lavra;Ukraine;
- 356;Jesuit Missions of the Chiquitos;Bolivia;
- 357;Delos;Greece;
- 358;Potsdam;Germany;
- 359;Garden Kingdom of Dessau-W�rlitz;Germany;
- 360;Quedlinburg;Germany;
- 361;Daphni, Hosios Loukas and Nea Moni of Chios;Greece;
- 362;St. Petersburg;Russia;
- 363;Vilnius;Lithuania;
- 364;Itchan Kala;Uzbekistan;
- 365;Kizhi Pogost;Russia;
- 366;Kremlin and Red Square;Russia;
- 367;Maulbronn Monastery;Germany;
- 368;Huangshan;China;
- 369;Rio Abiseo National Park;Peru;
- 370;Royal Palace at Caserta;Italy;
- 371;San Gimignano;Italy;
- 372;Te Wahipounamu;New Zealand;
- 373;Whale Sanctuary of El Vizcaino;Mexico;
- 374;Birka and Hovgarden;Sweden;
- 375;Engelsberg Ironworks;Sweden;
- 376;Rock Carvings in Tanum;Sweden;
- 377;Skogskyrkogarden;Sweden;
- 378;Drottningholm;Sweden;
- 379;Paquim�;Mexico;
- 380;Rangiri Dambulla Cave Temple;Sri Lanka;
- 381;Zamo??;Poland;
- 382;Kasbah of Algiers;Algeria;
- 383;Sucre;Bolivia;
- 384;Tiwanaku;Bolivia;
- 385;Berat and Gjirokastra;Albania;
- 386;Butrint;Albania;
- 387;Air and T�ner�;Niger;
- 388;Sukhothai;Thailand;
- 389;Ban Chiang;Thailand;
- 390;Ayutthaya;Thailand;
- 391;Heard and McDonald Islands;Australia;
- 392;Shark Bay;Australia;
- 393;Sammallahdenm�ki;Finland;
- 394;Old Rauma;Finland;
- 395;Fortress of Suomenlinna;Finland;
- 396;Pet�j�vesi Old Church;Finland;
- 397;Morelia;Mexico;
- 398;Rohtas Fort;Pakistan;
- 399;Danube Delta;Romania;
- 400;Dong Phayayen;Thailand;
- 401;Thungyai-Huai Kha Khaeng;Thailand;
- 402;Borobudur;Indonesia;
- 403;Sangiran Early Man Site;Indonesia;
- 404;Pythagoreion and Heraion of Samos;Greece;
- 405;Villages with Fortified Churches;Romania;
- 406;Monastery of Horezu;Romania;
- 407;Churches of Moldavia;Romania;
- 408;Island of Mozambique;Mozambique;
- 409;Paris, Banks of the Seine;France;
- 410;Reims;France;
- 411;Bukhara;Uzbekistan;
- 412;Samarkand;Uzbekistan;
- 413;Novgorod;Russia;
- 414;Serra da Capivara;Brazil;
- 415;Ujung Kulon National Park;Indonesia;
- 416;Komodo National Park;Indonesia;
- 417;Zabid;Yemen;
- 418;Ruins of Le�n Viejo;Nicaragua;
- 419;Safranbolu;Turkiye;
- 420;Prague;Czechia;
- 421;Cesky Krumlov;Czechia;
- 422;Banska Stiavnica;Slovakia;
- 423;Spissky Hrad and Levoca;Slovakia;
- 424;Telc;Czechia;
- 425;Vlkolinec;Slovakia;
- 426;Rammelsberg and Goslar;Germany;
- 427;Bamberg;Germany;
- 428;Mir Castle;Belarus;
- 429;Macquarie Island;Australia;
- 430;Fraser Island;Australia;
- 431;El Tajin;Mexico;
- 432;Solovetsky Islands;Russia;
- 433;White Monuments of Vladimir and Suzdal;Russia;
- 434;Church of the Ascension, Kolomenskoye;Russia;
- 435;Bourges Cathedral;France;
- 436;Jiuzhaigou Valley;China;
- 437;Huanglong;China;
- 438;Wulingyuan;China;
- 439;Prambanan;Indonesia;
- 440;Jesuit Missions of Trinidad and Jesus;Paraguay;
- 441;Puerto-Princesa Subterranean River;Philippines;
- 442;Tubbataha Reefs;Philippines;
- 443;Trinity Sergius Lavra;Russia;
- 444;Coro and its Port;Venezuela;
- 445;Br� na B�inne;Ireland;
- 446;Horyu-ji Area;Japan;
- 447;Himeji-jo;Japan;
- 448;Yakushima;Japan;
- 449;Shirakami-Sanchi;Japan;
- 450;M�rida;Spain;
- 451;Santa Maria de Guadalupe;Spain;
- 452;Lumbini;Nepal;
- 453;Angkor;Cambodia;
- 454;Route of Santiago de Compostela;Spain;
- 455;Matera;Italy;
- 456;Ha Long Bay � Cat Ba Archipelago;Viet Nam;
- 457;Joya de Ceren;El Salvador;
- 458;Zacatecas;Mexico;
- 459;Baroque Churches;Philippines;
- 460;Hu�;Viet Nam;
- 461;Bwindi Impenetrable National Park;Uganda;
- 462;Rwenzori Mountains;Uganda;
- 463;Donana National Park;Spain;
- 464;Miguasha National Park;Canada;
- 465;V�lklingen Ironworks;Germany;
- 466;Ancient Kyoto;Japan;
- 467;As-Salt;Jordan;
- 468;Pilgrimage Church of St. John of Nepomuk;Czechia;
- 469;Odzala-Kokoua;Congo (Republic);
- 470;Roskilde Cathedral;Denmark;
- 471;Kronborg Castle;Denmark;
- 472;Jelling;Denmark;
- 473;Australian Fossil Mammal Sites;Australia;
- 474;City of Luxembourg;Luxembourg;
- 475;Nasca Lines;Peru;
- 476;Canaima National Park;Venezuela;
- 477;Popocatepetl monasteries;Mexico;
- 478;Mountain Resort, Chengde;China;
- 479;Temple, Mansion and Cemetery of Confucius;China;
- 480;Wudang Mountains;China;
- 481;Potala Palace;China;
- 482;Mtskheta;Georgia;
- 483;Upper Svaneti;Georgia;
- 484;Gelati Monastery;Georgia;
- 485;Los Katios National Park;Colombia;
- 486;Vicenza and the Palladian Villas;Italy;
- 487;Rock Paintings of the Sierra de San Francisco;Mexico;
- 488;Rapa Nui;Chile;
- 489;Siena;Italy;
- 490;Okapi Wildlife Reserve;Congo (Democratic Republic);
- 491;Virgin Komi Forests;Russia;
- 492;Messel Pit;Germany;
- 493;Carlsbad Caverns;United States of America;
- 494;Rice Terraces of the Philippine Cordilleras;Philippines;
- 495;Sintra;Portugal;
- 496;Medieval Monuments in Kosovo;Serbia;
- 497;Aggtelek and Slovak Karst;Hungary;
- 498;Naples;Italy;
- 499;Edinburgh;United Kingdom;
- 500;Bauhaus Sites;Germany;
- 501;Crespi d'Adda;Italy;
- 502;Visby;Sweden;
- 503;Kutna Hora;Czechia;
- 504;Ferrara;Italy;
- 505;Shirakawa-go and Gokayama;Japan;
- 506;Seokguram Grotto and Bulguksa Temple;Republic of Korea;
- 507;Haeinsa Temple;Republic of Korea;
- 508;Jongmyo Shrine;Republic of Korea;
- 509;Schokland;Netherlands;
- 510;Gough and Inaccessible Islands;United Kingdom;
- 511;Old Town Lunenburg;Canada;
- 512;Santa Cruz de Mompox;Colombia;
- 513;Tierradentro;Colombia;
- 514;San Agust�n;Colombia;
- 515;Colonia del Sacramento;Uruguay;
- 516;W-Arly-Pendjari Complex;Niger;
- 517;Ancient ksours;Mauritania;
- 518;Verla Groundwood and Board Mill;Finland;
- 519;Medina of Essaouira;Morocco;
- 520;Lake Baikal;Russia;
- 521;Oporto;Portugal;
- 522;Sceilg Mhich�l;Ireland;
- 523;Pannonhalma;Hungary;
- 524;Dutch Water Defence Lines;Netherlands;
- 525;Kunta Kinteh Island;Gambia;
- 526;Gammelstad;Sweden;
- 527;Lednice-Valtice Cultural Landscape;Czechia;
- 528;Belize Barrier Reef;Belize;
- 529;Volcanoes of Kamchatka;Russia;
- 530;Central Sikhote-Alin;Russia;
- 531;Golden Mountains of Altai;Russia;
- 532;Uvs Nuur Basin;Russia;
- 533;Canal du Midi;France;
- 534;Fert�/Neusiedlersee;Austria;
- 535;Pyr�n�es - Mont Perdu;Spain;
- 536;Laponian Area;Sweden;
- 537;Genbaku Dome;Japan;
- 538;Itsukushima Shrine;Japan;
- 539;Haghpat and Sanahin;Armenia;
- 540;Lushan National Park;China;
- 541;Mount Emei, including Leshan Giant Buddha;China;
- 542;Archaeological Site of Aigai;Greece;
- 543;Cuenca;Spain;
- 544;La Lonja de la Seda;Spain;
- 545;Luther Memorials;Germany;
- 546;Salzburg;Austria;
- 547;Semmering Railway;Austria;
- 548;Sch�nbrunn;Austria;
- 549;The trulli of Alberobello;Italy;
- 550;Ravenna;Italy;
- 551;Pienza;Italy;
- 552;Panam�;Panama;
- 553;Uxmal;Mexico;
- 554;Quer�taro;Mexico;
- 555;Meknes;Morocco;
- 556;Dougga/Thugga;Tunisia;
- 557;Maritime Greenwich;United Kingdom;
- 558;Verona;Italy;
- 559;The Sundarbans;Bangladesh;
- 560;Mount Kenya;Kenya;
- 561;Lake Turkana;Kenya;
- 562;Las Medulas;Spain;
- 563;Palau de la Musica Catalana & Hospital de Sant Pau;Spain;
- 564;Yuso and Suso Monasteries;Spain;
- 565;Hallstatt-Dachstein;Austria;
- 566;Euphrasian Basilica in Porec;Croatia;
- 567;Trogir;Croatia;
- 568;Old Town of Lijiang;China;
- 569;Ping Yao;China;
- 570;Classical Gardens of Suzhou;China;
- 571;Morne Trois Pitons;Dominica;
- 572;Hospicio Caba�as;Mexico;
- 573;Changdeokgung Palace Complex;Republic of Korea;
- 574;Hwaseong Fortress;Republic of Korea;
- 575;Kinderdijk;Netherlands;
- 576;Willemstad;Netherlands;
- 577;Cocos Island;Costa Rica;
- 578;S�o Luis;Brazil;
- 579;Tallinn;Estonia;
- 580;Residences of the Royal House of Savoy;Italy;
- 581;Botanical Garden, Padua;Italy;
- 582;Aquileia;Italy;
- 583;Portovenere, Cinque Terre, and the Islands;Italy;
- 584;Modena;Italy;
- 585;Urbino;Italy;
- 586;Pompei;Italy;
- 587;Costiera Amalfitana;Italy;
- 588;Agrigento;Italy;
- 589;Villa Romana del Casale;Italy;
- 590;Su Nuraxi di Barumini;Italy;
- 591;Torun;Poland;
- 592;Volubilis;Morocco;
- 593;Medina of T�touan;Morocco;
- 594;Alejandro de Humboldt National Park;Cuba;
- 595;Vi�ales Valley;Cuba;
- 596;San Pedro de la Roca Castle;Cuba;
- 597;Cilento and Vallo di Diano;Italy;
- 598;Classical Weimar;Germany;
- 599;Malbork Castle;Poland;
- 600;Choirokoitia;Cyprus;
- 601;Troy;Turkiye;
- 602;Qadisha Valley;Lebanon;
- 603;Riga;Latvia;
- 604;Early Christian Necropolis of P�cs;Hungary;
- 605;East Rennell;Solomon Islands;
- 606;Flemish B�guinages;Belgium;
- 607;The Four Lifts;Belgium;
- 608;Grand Place, Brussels;Belgium;
- 609;Holy Trinity Column;Czechia;
- 610;Gardens and Castle at Kromer�z;Czechia;
- 611;Holasovice;Czechia;
- 612;Tlacotalpan;Mexico;
- 613;Santa Ana de los Rios de Cuenca;Ecuador;
- 614;L'viv;Ukraine;
- 615;Coa Valley and Siega Verde;Portugal;
- 616;Ir. D.F. Woudagemaal;Netherlands;
- 617;Routes of Santiago de Compostela in France;France;
- 618;Ancient Nara;Japan;
- 619;Karlskrona;Sweden;
- 620;Lyon;France;
- 621;Provins;France;
- 622;Rock Art of the Mediterranean Basin;Spain;
- 623;Tarraco;Spain;
- 624;Alcala de Henares;Spain;
- 625;Sub-Antarctic Islands;New Zealand;
- 626;Summer Palace;China;
- 627;Temple of Heaven;China;
- 628;El Fuerte de Samaipata;Bolivia;
- 629;Bellinzone;Switzerland;
- 630;Shakhrisyabz;Uzbekistan;
- 631;Ancient Merv;Turkmenistan;
- 632;Kuk;Papua New Guinea;
- 633;Desembarco del Granma National Park;Cuba;
- 634;Diamantina;Brazil;
- 635;Discovery Coast;Brazil;
- 636;Atlantic Forest South-East;Brazil;
- 637;Campeche;Mexico;
- 638;Museumsinsel (Museum Island);Germany;
- 639;Wartburg Castle;Germany;
- 640;High Coast / Kvarken Archipelago;Finland;
- 641;Beemster Polder;Netherlands;
- 642;Western Caucasus;Russia;
- 643;Litomysl Castle;Czechia;
- 644;Sighisoara;Romania;
- 645;Wooden Churches of Maramures;Romania;
- 646;Kalwaria Zebrzydowska;Poland;
- 647;Dacian Fortresses;Romania;
- 648;Villa Adriana (Tivoli);Italy;
- 649;Isole Eolie;Italy;
- 650;Brimstone Hill Fortress;Saint Kitts and Nevis;
- 651;Mount Wuyi;China;
- 652;Dazu Rock Carvings;China;
- 653;Nikko;Japan;
- 654;iSimangaliso Wetland Park;South Africa;
- 655;Fossil Hominid Sites;South Africa;
- 656;Robben Island;South Africa;
- 657;Greater Blue Mountains;Australia;
- 658;Rani-ki-Vav;India;
- 659;Rock Shelters of Bhimbetka;India;
- 660;Guanacaste;Costa Rica;
- 661;San Cristobal de La Laguna;Spain;
- 662;Palmeral of Elche;Spain;
- 663;Graz;Austria;
- 664;Saint-Emilion;France;
- 665;Loire Valley;France;
- 666;Laurisilva of Madeira;Portugal;
- 667;Cueva de las Manos;Argentina;
- 668;Peninsula Valdes;Argentina;
- 669;Sukur;Nigeria;
- 670;Xochicalco;Mexico;
- 671;Paramaribo;Suriname;
- 672;Mycenae and Tiryns;Greece;
- 673;Island of Patmos;Greece;
- 674;Belfries;Belgium;
- 675;Mountain Railways of India;India;
- 676;Chhatrapati Shivaji Terminus;India;
- 677;Mostar;Bosnia Herzegovina;
- 678;Hoi An;Viet Nam;
- 679;My Son;Viet Nam;
- 680;Ambohimanga;Madagascar;
- 681;Phong Nha - Ke Bang;Viet Nam;
- 682;Saint Catherine Area;Egypt;
- 683;Lorentz National Park;Indonesia;
- 684;Island of Saint-Louis;Senegal;
- 685;Walled City of Baku;Azerbaijan;
- 686;Valparaiso;Chile;
- 687;Monastery of Geghard;Armenia;
- 688;Cathedral of St. James in Sibenik;Croatia;
- 689;Rietveld Schr�derhuis;Netherlands;
- 690;Ischigualasto / Talampaya;Argentina;
- 691;Noel Kempff Mercado National Park;Bolivia;
- 692;Southern �land;Sweden;
- 693;Wachau Cultural Landscape;Austria;
- 694;Churches of Chilo�;Chile;
- 695;Gusuku of Ryukyu;Japan;
- 696;Bardejov Town;Slovakia;
- 697;Reichenau;Germany;
- 698;Zollverein;Germany;
- 699;Gyeongju;Republic of Korea;
- 700;Gochang, Hwasun, and Ganghwa Dolmen;Republic of Korea;
- 701;Corfu;Greece;
- 702;Kazan Kremlin;Russia;
- 703;Bolgar;Russia;
- 704;Ferapontov Monastery;Russia;
- 705;St. George, Bermuda;United Kingdom;
- 706;Blaenavon Industrial Landscape;United Kingdom;
- 707;Maloti-Drakensberg Park;Lesotho;
- 708;Ciudad Universitaria de Caracas;Venezuela;
- 709;Roman Walls of Lugo;Spain;
- 710;Vall de Boi;Spain;
- 711;Atapuerca;Spain;
- 712;Assisi;Italy;
- 713;Goias;Brazil;
- 714;Curonian Spit;Russia;
- 715;Jesuit Block and Estancias of C�rdoba;Argentina;
- 716;Brugge;Belgium;
- 717;Central Amazon Conservation Complex;Brazil;
- 718;Pantanal;Brazil;
- 719;Brazilian Atlantic Islands;Brazil;
- 720;Mount Qingcheng and Dujiangyan;China;
- 721;Xidi and Hongcun;China;
- 722;Longmen Grottoes;China;
- 723;Imperial Tombs;China;
- 724;Major Town Houses;Belgium;
- 725;Neolithic Flint Mines at Spiennes;Belgium;
- 726;Cape Floral Region;South Africa;
- 727;First Coffee Plantations;Cuba;
- 728;Notre-Dame Cathedral in Tournai;Belgium;
- 729;Land of Frankincense;Oman;
- 730;Echmiatsin and Zvartnots;Armenia;
- 731;Kinabalu Park;Malaysia;
- 732;Gunung Mulu;Malaysia;
- 733;Niah Caves;Malaysia;
- 734;Arequipa;Peru;
- 735;Central Suriname Nature Reserve;Suriname;
- 736;Ephesus;Turkiye;
- 737;Tsodilo;Botswana;
- 738;Tombs of Buganda Kings;Uganda;
- 739;Wrangel Island;Russia;
- 740;Val di Noto;Italy;
- 741;Villa d'Este;Italy;
- 742;Val d'Orcia;Italy;
- 743;Falun Great Copper Mountain;Sweden;
- 744;Saltaire;United Kingdom;
- 745;Dorset and East Devon Coast;United Kingdom;
- 746;Derwent Valley Mills;United Kingdom;
- 747;Guimar�es;Portugal;
- 748;Vienna;Austria;
- 749;Cerrado Protected Areas;Brazil;
- 750;Swiss Alps Jungfrau-Aletsch;Switzerland;
- 751;Yungang Grottoes;China;
- 752;Masada;Israel;
- 753;Old City of Acre;Israel;
- 754;Aranjuez;Spain;
- 755;Alto Douro;Portugal;
- 756;Tugendhat Villa;Czechia;
- 757;Wooden Churches of Southern Malopolska;Poland;
- 758;Churches of Peace;Poland;
- 759;Lamu Old Town;Kenya;
- 760;Mahabodhi Temple Complex;India;
- 761;Mazagan;Morocco;
- 762;Kenya Lake System;Kenya;
- 763;Calakmul;Mexico;
- 764;Tokaji Wine Region;Hungary;
- 765;Upper Middle Rhine Valley;Germany;
- 766;Stralsund and Wismar;Germany;
- 767;Sacri Monti of Piedmont and Lombardy;Italy;
- 768;Derbent;Russia;
- 769;Gebel Barkal;Sudan;
- 770;Gobustan Rock Art;Azerbaijan;
- 771;Takht-e Soleyman;Iran;
- 772;Trebic;Czechia;
- 773;Franciscan Missions in the Sierra Gorda;Mexico;
- 774;Orkhon Valley;Mongolia;
- 775;Three parallel rivers of Yunnan;China;
- 776;Kew Gardens;United Kingdom;
- 777;Town Hall and Roland, Bremen;Germany;
- 778;Monte San Giorgio;Italy;
- 779;Koguryo Tombs;Korea (DPR);
- 780;Um er-Rasas;Jordan;
- 781;Purnululu National Park;Australia;
- 782;White City of Tel-Aviv;Israel;
- 783;Novodevichy Convent;Russia;
- 784;Mapungubwe;South Africa;
- 785;Rio de Janeiro;Brazil;
- 786;Champaner-Pavagadh;India;
- 787;Saryarka;Kazakhstan;
- 788;Mausoleum of Khoja Ahmed Yasawi;Kazakhstan;
- 789;Pasargadae;Iran;
- 790;Incense Route of the Negev;Israel;
- 791;Biblical Tells;Israel;
- 792;Macao;China;
- 793;Hani Rice Terraces;China;
- 794;Kaiping Diaolou;China;
- 795;Fujian Tulou;China;
- 796;Yin Xu;China;
- 797;Lagoons of New Caledonia;France;
- 798;Quebrada de Humahuaca;Argentina;
- 799;Pico Island;Portugal;
- 800;Osun-Osogbo;Nigeria;
- 801;Coffee Cultural Landscape;Colombia;
- 802;Muskauer Park;Germany;
- 803;Ashur;Iraq;
- 804;Royal Exhibition Building;Australia;
- 805;Primeval Beech Forests;Slovakia;
- 806;Grimeton Radio Station;Sweden;
- 807;Koguryo Kingdom;China;
- 808;Luis Barrag�n House and Studio;Mexico;
- 809;Kernav?;Lithuania;
- 810;Coiba National Park;Panama;
- 811;Tomb of Askia;Mali;
- 812;Koutammakou;Togo;
- 813;Sarazm;Tajikistan;
- 814;Kii Mountain Range;Japan;
- 815;Vega�yan;Norway;
- 816;Tanbaly;Kazakhstan;
- 817;Lop�-Okanda;Gabon;
- 818;Ilulissat Icefjord;Denmark;
- 819;Thingvellir;Iceland;
- 820;Causses and C�vennes;France;
- 821;Regensburg;Germany;
- 822;Etruscan Necropolises;Italy;
- 823;Madriu-Perafita-Claror Valley;Andorra;
- 824;Pitons Management Area;Saint Lucia;
- 825;Vredefort Dome;South Africa;
- 826;Centennial Hall;Poland;
- 827;Tropical Rainforest Sumatra;Indonesia;
- 828;Yaroslavl;Russia;
- 829;Chiribiquete National Park;Colombia;
- 830;Humberstone and Santa Laura Saltpeter Works;Chile;
- 831;Swiss Tectonic Arena Sardona;Switzerland;
- 832;Le Havre;France;
- 833;Gulf of California;Mexico;
- 834;Kondoa;Tanzania;
- 835;Plantin-Moretus Museum;Belgium;
- 836;Wadi Al-Hitan;Egypt;
- 837;Struve Geodetic Arc;Norway;
- 838;Soltaniyeh;Iran;
- 839;Harar Jugol;Ethiopia;
- 840;Qal'at al-Bahrain;Bahrain;
- 841;Shiretoko;Japan;
- 842;Bali Subak system;Indonesia;
- 843;West Norwegian Fjords;Norway;
- 844;Nesvizh;Belarus;
- 845;Kunya-Urgench;Turkmenistan;
- 846;Syracuse;Italy;
- 847;Cienfuegos;Cuba;
- 848;Central Highlands;Sri Lanka;
- 849;Aflaj irrigation system;Oman;
- 850;Bam Cultural Landscape;Iran;
- 851;Tequila;Mexico;
- 852;Genoa;Italy;
- 853;Sichuan Giant Panda Sanctuaries;China;
- 854;Sewell Mining Town;Chile;
- 855;Cornwall and West Devon Mining Landscape;United Kingdom;
- 856;Malpelo;Colombia;
- 857;Vizcaya Bridge;Spain;
- 858;Bah�i Holy Places;Israel;
- 859;Rideau Canal;Canada;
- 860;Bisotun;Iran;
- 861;Melaka and George Town;Malaysia;
- 862;Preah Vihear Temple;Cambodia;
- 863;Ruins of Lorop�ni;Burkina Faso;
- 864;Stone Circles of Senegambia;Gambia;
- 865;Aapravasi Ghat;Mauritius;
- 866;Crac des Chevaliers;Syria;
- 867;Sulaiman-Too;Kyrgyzstan;
- 868;Mijikenda Kaya Forests;Kenya;
- 869;Putorana Plateau;Russia;
- 870;Le�n Cathedral;Nicaragua;
- 871;Dolomites;Italy;
- 872;Berlin Modernism Housing Estates;Germany;
- 873;Stari Grad Plain;Croatia;
- 874;Nisa;Turkmenistan;
- 875;Lavaux, Vineyard Terraces;Switzerland;
- 876;San Marino and Mount Titano;San Marino;
- 877;Iwami Ginzan Silver Mine;Japan;
- 878;South China Karst;China;
- 879;Central University City Campus of the UNAM;Mexico;
- 880;Tajik National Park;Tajikistan;
- 881;Gamzigrad-Romuliana;Serbia;
- 882;Twyfelfontein;Namibia;
- 883;Bordeaux;France;
- 884;Rainforests of the Atsinanana;Madagascar;
- 885;Teide National Park;Spain;
- 886;Le Morne;Mauritius;
- 887;Mehmed Pa�a Sokolovi? Bridge;Bosnia Herzegovina;
- 888;Armenian Monastic Ensembles;Iran;
- 889;Socotra Archipelago;Yemen;
- 890;Jeju;Republic of Korea;
- 891;Richtersveld;South Africa;
- 892;Surtsey;Iceland;
- 893;Agadez;Niger;
- 894;Caral-Supe;Peru;
- 895;Camag�ey;Cuba;
- 896;S�o Francisco Square;Brazil;
- 897;Wooden Churches of the Slovak Carpathians;Slovakia;
- 898;San Miguel de Allende;Mexico;
- 899;Rhaetian Railway;Switzerland;
- 900;Hiraizumi;Japan;
- 901;Kaesong;Korea (DPR);
- 902;Mount Wutai;China;
- 903;Chief Roi Mata's Domain;Vanuatu;
- 904;Decorated Farmhouses of H�lsingland;Sweden;
- 905;Fortifications of Vauban;France;
- 906;Joggins Fossil Cliffs;Canada;
- 907;Mantua and Sabbioneta;Italy;
- 908;Monarch Butterfly Biosphere Reserve;Mexico;
- 909;Mount Sanqingshan;China;
- 910;Hegra;Saudi Arabia;
- 911;Fort Jesus;Kenya;
- 912;Stoclet House;Belgium;
- 913;Lena Pillars;Russia;
- 914;La Chaux-de-Fonds / Le Locle;Switzerland;
- 915;Pontcysyllte Aqueduct and Canal;United Kingdom;
- 916;Dengfeng;China;
- 917;Australian Convict Sites;Australia;
- 918;Paraty and Ilha Grande;Brazil;
- 919;Cidade Velha;Cabo Verde;
- 920;Tower of Hercules;Spain;
- 921;Heritage of Mercury;Spain;
- 922;Wadden Sea;Netherlands;
- 923;Shushtar;Iran;
- 924;Pitons of Reunion;France;
- 925;Longobards in Italy;Italy;
- 926;Royal Joseon Tombs;Republic of Korea;
- 927;The Architectural Work of Le Corbusier;France;
- 928;Grand-Bassam;C�te d'Ivoire;
- 929;Hahoe and Yangdong;Republic of Korea;
- 930;Phoenix Islands;Kiribati;
- 931;Papahanaumokuakea;United States of America;
- 932;Thang Long;Viet Nam;
- 933;Turaif Quarter;Saudi Arabia;
- 934;Residence of Bukovinian & Dalmatian Metropolitans;Ukraine;
- 935;Konso;Ethiopia;
- 936;West Lake;China;
- 937;China Danxia;China;
- 938;Meroe;Sudan;
- 939;Albi;France;
- 940;Jantar Mantar;India;
- 941;Bikini Atoll;Marshall Islands;
- 942;Western Ghats;India;
- 943;Al Ain;United Arab Emirates;
- 944;Mining Sites of Wallonia;Belgium;
- 945;Safi al-Din Ensemble in Ardabil;Iran;
- 946;Tabriz Bazaar;Iran;
- 947;Ancient villages of Northern Syria;Syria;
- 948;Amsterdam Canal Ring;Netherlands;
- 949;Camino Real;Mexico;
- 950;Caves of Yagul and Mitla;Mexico;
- 951;Blue and John Crow Mountains;Jamaica;
- 952;Citadel of the Ho Dynasty;Viet Nam;
- 953;Saloum Delta;Senegal;
- 954;Nord-Pas de Calais Mining Basin;France;
- 955;Historic Jeddah;Saudi Arabia;
- 956;Ogasawara Islands;Japan;
- 957;Prehistoric Pile Dwellings;Switzerland;
- 958;Pearling;Bahrain;
- 959;Selimiye Mosque;Turkiye;
- 960;Elvas;Portugal;
- 961;Fagus Factory;Germany;
- 962;Ningaloo Coast;Australia;
- 963;Caves of Maresha and Bet Guvrin;Israel;
- 964;Serra de Tramuntana;Spain;
- 965;Persian Garden;Iran;
- 966;Santiniketan;India;
- 967;Bridgetown;Barbados;
- 968;Wadi Rum;Jordan;
- 969;Margravial Opera House;Germany;
- 970;Sangha Trinational;Cameroon;
- 971;Petroglyphs of the Mongolian Altai;Mongolia;
- 972;Rock Islands;Palau;
- 973;University of Coimbra;Portugal;
- 974;Chengjiang Fossil Site;China;
- 975;Site of Xanadu;China;
- 976;Vineyard Landscape of Piedmont;Italy;
- 977;Mount Carmel Caves;Israel;
- 978;Lenggong Valley;Malaysia;
- 979;Masjed-e J�me';Iran;
- 980;Gonbad-e Q�bus;Iran;
- 981;Levuka;Fiji;
- 982;Lakes of Ounianga;Chad;
- 983;Rabat;Morocco;
- 984;Al Zubarah;Qatar;
- 985;Mount Hamiguitan;Philippines;
- 986;Grand Pr�;Canada;
- 987;�atalh�y�k;Turkiye;
- 988;Great Himalayan National Park;India;
- 989;Bassari Country;Senegal;
- 990;El Pinacate;Mexico;
- 991;Tauric Chersonese;Ukraine;
- 992;Red Bay Basque Whaling Station;Canada;
- 993;Bergpark Wilhelmsh�he;Germany;
- 994;Xinjiang Tianshan;China;
- 995;Pimachiowin Aki;Canada;
- 996;Stevns Klint;Denmark;
- 997;Fujisan;Japan;
- 998;Golestan Palace;Iran;
- 999;Maymand;Iran;
-1000;Wooden Tserkvas of the Carpathian Region;Poland;
-1001;Burgundy;France;
-1002;Decorated cave of Pont d'Arc;France;
-1003;Mount Etna;Italy;
-1004;Namib Sand Sea;Namibia;
-1005;Okavango Delta;Botswana;
-1006;Bethlehem;Palestine;
-1007;Cha�ne des Puys;France;
-1008;Poverty Point;United States of America;
-1009;Erbil Citadel;Iraq;
-1010;Trang An;Viet Nam;
-1011;Namhansanseong;Republic of Korea;
-1012;Great Burkhan Khaldun Mountain;Mongolia;
-1013;Van Nellefabriek;Netherlands;
-1014;Silk Roads Chang'an-Tianshan Corridor;China;
-1015;Grand Canal;China;
-1016;Pyu Ancient Cities;Myanmar;
-1017;"Baptism Site ""Bethany Beyond the Jordan""";Jordan;
-1018;Corvey;Germany;
-1019;Landscapes of Dauria;Mongolia;
-1020;Tomioka Silk Mill;Japan;
-1021;Thimlich Ohinga;Kenya;
-1022;Bursa and Cumalikizik;Turkiye;
-1023;Stone Spheres of the Diqu�s;Costa Rica;
-1024;Susa;Iran;
-1025;Shahr-i Sokhta;Iran;
-1026;Pergamon;Turkiye;
-1027;Qhapaq �an;Argentina;
-1028;Kaeng Krachan Forest;Thailand;
-1029;Aqueduct of Padre Tembleque;Mexico;
-1030;Fray Bentos;Uruguay;
-1031;Champagne;France;
-1032;San Antonio Missions;United States of America;
-1033;Speicherstadt and Kontorhaus District;Germany;
-1034;Moravian Church Settlements;Denmark;
-1035;Par force hunting landscape;Denmark;
-1036;Naumburg Cathedral;Germany;
-1037;Necropolis of Bet She'arim;Israel;
-1038;Rock Art in the Hail Region;Saudi Arabia;
-1039;Br�ncusi Monumental Ensemble of T�rgu Jiu;Romania;
-1040;Tusi Sites;China;
-1041;Ennedi Massif;Chad;
-1042;Baekje Historic Areas;Republic of Korea;
-1043;Mining Cultural Landscape Erzgebirge;Czechia;
-1044;Victorian Gothic and Art Deco Ensembles of Mumbai;India;
-1045;Ahwar of Southern Iraq;Iraq;
-1046;Singapore Botanic Gardens;Singapore;
-1047;Sites of Japan's Meiji Industrial Revolution;Japan;
-1048;Forth Bridge;United Kingdom;
-1049;Rjukan / Notodden;Norway;
-1050;Arab-Norman Palermo;Italy;
-1051;Diyarbakir Fortress and Hevsel Gardens;Turkiye;
-1052;Western Tien-Shan;Kazakhstan;
-1053;Battir;Palestine;
-1054;Pampulha;Brazil;
-1055;Hidden Christian Sites in the Nagasaki Region;Japan;
-1056;Frank Lloyd Wright Buildings;United States of America;
-1057;Mistaken Point;Canada;
-1058;Seowon, Neo-Confucian Academies;Republic of Korea;
-1059;Antigua Naval Dockyard;Antigua and Barbuda;
-1060;Gorham's Cave Complex;United Kingdom;
-1061;Antequera Dolmens Site;Spain;
-1062;Nalanda;India;
-1063;Nan Madol;Micronesia;
-1064;Ste?ci;Bosnia Herzegovina;
-1065;Lut Desert;Iran;
-1066;The Persian Qanat;Iran;
-1067;Phu Phrabat;Thailand;
-1068;Zuojiang Huashan Rock Art;China;
-1069;Hubei Shennongjia;China;
-1070;Archipi�lago de Revillagigedo;Mexico;
-1071;Mbanza Kongo;Angola;
-1072;Khangchendzonga National Park;India;
-1073;Archaeological site of Philippi;Greece;
-1074;Ani;Turkiye;
-1075;Aphrodisias;Turkiye;
-1076;Churches of the Pskov School of Architecture;Russia;
-1077;Sviyazhsk;Russia;
-1078;Los Alerces National Park;Argentina;
-1079;Caves and Ice Age Art;Germany;
-1080;Talayotic Menorca;Spain;
-1081;Taputapu?tea;France;
-1082;Sambor Prei Kuk;Cambodia;
-1083;Venetian Works of Defence;Montenegro;
-1084;Tehuac�n-Cuicatl�n Valley;Mexico;
-1085;Okinoshima Island;Japan;
-1086;Kujataa;Denmark;
-1087;Qalhat;Oman;
-1088;Ivrea;Italy;
-1089;Tarnowskie G�ry Lead-Silver-Zinc Mine;Poland;
-1090;Qinghai Hoh Xil;China;
-1091;Kulangsu;China;
-1092;Dilmun Burial Mounds;Bahrain;
-1093;Yazd;Iran;
-1094;?Khomani Cultural Landscape;South Africa;
-1095;Valongo Wharf;Brazil;
-1096;Sheki;Azerbaijan;
-1097;Asmara;Eritrea;
-1098;Ahmadabad;India;
-1099;Ro?ia Montan?;Romania;
-1100;Hedeby and Danevirke;Germany;
-1101;Colonies of Benevolence;Belgium;
-1102;Aasivissuit - Nipisat;Denmark;
-1103;�atec � Landscape of Hops;Czechia;
-1104;Fanjingshan;China;
-1105;Medina Azahara;Spain;
-1106;Quanzhou;China;
-1107;Sansa, Buddhist Mountain Monasteries;Republic of Korea;
-1108;Al-Ahsa Oasis;Saudi Arabia;
-1109;Tr�ond�k-Klondike;Canada;
-1110;Hebron/Al-Khalil Old Town;Palestine;
-1111;Funerary and memory sites of the First World War;France;
-1112;Sassanid Archaeological Landscape;Iran;
-1113;Maison Carr�e of N�mes;France;
-1114;Rudreshwara (Ramappa) Temple;India;
-1115;The Prosecco Hills;Italy;
-1116;G�bekli Tepe;Turkiye;
-1117;Mafra;Portugal;
-1118;Amami-Oshima Island;Japan;
-1119;Barberton Makhonjwa Mountains;South Africa;
-1120;Budj Bim Cultural Landscape;Australia;
-1121;Risco Caido;Spain;
-1122;Water Management System of Augsburg;Germany;
-1123;Hyrcanian Forests;Azerbaijan;
-1124;Trans-Iranian Railway;Iran;
-1125;Memorial Sites of Genocide;Rwanda;
-1126;Plain of Jars;Laos;
-1127;Bagan;Myanmar;
-1128;Kladruby nad Labem;Czechia;
-1129;Bom Jesus do Monte;Portugal;
-1130;Getbol, Korean Tidal Flat;Republic of Korea;
-1131;Liangzhu Archaeological Site;China;
-1132;Mozu-Furuichi Kofungun;Japan;
-1133;Jodrell Bank Observatory;United Kingdom;
-1134;Writing-on-Stone / ��s�nai�pi;Canada;
-1135;Krzemionki prehistoric flint mines;Poland;
-1136;Ancient ferrous metallurgy sites;Burkina Faso;
-1137;French Austral Lands and Seas;France;
-1138;Vatnaj�kull National Park;Iceland;
-1139;Jaipur City, Rajasthan;India;
-1140;Migratory Bird Sanctuaries China;China;
-1141;Danube Limes;Austria;
-1142;Ombilin Coal Mining Heritage of Sawahlunto;Indonesia;
-1143;Len��is Maranhenses National Park;Brazil;
-1144;Church of Atl�ntida;Uruguay;
-1145;Great Spa Towns of Europe;Austria;
-1146;Mathildenh�he Darmstadt;Germany;
-1147;Colchic Rainforests and Wetlands;Georgia;
-1148;Paseo del Prado and Buen Retiro;Spain;
-1149;Him? Cultural area;Saudi Arabia;
-1150;S�tio Roberto Burle Marx;Brazil;
-1151;Deer Stone Monuments;Mongolia;
-1152;Arslantepe Mound;Turkiye;
-1153;Padua�s fourteenth-century fresco cycles;Italy;
-1154;Chankillo Archaeoastronomical Complex;Peru;
-1155;Cordouan Lighthouse;France;
-1156;Lower German Limes;Germany;
-1157;Jomon Prehistoric Sites;Japan;
-1158;The Slate Landscape of Northwest Wales;United Kingdom;
-1159;Chinchorro Culture;Chile;
-1160;Nice;France;
-1161;ShUM Sites;Germany;
-1162;Badain Jaran Desert;China;
-1163;Djerba;Tunisia;
-1164;Gedeo Cultural landscape;Ethiopia;
-1165;Ple?nik's Ljubljana;Slovenia;
-1166;Dholavira: A Harappan City;India;
-1167;Hawraman/Uramanat;Iran;
-1168;Sudanese style mosques;C�te d'Ivoire;
-1169;The Porticoes of Bologna;Italy;
-1170;Ivindo National Park;Gabon;
-1171;Petroglyphs of the Lake Onega and the White Sea;Russia;
-1172;Jewish-Medieval heritage of Erfurt;Germany;
-1173;Northern Martinique;France;
-1174;Kuldiga;Latvia;
-1175;Viking Age Ring Fortresses;Denmark;
-1176;Modernist Kaunas;Lithuania;
-1177;Si Thep;Thailand;
-1178;Tak'alik Ab'aj;Guatemala;
-1179;Ancient Tea Plantations of Pu'er;China;
-1180;Gaya Tumuli;Republic of Korea;
-1181;Koh Ker;Cambodia;
-1182;Persian Caravanserai;Iran;
-1183;Gordion;Turkiye;
-1184;Sacred Ensembles of the Hoysala;India;
-1185;Yogyakarta;Indonesia;
-1186;Vjetrenica Cave;Bosnia Herzegovina;
-1187;Silk Roads: Zarafshan-Karakum Corridor;Turkmenistan;
-1188;Nelson Mandela Legacy Sites;South Africa;
-1189;Astronomical Observatories of Kazan Federal University;Russia;
-1190;Jodensavanne;Suriname;
-1191;ESMA Site Museum;Argentina;
-1192;Eisinga Planetarium;Netherlands;
-1193;Tugay forests;Tajikistan;
-1194;Anticosti;Canada;
-1195;Ancient Jericho;Palestine;
-1196;Cultural Landscape of Kenozero Lake;Russia;
-1197;Hopewell;United States of America;
-1198;Evaporitic Karst and Caves;Italy;
-1199;Cold winter deserts of Turan;Turkmenistan;
-1200;Wooden Hypostyle Mosques of Medieval Anatolia;Turkiye;
-1201;Zagori Cultural Landscape;Greece;
-1202;Khinalig;Azerbaijan;
-1203;Nyungwe National Park;Rwanda;
-1204;Sado Island Gold Mines;Japan;
-1205;'Uruq Bani Ma'arid;Saudi Arabia;
-1206;Ancient Kingdom of Saba;Yemen;
-1207;Rachid Karami International Fair-Tripoli;Lebanon;
-1208;Odesa;Ukraine;
-1209;Schwerin Residence Ensemble;Germany;
-1210;Marquesas Islands;France;
-1211;Via Appia;Italy;
-1212;Moidams;India;
-1213;Al-Faw;Saudi Arabia;
-1214;The Royal Court of Ti�b�l�;Burkina Faso;
-1215;Beijing Central Axis;China;
-1216;Hegmataneh;Iran;
-1217;Dacian Limes;Romania;
-1218;Gedi;Kenya;
-1219;Umm Al-Jim?l;Jordan;
-1220;The Flow Country;United Kingdom;
-1221;The Pleistocene Occupation Sites of South Africa;South Africa;
-1222;Tell Umm Amer;Palestine;
-;;;
+0;Galapagos Islands;Galapagos Islands
+1;Quito;Quito
+2;Aachen Cathedral;Aachen
+3;L'Anse aux Meadows;L'Anse aux Meadows
+4;Ichkeul National Park;Ichkeul
+5;Simien National Park;Simien Mountains
+6;Lower Valley of the Awash;Lower Valley of the Awash
+7;Tiya;Tiya
+8;Melka Kunture and Balchit;Melka Kunture
+9;Aksum;Aksum
+10;Lower Valley of the Omo;Lower Valley of the Omo
+11;Lalibela;Lalibela
+12;Fasil Ghebbi;Fasil Ghebbi
+13;Damascus;Damascus
+14;Aleppo;Aleppo
+15;Bosra;Bosra
+16;Palmyra;Palmyra
+17;Nahanni National Park;Nahanni National Park
+18;Djoudj;Djoudj
+19;Island of Gorée;Gorée
+20;Mesa Verde;Mesa Verde
+21;Yellowstone;Yellowstone
+22;Kraków;Kraków
+23;Warsaw;Warsaw
+24;Auschwitz Birkenau;Auschwitz
+25;Wieliczka and Bochnia Royal Salt Mines;Wieliczka
+26;Białowieża Forest;Białowieża
+27;Forts and Castles Gold Coast;Gold Coast
+28;Asante Traditional Buildings;Asante
+29;Medina of Tunis;Tunis
+30;Carthage;Carthage
+31;Amphitheater of El Jem;El Jem
+32;Ngorongoro;Ngorongoro
+33;Boyana Church;Boyana
+34;Madara Rider;Madara
+35;Thracian tomb of Kazanlak;Kazanlak
+36;Rock-hewn Churches of Ivanovo;Ivanovo
+37;Røros;Røros
+38;Urnes Stave Church;Urnes
+39;Bryggen;Bryggen
+40;Virunga National Park;Virunga
+41;Tikal National Park;Tikal
+42;Antigua Guatemala;Antigua
+43;Dinosaur Provincial Park;Dinosaur
+44;Glacier parks;Glacier
+45;Grand Canyon;Grand Canyon
+46;Everglades;Everglades
+47;Independence Hall;Independence Hall
+48;Paphos;Paphos
+49;Mont-Saint-Michel;Mont-Saint-Michel
+50;Chartres Cathedral;Chartres
+51;Versailles;Versailles
+52;Vézelay;Vézelay
+53;Vézère Valley;Vézère Valley
+54;Pyramids (Memphis);Memphis
+55;Ancient Thebes;Thebes
+56;Nubian Monuments;Nubian Monuments
+57;Historic Cairo;Cairo
+58;Abu Mena;Abu Mena
+59;Rome;Rome
+60;Santa Maria delle Grazie;Santa Maria delle Grazie
+61;Rock Drawings in Valcamonica;Valcamonica
+62;Dubrovnik;Dubrovnik
+63;Stari Ras and Sopocani;Stari Ras
+64;Split;Split
+65;Plitvice Lakes;Plitvice Lakes
+66;Ohrid Region;Ohrid
+67;Durmitor National Park;Durmitor
+68;Al Qal'a of Beni Hammad;Al Qal'a of Beni Hammad
+69;Bale Mountains National Park;Bale Mountains
+70;Tchogha Zanbil;Tchogha Zanbil
+71;Persepolis;Persepolis
+72;Meidan Emam Esfahan;Esfahan
+73;Djenné;Djenné
+74;Timbuktu;Timbuktu
+75;Sagarmatha National Park;Sagarmatha
+76;Kathmandu Valley;Kathmandu
+77;Ouro Preto;Ouro Preto
+78;Kotor;Kotor
+79;Copán;Copán
+80;Hal Saflieni Hypogeum;Paola;
+81;Valletta;Valletta
+82;Megalithic Temples of Malta;Megalithic Temples
+83;Redwood;Redwood
+84;Portobelo-San Lorenzo;Portobelo
+85;Garamba National Park;Garamba
+86;Kahuzi-Biega National Park;Kahuzi-Biega
+87;Moenjodaro;Moenjodaro
+88;Taxila;Taxila
+89;Takht-i-Bahi;Takht-i-Bahi
+90;Makli Thatta;Makli
+91;Ruins of Kilwa Kisiwani and Songo Mnara;Kilwa Kisiwani
+92;Los Glaciares;Los Glaciares
+93;Kakadu National Park;Kakadu
+94;Old City of Jerusalem;Jerusalem
+95;Quirigua;Quirigua
+96;Mammoth Cave;Mammoth Cave
+97;Olympic National Park;Olympic National Park
+98;Niokolo-Koba National Park;Niokolo-Koba
+99;Great Barrier Reef;Great Barrier Reef
+100;Mount Nimba;Mount Nimba
+101;Serengeti;Serengeti
+102;SGang Gwaay;SGang Gwaay;
+103;Head-Smashed-In Buffalo Jump;Alberta;
+104;Darien National Park;Darien
+105;Fontainebleau;Fontainebleau
+106;Amiens Cathedral;Amiens
+107;Orange;Orange
+108;Arles;Arles
+109;Cistercian Abbey of Fontenay;Fontenay
+110;Sydney Opera House;Sydney
+111;Willandra Lakes;Willandra Lakes
+112;Speyer Cathedral;Speyer
+113;Würzburg Residence;Würzburg
+114;Medina of Fez;Fez
+115;Fort and Shalamar Gardens;Shalamar Gardens
+116;Stone Town of Zanzibar;Zanzibar
+117;Florence;Florence
+118;Medici Villas and Gardens;Medici Villas
+119;Tassili n'Ajjer;Algeria;
+120;National History Park;National History Park
+121;Tasmanian Wilderness;Tasmanian Wilderness
+122;Leptis Magna;Leptis Magna
+123;Sabratha;Sabratha
+124;Aldabra Atoll;Aldabra Atoll
+125;Lord Howe Island;Lord Howe Island
+126;Hildesheim Cathedral and Church;Hildesheim
+127;M'Zab Valley;M'Zab Valley
+128;Olinda;Olinda
+129;Cyrene;Cyrene
+130;Djémila;Djémila
+131;Shibam;Shibam
+132;Tipasa;Tipasa
+133;Timgad;Timgad
+134;Taï National Park;Taï National Park
+135;Rio Platano Biosphere Reserve;Rio Platano
+136;Cahokia Mounds;Cahokia Mounds
+137;Selous Game Reserve;Selous
+138;Anuradhapura;Anuradhapura
+139;Polonnaruva;Polonnaruva
+140;Sigiriya;Sigiriya
+141;Royal Saltworks of Arc-et-Senans;Arc-et-Senans
+142;Old Havana;Havana
+143;Talamanca Range-La Amistad Reserves;Talamanca Range-La Amistad
+144;Angra do Heroismo;Angra do Heroismo
+145;Bamiyan Valley;Bamiyan
+146;Minaret of Jam;Jam
+147;Rila Monastery;Rila
+148;Nessebar;Nessebar
+149;Srebarna Nature Reserve;Srebarna
+150;Pirin National Park;Pirin
+151;Comoé National Park;Comoé
+152;Avignon;Avignon
+153;Nancy;Nancy
+154;Saint-Savin sur Gartempe;Saint-Savin sur Gartempe
+155;Red Fort;Red Fort
+156;Humayun's Tomb;Humayun's Tomb
+157;Qutb Minar;Qutb Minar
+158;Churches and Convents of Goa;Goa
+159;Pattadakal;Pattadakal
+160;Khajuraho Group of Monuments;Khajuraho
+161;Hampi;Hampi
+162;Ajanta Caves;Ajanta Caves
+163;Ellora Caves;Ellora Caves
+164;Elephanta Caves;Elephanta Caves
+165;Sun Temple Konarak;Konarak
+166;Hill Forts of Rajasthan;Rajasthan
+167;Mahabalipuram;Mahabalipuram
+168;Chola Temples;Tanjore
+169;Agra Fort;Agra;
+170;Taj Mahal;Agra;
+171;Fatehpur Sikri;Fatehpur Sikri
+172;Wood Buffalo National Park;Wood Buffalo National Park
+173;Gulf of Porto;Gulf of Porto
+174;Great Smoky Mountains;Great Smoky Mountains
+175;Sangay National Park;Sangay National Park
+176;Vallée de Mai;Vallée de Mai
+177;Sanganeb;Sanganeb
+178;Belem;Belem
+179;Monastery of Batalha;Batalha
+180;Convent of Christ in Tomar;Tomar
+181;La Fortaleza and San Juan;San Juan
+182;Old City of Berne;Berne
+183;Abbey of St Gall;St Gall
+184;Benedictine Convent of St. John;St. John
+185;Pilgrimage Church of Wies;Wies
+186;Lübeck;Lübeck
+187;Cuzco;Cuzco
+188;Machu Picchu;Machu Picchu
+189;Jesuit Missions of the Guaranis;Jesuit Missions
+190;Samarra;Samarra
+191;Hatra;Hatra
+192;Babylon;Babylon
+193;Salonga National Park;Salonga
+194;Chitwan National Park;Chitwan
+195;Cartagena;Cartagena
+196;Vatican City;Vatican City
+197;Tadrart Acacus;Tadrart Acacus
+198;Castles of Augustusburg and Falkenlust;Augustusburg and Falkenlust
+199;Lake Malawi;Lake Malawi
+200;Cologne Cathedral;Cologne
+201;Anjar;Anjar
+202;Baalbek;Baalbek
+203;Byblos;Byblos
+204;Tyre;Tyre
+205;Québec;Québec
+206;Mana Pools;Mana Pools
+207;Iguazu National Park;Iguazu
+208;Canadian Rocky Mountain Parks;Canadian Rockies
+209;Matobo Hills;Matobo Hills
+210;Statue of Liberty;Statue of Liberty
+211;Yosemite National Park;Yosemite
+212;Salvador de Bahia;Salvador de Bahia
+213;Altamira Cave;Altamira
+214;Segovia;Segovia
+215;Asturian Monuments;Asturias
+216;Cordoba;Córdoba
+217;Granada;Granada
+218;Burgos Cathedral;Burgos
+219;El Escurial;El Escurial
+220;Works of Antoni Gaudí;Gaudí Works
+221;Bagerhat;Bagerhat
+222;Buddhist Vihara at Paharpur;Paharpur
+223;Royal Palaces of Abomey;Abomey
+224;Petra;Petra
+225;Quseir Amra;Quseir Amra
+226;Chavin;Chavin
+227;Medina of Marrakesh;Marrakesh
+228;Kerkuane;Kerkuane
+229;Huascaran National Park;Huascaran
+230;Congonhas;Congonhas
+231;Nanda Devi and Valley of Flowers;Nanda Devi
+232;Kaziranga National Park;Kaziranga
+233;Manas Wildlife Sanctuary;Manas
+234;Keoladeo National Park;Keoladeo
+235;Pont du Gard;Nîmes;
+236;Fortified City of Carcassonne;Carcassonne;
+237;Santiago de Compostela;Santiago de Compostela;
+238;Avila;Ávila;
+239;Painted Churches in the Troodos Region;Troodos Mountains;
+240;Rock Art of Alta;Alta;
+241;Chaco Culture;Nageezi;
+242;Waterton Glacier International Peace Park;Waterton Park;
+243;Iguacu;Foz do Iguaçu;
+244;Istanbul;Istanbul;
+245;Göreme NP;Göreme;
+246;Divrigi;Divriği;
+247;Thracian tomb of Sveshtari;Sveshtari;
+248;Evora;Évora;
+249;Ghadames;Ghadames;
+250;Great Zimbabwe;Masvingo;
+251;Khami Ruins;Khami;
+252;Chan Chan;Trujillo;
+253;Trier;Trier;
+254;Gondwana Rainforests;Queensland;
+255;Giant's Causeway;County Antrim;
+256;Durham Castle and Cathedral;Durham;
+257;Ironbridge Gorge;Ironbridge;
+258;Studley Royal Park;Ripon;
+259;Stonehenge;Salisbury;
+260;Gwynedd Castles;Gwynedd;
+261;Hattusha;Boğazkale;
+262;Mudejar Architecture of Aragon;Zaragoza;
+263;Toledo;Toledo;
+264;Garajonay;La Gomera;
+265;Salamanca;Salamanca;
+266;Seville;Seville;
+267;Caceres;Cáceres;
+268;Sana'a;Sana'a;
+269;St. Kilda;St. Kilda;
+270;Studenica Monastery;Studenica;
+271;Skocjan Caves;Škocjan;
+272;Temple of Apollo Epicurius at Bassae;Bassae;
+273;Archaeological Site of Delphi;Delphi;
+274;Venice and its Lagoon;Venice;
+275;Piazza del Duomo (Pisa);Pisa;
+276;Castel del Monte;Andria;
+277;Budapest;Budapest;
+278;Hollókö;Hollókö;
+279;Manu National Park;Manu;
+280;Kilimanjaro National Park;Moshi;
+281;Acropolis;Athens;
+282;Sinharaja Forest;Sinharaja;
+283;Dja Faunal Reserve;Dja;
+284;Hawaii Volcanoes;Hilo;
+285;Sian Ka'an;Tulum;
+286;Palenque;Palenque;
+287;Mexico City and Xochimilco;Mexico City;
+288;Teotihuacan;San Juan Teotihuacan;
+289;Oaxaca and Monte Alban;Oaxaca;
+290;Puebla;Puebla;
+291;Ibiza;Ibiza;
+292;Gros Morne National Park;Rocky Harbour;
+293;Potosi;Potosí;
+294;Tongariro National Park;Ohakune;
+295;Lake District;Windermere;
+296;Blenheim Palace;Woodstock;
+297;Westminster;London;
+298;City of Bath;Bath;
+299;New Lanark;Lanark;
+300;Frontiers of the Roman Empire;Hadrian's Wall;
+301;Bahla Fort;Bahla;
+302;Bat Al-Khutm and Al-Ayn;Bat;
+303;Mount Taishan;Taian;
+304;Great Wall;Beijing;
+305;Imperial Palace;Beijing;
+306;Mogao Caves;Dunhuang;
+307;Mausoleum of the First Qin Emperor;Xi'an;
+308;Monticello;Charlottesville;
+309;Ksar of Aït Ben Haddou;Aït Ben Haddou;
+310;Brasilia;Brasilia;
+311;Uluru;Yulara;
+312;Nemrut Dag;Kahta;
+313;Peking Man Site;Zhoukoudian;
+314;Kandy;Kandy;
+315;Old Town of Galle;Galle;
+316;Sundarbans National Park;Kolkata;
+317;Mount Athos;Mount Athos;
+318;Meteora;Kalambaka;
+319;Thessalonika;Thessaloniki;
+320;Trinidad and the Valley de los Ingenios;Trinidad;
+321;Hortobágy;Hortobágy;
+322;Manovo-Gounda St. Floris;Manovo-Gounda;
+323;Chongoni Rock Art;Chongoni;
+324;Luang Prabang;Luang Prabang;
+325;Vat Phou;Champasak;
+326;Guanajuato;Guanajuato;
+327;Chichen-Itza;Chichen Itza;
+328;Xanthos-Letoon;Xanthos;
+329;Hierapolis-Pamukkale;Pamukkale;
+330;Wet Tropics of Queensland;Cairns;
+331;Henderson Island;Henderson Island;
+332;Tower of London;London;
+333;Epidaurus;Epidaurus;
+334;Taos Pueblo;Taos;
+335;Rhodes;Rhodes;
+336;Andrefana Dry Forests;Andrefana;
+337;Strasbourg;Strasbourg;
+338;Canterbury;Canterbury;
+339;Medina of Sousse;Sousse;
+340;Kairouan;Kairouan;
+341;Lima;Lima;
+342;Vigan;Vigan;
+343;Monastery of Alcobaça;Alcobaça;
+344;Banc d'Arguin;Nouadhibou;
+345;Victoria Falls;Livingstone;
+346;Mystras;Mystras;
+347;Neolithic Orkney;Kirkwall;
+348;Abbey and Altenmünster of Lorsch;Lorsch;
+349;Cliff of Bandiagara;Bandiagara;
+350;Olympia;Olympia;
+351;Poblet Monastery;Poblet;
+352;Úbeda and Baeza;Úbeda;
+353;Sanchi;Sanchi;
+354;Santo Domingo;Santo Domingo;
+355;Kyiv Cathedral and Lavra;Kyiv;
+356;Jesuit Missions of the Chiquitos;San Ignacio de Velasco;
+357;Delos;Delos;
+358;Potsdam;Potsdam;
+359;Garden Kingdom of Dessau-Wörlitz;Dessau;
+360;Quedlinburg;Quedlinburg;
+361;Daphni Hosios Loukas and Nea Moni of Chios;Chios;
+362;St. Petersburg;St. Petersburg;
+363;Vilnius;Vilnius;
+364;Itchan Kala;Khiva;
+365;Kizhi Pogost;Kizhi Island;
+366;Kremlin and Red Square;Moscow;
+367;Maulbronn Monastery;Maulbronn;
+368;Huangshan;Huangshan;
+369;Rio Abiseo National Park;Rio Abiseo;
+370;Royal Palace at Caserta;Caserta;
+371;San Gimignano;San Gimignano;
+372;Te Wahipounamu;Te Wahipounamu;
+373;Whale Sanctuary of El Vizcaino;El Vizcaino;
+374;Birka and Hovgarden;Birka;
+375;Engelsberg Ironworks;Engelsberg;
+376;Rock Carvings in Tanum;Tanum;
+377;Skogskyrkogarden;Stockholm;
+378;Drottningholm;Drottningholm;
+379;Paquimé;Paquimé;
+380;Rangiri Dambulla Cave Temple;Dambulla;
+381;Zamość;Zamość;
+382;Kasbah of Algiers;Algiers;
+383;Sucre;Sucre;
+384;Tiwanaku;Tiwanaku;
+385;Berat and Gjirokastra;Berat;
+386;Butrint;Butrint;
+387;Air and Ténéré;Agadez;
+388;Sukhothai;Sukhothai;
+389;Ban Chiang;Ban Chiang;
+390;Ayutthaya;Ayutthaya;
+391;Heard and McDonald Islands;Heard Island;
+392;Shark Bay;Shark Bay;
+393;Sammallahdenmäki;Sammallahdenmäki;
+394;Old Rauma;Rauma;
+395;Fortress of Suomenlinna;Suomenlinna;
+396;Petäjävesi Old Church;Petäjävesi;
+397;Morelia;Morelia;
+398;Rohtas Fort;Rohtas;
+399;Danube Delta;Tulcea;
+400;Dong Phayayen;Nakhon Ratchasima;
+401;Thungyai-Huai Kha Khaeng;Kanchanaburi;
+402;Borobudur;Magelang;
+403;Sangiran Early Man Site;Sangiran;
+404;Pythagoreion and Heraion of Samos;Pythagoreio;
+405;Villages with Fortified Churches;Transylvania;
+406;Monastery of Horezu;Horezu;
+407;Churches of Moldavia;Moldavia;
+408;Island of Mozambique;Mozambique Island;
+409;Banks of the Seine;Paris;
+410;Reims;Reims;
+411;Bukhara;Bukhara;
+412;Samarkand;Samarkand;
+413;Novgorod;Veliky Novgorod;
+414;Serra da Capivara;Serra da Capivara;
+415;Ujung Kulon National Park;Ujung Kulon;
+416;Komodo National Park;Komodo Island;
+417;Zabid;Zabid;
+418;Ruins of León Viejo;León;
+419;Safranbolu;Safranbolu;
+420;Prague;Prague;
+421;Cesky Krumlov;Cesky Krumlov;
+422;Banska Stiavnica;Banska Stiavnica;
+423;Spissky Hrad and Levoca;Levoca;
+424;Telc;Telc;
+425;Vlkolinec;Vlkolinec;
+426;Rammelsberg and Goslar;Goslar;
+427;Bamberg;Bamberg;
+428;Mir Castle;Mir;
+429;Macquarie Island;Macquarie Island;
+430;Fraser Island;Fraser Island;
+431;El Tajin;El Tajín;
+432;Solovetsky Islands;Solovetsky Islands;
+433;White Monuments of Vladimir and Suzdal;Vladimir;
+434;Church of the Ascension Kolomenskoye;Moscow;
+435;Bourges Cathedral;Bourges;
+436;Jiuzhaigou Valley;Jiuzhaigou;
+437;Huanglong;Huanglong;
+438;Wulingyuan;Zhangjiajie;
+439;Prambanan;Prambanan;
+440;Jesuit Missions of Trinidad and Jesus;Trinidad;
+441;Puerto-Princesa Subterranean River;Puerto Princesa;
+442;Tubbataha Reefs;Tubbataha Reefs;
+443;Trinity Sergius Lavra;Sergiev Posad;
+444;Coro and its Port;Coro;
+445;Brú na Bóinne;Brú na Bóinne;
+446;Horyu-ji Area;Ikaruga;
+447;Himeji-jo;Himeji;
+448;Yakushima;Yakushima;
+449;Shirakami-Sanchi;Shirakami-Sanchi;
+450;Mérida;Mérida;
+451;Santa Maria de Guadalupe;Cáceres;
+452;Lumbini;Lumbini;
+453;Angkor;Siem Reap;
+454;Route of Santiago de Compostela;Santiago de Compostela;
+455;Matera;Matera;
+456;Ha Long Bay – Cat Ba Archipelago;Ha Long Bay;
+457;Joya de Ceren;Joya de Ceren;
+458;Zacatecas;Zacatecas;
+459;Baroque Churches;Manila;
+460;Huế;Huế;
+461;Bwindi Impenetrable National Park;Bwindi;
+462;Rwenzori Mountains;Rwenzori Mountains;
+463;Donana National Park;El Rocío;
+464;Miguasha National Park;Miguasha;
+465;Völklingen Ironworks;Völklingen;
+466;Ancient Kyoto;Kyoto;
+467;As-Salt;As-Salt;
+468;Pilgrimage Church of St. John of Nepomuk;Zelená Hora;
+469;Odzala-Kokoua;Odzala-Kokoua;
+470;Roskilde Cathedral;Roskilde;
+471;Kronborg Castle;Helsingør;
+472;Jelling;Jelling;
+473;Australian Fossil Mammal Sites;Australia;
+474;City of Luxembourg;Luxembourg City;
+475;Nasca Lines;Nasca;
+476;Canaima National Park;Canaima;
+477;Popocatepetl monasteries;Amecameca;
+478;Mountain Resort Chengde;Chengde;
+479;Temple Mansion and Cemetery of Confucius;Qufu;
+480;Wudang Mountains;Shiyan;
+481;Potala Palace;Lhasa;
+482;Mtskheta;Mtskheta;
+483;Upper Svaneti;Mestia;
+484;Gelati Monastery;Kutaisi;
+485;Los Katios National Park;Los Katios;
+486;Vicenza and the Palladian Villas;Vicenza;
+487;Rock Paintings of the Sierra de San Francisco;San Francisco;
+488;Rapa Nui;Hanga Roa;
+489;Siena;Siena;
+490;Okapi Wildlife Reserve;Epulu;
+491;Virgin Komi Forests;Komi Republic;
+492;Messel Pit;Messel;
+493;Carlsbad Caverns;Carlsbad;
+494;Rice Terraces of the Philippine Cordilleras;Banaue;
+495;Sintra;Sintra;
+496;Medieval Monuments in Kosovo;Prizren;
+497;Aggtelek and Slovak Karst;Aggtelek;
+498;Naples;Naples;
+499;Edinburgh;Edinburgh;
+500;Bauhaus Sites;Weimar;
+501;Crespi d'Adda;Crespi d'Adda;
+502;Visby;Visby;
+503;Kutna Hora;Kutná Hora;
+504;Ferrara;Ferrara;
+505;Shirakawa-go and Gokayama;Shirakawa;
+506;Seokguram Grotto and Bulguksa Temple;Gyeongju;
+507;Haeinsa Temple;Haeinsa;
+508;Jongmyo Shrine;Seoul;
+509;Schokland;Schokland;
+510;Gough and Inaccessible Islands;Gough Island;
+511;Old Town Lunenburg;Lunenburg;
+512;Santa Cruz de Mompox;Santa Cruz de Mompox;
+513;Tierradentro;Tierradentro;
+514;San Agustín;San Agustín;
+515;Colonia del Sacramento;Colonia del Sacramento;
+516;W-Arly-Pendjari Complex;W-Arly-Pendjari;
+517;Ancient ksours;Ksour;
+518;Verla Groundwood and Board Mill;Verla;
+519;Medina of Essaouira;Essaouira;
+520;Lake Baikal;Irkutsk;
+521;Oporto;Porto;
+522;Sceilg Mhichíl;Sceilg Mhichíl;
+523;Pannonhalma;Pannonhalma;
+524;Dutch Water Defence Lines;Amsterdam;
+525;Kunta Kinteh Island;Kunta Kinteh Island;
+526;Gammelstad;Luleå;
+527;Lednice-Valtice Cultural Landscape;Lednice;
+528;Belize Barrier Reef;Belize City;
+529;Volcanoes of Kamchatka;Petropavlovsk-Kamchatsky;
+530;Central Sikhote-Alin;Sikhote-Alin;
+531;Golden Mountains of Altai;Gorno-Altaysk;
+532;Uvs Nuur Basin;Uvs Nuur;
+533;Canal du Midi;Toulouse;
+534;Fertő/Neusiedlersee;Neusiedlersee;
+535;Pyrénées - Mont Perdu;Luchon;
+536;Laponian Area;Arvidsjaur;
+537;Genbaku Dome;Hiroshima;
+538;Itsukushima Shrine;Miyajima;
+539;Haghpat and Sanahin;Haghpat;
+540;Lushan National Park;Jiujiang;
+541;Mount Emei-Leshan Giant Buddha;Leshan;
+542;Archaeological Site of Aigai;Vergina;
+543;Cuenca;Cuenca;
+544;La Lonja de la Seda;Valencia;
+545;Luther Memorials;Wittenberg;
+546;Salzburg;Salzburg;
+547;Semmering Railway;Semmering;
+548;Schönbrunn;Vienna;
+549;The trulli of Alberobello;Alberobello;
+550;Ravenna;Ravenna;
+551;Pienza;Pienza;
+552;Panamá;Panama City;
+553;Uxmal;Uxmal;
+554;Querétaro;Querétaro;
+555;Meknes;Meknes;
+556;Dougga/Thugga;Dougga;
+557;Maritime Greenwich;Greenwich;
+558;Verona;Verona;
+559;The Sundarbans;Khulna;
+560;Mount Kenya;Nanyuki;
+561;Lake Turkana;Lake Turkana;
+562;Las Medulas;Las Médulas;
+563;Palau de la Musica Catalana & Hospital de Sant Pau;Barcelona;
+564;Yuso and Suso Monasteries;San Millán de la Cogolla;
+565;Hallstatt-Dachstein;Hallstatt;
+566;Euphrasian Basilica in Porec;Poreč;
+567;Trogir;Trogir;
+568;Old Town of Lijiang;Lijiang;
+569;Ping Yao;Pingyao;
+570;Classical Gardens of Suzhou;Suzhou;
+571;Morne Trois Pitons;Morne Trois Pitons;
+572;Hospicio Cabañas;Guadalajara;
+573;Changdeokgung Palace Complex;Seoul;
+574;Hwaseong Fortress;Suwon;
+575;Kinderdijk;Kinderdijk;
+576;Willemstad;Willemstad;
+577;Cocos Island;Cocos Island;
+578;São Luis;São Luís;
+579;Tallinn;Tallinn;
+580;Residences of the Royal House of Savoy;Turin;
+581;Botanical Garden;Padua;
+582;Aquileia;Aquileia;
+583;Portovenere Cinque Terre and the Islands;Portovenere;
+584;Modena;Modena;
+585;Urbino;Urbino;
+586;Pompei;Pompei;
+587;Costiera Amalfitana;Amalfi;
+588;Agrigento;Agrigento;
+589;Villa Romana del Casale;Piazza Armerina;
+590;Su Nuraxi di Barumini;Barumini;
+591;Torun;Torun;
+592;Volubilis;Volubilis;
+593;Medina of Tétouan;Tétouan;
+594;Alejandro de Humboldt National Park;Baracoa;
+595;Viñales Valley;Viñales;
+596;San Pedro de la Roca Castle;Santiago de Cuba;
+597;Cilento and Vallo di Diano;Salerno;
+598;Classical Weimar;Weimar;
+599;Malbork Castle;Malbork;
+600;Choirokoitia;Choirokoitia;
+601;Troy;Hisarlik;
+602;Qadisha Valley;Qadisha Valley;
+603;Riga;Riga;
+604;Early Christian Necropolis of Pécs;Pécs;
+605;East Rennell;East Rennell;
+606;Flemish Béguinages;Bruges;
+607;The Four Lifts;Ghent;
+608;Grand Place Brussels;Brussels;
+609;Holy Trinity Column;Olomouc;
+610;Gardens and Castle at Kroměříž;Kroměříž;
+611;Holasovice;Holasovice;
+612;Tlacotalpan;Tlacotalpan;
+613;Santa Ana de los Rios de Cuenca;Cuenca;
+614;L'viv;L'viv;
+615;Coa Valley and Siega Verde;Coa Valley;
+616;Ir. D.F. Woudagemaal;Leeuwarden;
+617;Routes of Santiago de Compostela in France;Saint-Jean-Pied-de-Port;
+618;Ancient Nara;Nara;
+619;Karlskrona;Karlskrona;
+620;Lyon;Lyon;
+621;Provins;Provins;
+622;Rock Art of the Mediterranean Basin;Algeria;
+623;Tarraco;Tarragona;
+624;Alcala de Henares;Alcalá de Henares;
+625;Sub-Antarctic Islands;New Zealand;
+626;Summer Palace;Beijing;
+627;Temple of Heaven;Beijing;
+628;El Fuerte de Samaipata;Samaipata;
+629;Bellinzone;Bellinzona;
+630;Shakhrisyabz;Shakhrisyabz;
+631;Ancient Merv;Mary;
+632;Kuk;Kuk;
+633;Desembarco del Granma National Park;Granma;
+634;Diamantina;Diamantina;
+635;Discovery Coast;Discovery Coast;
+636;Atlantic Forest South-East;Atlantic Forest;
+637;Campeche;Campeche;
+638;Museumsinsel (Museum Island);Berlin;
+639;Wartburg Castle;Eisenach;
+640;High Coast / Kvarken Archipelago;Kvarken Archipelago;
+641;Beemster Polder;Beemster;
+642;Western Caucasus;Western Caucasus;
+643;Litomysl Castle;Litomyšl;
+644;Sighisoara;Sighisoara;
+645;Wooden Churches of Maramures;Maramureș;
+646;Kalwaria Zebrzydowska;Kalwaria Zebrzydowska;
+647;Dacian Fortresses;Dacian Fortresses;
+648;Villa Adriana (Tivoli);Tivoli;
+649;Isole Eolie;Aeolian Islands;
+650;Brimstone Hill Fortress;Basseterre;
+651;Mount Wuyi;Mount Wuyi;
+652;Dazu Rock Carvings;Dazu;
+653;Nikko;Nikko;
+654;iSimangaliso Wetland Park;St. Lucia;
+655;Fossil Hominid Sites;Sterkfontein;
+656;Robben Island;Robben Island;
+657;Greater Blue Mountains;Katoomba;
+658;Rani-ki-Vav;Patan;
+659;Rock Shelters of Bhimbetka;Bhopal;
+660;Guanacaste;Liberia;
+661;San Cristobal de La Laguna;San Cristóbal de La Laguna;
+662;Palmeral of Elche;Elche;
+663;Graz;Graz;
+664;Saint-Emilion;Saint-Émilion;
+665;Loire Valley;Loire Valley;
+666;Laurisilva of Madeira;Funchal;
+667;Cueva de las Manos;Perito Moreno;
+668;Peninsula Valdes;Puerto Madryn;
+669;Sukur;Sukur;
+670;Xochicalco;Xochicalco;
+671;Paramaribo;Paramaribo;
+672;Mycenae and Tiryns;Mycenae;
+673;Island of Patmos;Patmos;
+674;Belfries;Bruges;
+675;Mountain Railways of India;Darjeeling;
+676;Chhatrapati Shivaji Terminus;Mumbai;
+677;Mostar;Mostar;
+678;Hoi An;Hoi An;
+679;My Son;Quang Nam;
+680;Ambohimanga;Ambohimanga;
+681;Phong Nha - Ke Bang;Phong Nha;
+682;Saint Catherine Area;Saint Catherine;
+683;Lorentz National Park;Lorentz;
+684;Island of Saint-Louis;Saint-Louis;
+685;Walled City of Baku;Baku;
+686;Valparaiso;Valparaiso;
+687;Monastery of Geghard;Geghard;
+688;Cathedral of St. James in Sibenik;Šibenik;
+689;Rietveld Schröderhuis;Utrecht;
+690;Ischigualasto / Talampaya;Ischigualasto;
+691;Noel Kempff Mercado National Park;Noel Kempff;
+692;Southern Åland;Åland Islands;
+693;Wachau Cultural Landscape;Wachau;
+694;Churches of Chiloé;Chiloé;
+695;Gusuku of Ryukyu;Okinawa;
+696;Bardejov Town;Bardejov;
+697;Reichenau;Reichenau;
+698;Zollverein;Essen;
+699;Gyeongju;Gyeongju;
+700;Ganghwa Dolmen;Gochang;
+701;Corfu;Corfu;
+702;Kazan Kremlin;Kazan;
+703;Bolgar;Bolgar;
+704;Ferapontov Monastery;Ferapontovo;
+705;St. George's Bermuda;Saint George's;
+706;Blaenavon Industrial Landscape;Blaenavon;
+707;Maloti-Drakensberg Park;Maloti-Drakensberg;
+708;Ciudad Universitaria de Caracas;Caracas;
+709;Roman Walls of Lugo;Lugo;
+710;Vall de Boi;Vall de Boi;
+711;Atapuerca;Atapuerca;
+712;Assisi;Assisi;
+713;Goias;Goias;
+714;Curonian Spit;Curonian Spit;
+715;Jesuit Block and Estancias of C�rdoba;Córdoba;
+716;Brugge;Brugge;
+717;Central Amazon Conservation Complex;Manaus;
+718;Pantanal;Campo Grande;
+719;Brazilian Atlantic Islands;Fernando de Noronha;
+720;Mount Qingcheng and Dujiangyan;Dujiangyan;
+721;Xidi and Hongcun;Hongcun;
+722;Longmen Grottoes;Luoyang;
+723;Imperial Tombs;Beijing;
+724;Major Town Houses;Bruges;
+725;Neolithic Flint Mines at Spiennes;Spiennes;
+726;Cape Floral Region;Cape Town;
+727;First Coffee Plantations;Trinidad;
+728;Notre-Dame Cathedral in Tournai;Tournai;
+729;Land of Frankincense;Salalah;
+730;Echmiatsin and Zvartnots;Echmiatsin;
+731;Kinabalu Park;Kinabalu Park;
+732;Gunung Mulu;Mulu;
+733;Niah Caves;Niah;
+734;Arequipa;Arequipa;
+735;Central Suriname Nature Reserve;Suriname;
+736;Ephesus;Selçuk;
+737;Tsodilo;Tsodilo;
+738;Tombs of Buganda Kings;Kasubi;
+739;Wrangel Island;Wrangel Island;
+740;Val di Noto;Noto;
+741;Villa d'Este;Tivoli;
+742;Val d'Orcia;Pienza;
+743;Falun Great Copper Mountain;Falun;
+744;Saltaire;Saltaire;
+745;Dorset and East Devon Coast;Dorset;
+746;Derwent Valley Mills;Derwent Valley;
+747;Guimar�es;Guimarães;
+748;Vienna;Vienna;
+749;Cerrado Protected Areas;Cerrado;
+750;Swiss Alps Jungfrau-Aletsch;Jungfrau;
+751;Yungang Grottoes;Datong;
+752;Masada;Masada;
+753;Old City of Acre;Acre;
+754;Aranjuez;Aranjuez;
+755;Alto Douro;Pinhão;
+756;Tugendhat Villa;Brno;
+757;Wooden Churches of Southern Malopolska;Zalipie;
+758;Churches of Peace;Świdnica;
+759;Lamu Old Town;Lamu;
+760;Mahabodhi Temple Complex;Bodh Gaya;
+761;Mazagan;El Jadida;
+762;Kenya Lake System;Nakuru;
+763;Calakmul;Calakmul;
+764;Tokaji Wine Region;Tokaj;
+765;Upper Middle Rhine Valley;Koblenz;
+766;Stralsund and Wismar;Stralsund;
+767;Sacri Monti of Piedmont and Lombardy;Varallo;
+768;Derbent;Derbent;
+769;Gebel Barkal;Karima;
+770;Gobustan Rock Art;Gobustan;
+771;Takht-e Soleyman;Takht-e Soleyman;
+772;Trebic;Třebíč;
+773;Franciscan Missions in the Sierra Gorda;Querétaro;
+774;Orkhon Valley;Orkhon;
+775;Three parallel rivers of Yunnan;Lijiang;
+776;Kew Gardens;London;
+777;Town Hall and Roland;Bremen;
+778;Monte San Giorgio;Lugano;
+779;Koguryo Tombs;Nampo;
+780;Um er-Rasas;Jordan;
+781;Purnululu National Park;Purnululu;
+782;White City of Tel-Aviv;Tel Aviv;
+783;Novodevichy Convent;Moscow;
+784;Mapungubwe;Mapungubwe;
+785;Rio de Janeiro;Rio de Janeiro;
+786;Champaner-Pavagadh;Pavagadh;
+787;Saryarka;Steppe;
+788;Mausoleum of Khoja Ahmed Yasawi;Turkistan;
+789;Pasargadae;Pasargadae;
+790;Incense Route of the Negev;Negev;
+791;Biblical Tells;Tel Aviv;
+792;Macao;Macao;
+793;Hani Rice Terraces;Honghe;
+794;Kaiping Diaolou;Kaiping;
+795;Fujian Tulou;Fujian;
+796;Yin Xu;Anyang;
+797;Lagoons of New Caledonia;Noumea;
+798;Quebrada de Humahuaca;Humahuaca;
+799;Pico Island;Madalena;
+800;Osun-Osogbo;Osogbo;
+801;Coffee Cultural Landscape;Manizales;
+802;Muskauer Park;Bad Muskau;
+803;Ashur;Ashur;
+804;Royal Exhibition Building;Melbourne;
+805;Primeval Beech Forests;Carpathians;
+806;Grimeton Radio Station;Grimeton;
+807;Koguryo Kingdom;Pyongyang;
+808;Luis Barragán House and Studio;Mexico City;
+809;Kernav?;Kernavė;
+810;Coiba National Park;Coiba;
+811;Tomb of Askia;Gao;
+812;Koutammakou;Koutammakou;
+813;Sarazm;Sarazm;
+814;Kii Mountain Range;Kii Mountains;
+815;Vega�yan;Vegaåyan;
+816;Tanbaly;Tanbaly;
+817;Lop�-Okanda;Lopé;
+818;Ilulissat Icefjord;Ilulissat;
+819;Thingvellir;Thingvellir;
+820;Causses and C�vennes;Montpellier;
+821;Regensburg;Regensburg;
+822;Etruscan Necropolises;Tarquinia;
+823;Madriu-Perafita-Claror Valley;Escaldes-Engordany;
+824;Pitons Management Area;Soufrière;
+825;Vredefort Dome;Vredefort;
+826;Centennial Hall;Wrocław;
+827;Tropical Rainforest Sumatra;Gunung Leuser;
+828;Yaroslavl;Yaroslavl;
+829;Chiribiquete National Park;Chiribiquete;
+830;Humberstone and Santa Laura Saltpeter Works;Iquique;
+831;Swiss Tectonic Arena Sardona;Sardona;
+832;Le Havre;Le Havre;
+833;Gulf of California;La Paz;
+834;Kondoa;Kondoa;
+835;Plantin-Moretus Museum;Antwerp;
+836;Wadi Al-Hitan;Wadi Al-Hitan;
+837;Struve Geodetic Arc;Nizhny Arkhyz;
+838;Soltaniyeh;Soltaniyeh;
+839;Harar Jugol;Harar;
+840;Qal'at al-Bahrain;Qal'at al-Bahrain;
+841;Shiretoko;Shiretoko;
+842;Bali Subak system;Ubud;
+843;West Norwegian Fjords;Bergen;
+844;Nesvizh;Nesvizh;
+845;Kunya-Urgench;Kunya-Urgench;
+846;Syracuse;Syracuse;
+847;Cienfuegos;Cienfuegos;
+848;Central Highlands;Nuwara Eliya;
+849;Aflaj irrigation system;Rustaq;
+850;Bam Cultural Landscape;Bam;
+851;Tequila;Tequila;
+852;Genoa;Genoa;
+853;Sichuan Giant Panda Sanctuaries;Chengdu;
+854;Sewell Mining Town;Sewell;
+855;Cornwall and West Devon Mining Landscape;Cornwall;
+856;Malpelo;Malpelo;
+857;Vizcaya Bridge;Bilbao;
+858;Bahá'i Holy Places;Haifa;
+859;Rideau Canal;Ottawa;
+860;Bisotun;Bisotun;
+861;Melaka and George Town;Melaka;
+862;Preah Vihear Temple;Preah Vihear;
+863;Ruins of Loropéni;Loropéni;
+864;Stone Circles of Senegambia;Senegambia;
+865;Aapravasi Ghat;Port Louis
+866;Crac des Chevaliers;Homs
+867;Sulaiman-Too;Osh
+868;Mijikenda Kaya Forests;Kilifi
+869;Putorana Plateau;Norilsk
+870;León Cathedral;León
+871;Dolomites;Belluno
+872;Berlin Modernism Housing Estates;Berlin
+873;Stari Grad Plain;Stari Grad
+874;Nisa;Türkmenabat
+875;Lavaux Vineyard Terraces;Lavaux
+876;San Marino and Mount Titano;San Marino
+877;Iwami Ginzan Silver Mine;Oda
+878;South China Karst;Guilin
+879;Central University City Campus of the UNAM;Mexico City
+880;Tajik National Park;Dushanbe
+881;Gamzigrad-Romuliana;Zajecar
+882;Twyfelfontein;Twyfelfontein
+883;Bordeaux;Bordeaux
+884;Rainforests of the Atsinanana;Antananarivo
+885;Teide National Park;La Orotava
+886;Le Morne;Le Morne
+887;Mehmed Paša Sokolović Bridge;Višegrad
+888;Armenian Monastic Ensembles;Tatev
+889;Socotra Archipelago;Hadibu
+890;Jeju;Jeju City
+891;Richtersveld;Oranjemund
+892;Surtsey;Surtsey
+893;Agadez;Agadez
+894;Caral-Supe;Caral
+895;Camagüey;Camagüey
+896;São Francisco Square;São João Nepomuceno
+897;Wooden Churches of the Slovak Carpathians;Kežmarok
+898;San Miguel de Allende;San Miguel de Allende
+899;Rhaetian Railway;St. Moritz
+900;Hiraizumi;Hiraizumi
+901;Kaesong;Kaesong
+902;Mount Wutai;Wutai
+903;Chief Roi Mata's Domain;Port Vila
+904;Decorated Farmhouses of Hälsingland;Bollnäs
+905;Fortifications of Vauban;Neuf-Brisach
+906;Joggins Fossil Cliffs;Joggins
+907;Mantua and Sabbioneta;Mantua
+908;Monarch Butterfly Biosphere Reserve;Angangueo
+909;Mount Sanqingshan;Sanqingshan
+910;Hegra;AlUla
+911;Fort Jesus;Mombasa
+912;Stoclet House;Brussels
+913;Lena Pillars;Lena River
+914;La Chaux-de-Fonds / Le Locle;La Chaux-de-Fonds
+915;Pontcysyllte Aqueduct and Canal;Llangollen
+916;Dengfeng;Dengfeng
+917;Australian Convict Sites;Sydney
+918;Paraty and Ilha Grande;Paraty
+919;Cidade Velha;Cidade Velha
+920;Tower of Hercules;A Coruña
+921;Heritage of Mercury;Almadén
+922;Wadden Sea;Harlingen
+923;Shushtar;Shushtar
+924;Pitons of Reunion;Saint-Louis
+925;Longobards in Italy;Brescia
+926;Royal Joseon Tombs;Gyeongju
+927;The Architectural Work of Le Corbusier;Chandigarh
+928;Grand-Bassam;Grand-Bassam
+929;Hahoe and Yangdong;Andong
+930;Phoenix Islands;Tarawa
+931;Papahanaumokuakea;Honolulu
+932;Thang Long;Hanoi
+933;Turaif Quarter;Turaif
+934;Residence of Bukovinian & Dalmatian Metropolitans;Chernivtsi
+935;Konso;Konso
+936;West Lake;Hangzhou
+937;China Danxia;Langshan
+938;Meroe;Meroe
+939;Albi;Albi
+940;Jantar Mantar;Jaipur
+941;Bikini Atoll;Bikini Atoll
+942;Western Ghats;Pune
+943;Al Ain;Al Ain
+944;Mining Sites of Wallonia;Liège
+945;Safi al-Din Ensemble in Ardabil;Ardabil
+946;Tabriz Bazaar;Tabriz
+947;Ancient villages of Northern Syria;Alep
+948;Amsterdam Canal Ring;Amsterdam
+949;Camino Real;Mexico City
+950;Caves of Yagul and Mitla;Oaxaca
+951;Blue and John Crow Mountains;Kingston
+952;Citadel of the Ho Dynasty;Thanh Hóa
+953;Saloum Delta;Kaolack
+954;Nord-Pas de Calais Mining Basin;Lens
+955;Historic Jeddah;Jeddah
+956;Ogasawara Islands;Chichijima
+957;Prehistoric Pile Dwellings;Zurich
+958;Pearling;Muharraq
+959;Selimiye Mosque;Edirne
+960;Elvas;Elvas
+961;Fagus Factory;Alfeld
+962;Ningaloo Coast;Exmouth
+963;Caves of Maresha and Bet Guvrin;Be'er Sheva
+964;Serra de Tramuntana;Soller
+965;Persian Garden;Shiraz
+966;Santiniketan;Santiniketan
+967;Bridgetown;Bridgetown
+968;Wadi Rum;Wadi Rum
+969;Margravial Opera House;Bamberg
+970;Sangha Trinational;Nouabalé-Ndoki
+971;Petroglyphs of the Mongolian Altai;Altai
+972;Rock Islands;Koror
+973;University of Coimbra;Coimbra
+974;Chengjiang Fossil Site;Chengjiang
+975;Site of Xanadu;Xanadu
+976;Vineyard Landscape of Piedmont;Alba
+977;Mount Carmel Caves;Haifa
+978;Lenggong Valley;Lenggong
+979;Masjed-e Jāme';Isfahan
+980;Gonbad-e Qābus;Gonbad-e Qābus
+981;Levuka;Levuka
+982;Lakes of Ounianga;Ounianga
+983;Rabat;Rabat
+984;Al Zubarah;Al Zubarah
+985;Mount Hamiguitan;Davao City
+986;Grand Pré;Grand Pré
+987;Çatalhöyük;Çatalhöyük
+988;Great Himalayan National Park;Kullu
+989;Bassari Country;Kedougou
+990;El Pinacate;Puerto Peñasco
+991;Tauric Chersonese;Sevastopol
+992;Red Bay Basque Whaling Station;Red Bay
+993;Bergpark Wilhelmshöhe;Kassel
+994;Xinjiang Tianshan;Ürümqi
+995;Pimachiowin Aki;Pimachiowin Aki
+996;Stevns Klint;Borre
+997;Fujisan;Fujiyoshida
+998;Golestan Palace;Tehran
+999;Maymand;Maymand
+1000;Wooden Tserkvas of the Carpathian Region;Lviv
+1001;Burgundy;Dijon
+1002;Decorated cave of Pont d'Arc;Vallon-Pont-d'Arc
+1003;Mount Etna;Catania
+1004;Namib Sand Sea;Swakopmund
+1005;Okavango Delta;Maun
+1006;Bethlehem;Bethlehem
+1007;Chaîne des Puys;Clermont-Ferrand
+1008;Poverty Point;Epps
+1009;Erbil Citadel;Erbil
+1010;Trang An;Ninh Binh
+1011;Namhansanseong;Suwon
+1012;Great Burkhan Khaldun Mountain;Töv Province
+1013;Van Nellefabriek;Rotterdam
+1014;Silk Roads Chang'an-Tianshan Corridor;Xi'an
+1015;Grand Canal;Beijing
+1016;Pyu Ancient Cities;Pyay
+1017;Baptism Site "Bethany Beyond the Jordan";Al-Maghtas
+1018;Corvey;Höxter
+1019;Landscapes of Dauria;Chita
+1020;Tomioka Silk Mill;Tomioka
+1021;Thimlich Ohinga;Migori
+1022;Bursa and Cumalikizik;Bursa
+1023;Stone Spheres of the Diquís;Palmar Sur
+1024;Susa;Shush
+1025;Shahr-i Sokhta;Zabol
+1026;Pergamon;Bergama
+1027;Qhapaq Ñan;Quito
+1028;Kaeng Krachan Forest;Phetchaburi
+1029;Aqueduct of Padre Tembleque;Tepeapulco
+1030;Fray Bentos;Fray Bentos
+1031;Champagne;Reims
+1032;San Antonio Missions;San Antonio
+1033;Speicherstadt and Kontorhaus District;Hamburg
+1034;Moravian Church Settlements;Kolin
+1035;Par force hunting landscape;Rudersdal
+1036;Naumburg Cathedral;Naumburg
+1037;Necropolis of Bet She'arim;Bet She'arim
+1038;Rock Art in the Hail Region;Hail
+1039;Brâncusi Monumental Ensemble of Târgu Jiu;Târgu Jiu
+1040;Tusi Sites;Zhangye
+1041;Ennedi Massif;Fada
+1042;Baekje Historic Areas;Gongsan
+1043;Mining Cultural Landscape Erzgebirge;Annaberg-Buchholz
+1044;Victorian Gothic and Art Deco Ensembles of Mumbai;Mumbai
+1045;Ahwar of Southern Iraq;Basra
+1046;Singapore Botanic Gardens;Singapore
+1047;Sites of Japan's Meiji Industrial Revolution;Kobe
+1048;Forth Bridge;Edinburgh
+1049;Rjukan / Notodden;Rjukan
+1050;Arab-Norman Palermo;Palermo
+1051;Diyarbakir Fortress and Hevsel Gardens;Diyarbakir
+1052;Western Tien-Shan;Almaty
+1053;Battir;Battir
+1054;Pampulha;Belo Horizonte
+1055;Hidden Christian Sites in the Nagasaki Region;Nagasaki
+1056;Frank Lloyd Wright Buildings;Chicago
+1057;Mistaken Point;Portugal Cove
+1058;Seowon Neo-Confucian Academies;Jeonju
+1059;Antigua Naval Dockyard;Antigua
+1060;Gorham's Cave Complex;Gibraltar
+1061;Antequera Dolmens Site;Antequera
+1062;Nalanda;Nalanda
+1063;Nan Madol;Kolonia
+1064;Stećci;Visoko
+1065;Lut Desert;Kerman
+1066;The Persian Qanat;Yazd
+1067;Phu Phrabat;Phu Phrabat
+1068;Zuojiang Huashan Rock Art;Binyang
+1069;Hubei Shennongjia;Shennongjia
+1070;Archipiélago de Revillagigedo;San Benedicto
+1071;Mbanza Kongo;Mbanza Kongo
+1072;Khangchendzonga National Park;Gangtok
+1073;Archaeological site of Philippi;Philippi
+1074;Ani;Kars
+1075;Aphrodisias;Aphrodisias
+1076;Churches of the Pskov School of Architecture;Pskov
+1077;Sviyazhsk;Sviyazhsk
+1078;Los Alerces National Park;Esquel
+1079;Caves and Ice Age Art;Bonn
+1080;Talayotic Menorca;Ciutadella
+1081;Taputapuātea;Taputapuātea
+1082;Sambor Prei Kuk;Sambor Prei Kuk
+1083;Venetian Works of Defence;Kotor
+1084;Tehuacán-Cuicatlán Valley;Tehuacán
+1085;Okinoshima Island;Okinoshima
+1086;Kujataa;Qaqortoq
+1087;Qalhat;Qalhat
+1088;Ivrea;Ivrea
+1089;Tarnowskie Góry Lead-Silver-Zinc Mine;Tarnowskie Góry
+1090;Qinghai Hoh Xil;Golmud
+1091;Kulangsu;Xiamen
+1092;Dilmun Burial Mounds;Manama
+1093;Yazd;Yazd
+1094;ǃKhomani Cultural Landscape;Upington
+1095;Valongo Wharf;Rio de Janeiro
+1096;Sheki;Sheki
+1097;Asmara;Asmara
+1098;Ahmadabad;Ahmedabad
+1099;Roșia Montană;Roșia Montană
+1100;Hedeby and Danevirke;Schleswig
+1101;Colonies of Benevolence;Middelburg
+S.NO;Site Name;City
+1102;Aasivissuit - Nipisat;Kangerlussuaq
+1103;Čatec – Landscape of Hops;Žatec
+1104;Fanjingshan;Jiujiang
+1105;Medina Azahara;Córdoba
+1106;Quanzhou;Quanzhou
+1107;Sansa Buddhist Mountain Monasteries;Pyeongchang
+1108;Al-Ahsa Oasis;Al-Hasa
+1109;Tr’ondëk-Klondike;Dawson City
+1110;Hebron/Al-Khalil Old Town;Hebron
+1111;Funerary and memory sites of the First World War;Compiègne
+1112;Sassanid Archaeological Landscape;Fars
+1113;Maison Carrée of Nîmes;Nîmes
+1114;Rudreshwara (Ramappa) Temple;Warangal
+1115;The Prosecco Hills;Valdobbiadene
+1116;Göbekli Tepe;Şanlıurfa
+1117;Mafra;Mafra
+1118;Amami-Oshima Island;Amami
+1119;Barberton Makhonjwa Mountains;Barberton
+1120;Budj Bim Cultural Landscape;Hamilton
+1121;Risco Caido;Tejeda
+1122;Water Management System of Augsburg;Augsburg
+1123;Hyrcanian Forests;Gorgan
+1124;Trans-Iranian Railway;Tehran
+1125;Memorial Sites of Genocide;Kigali
+1126;Plain of Jars;Xieng Khouang
+1127;Bagan;Bagan
+1128;Kladruby nad Labem;Kladruby
+1129;Bom Jesus do Monte;Braga
+1130;Getbol Korean Tidal Flat;Gochang
+1131;Liangzhu Archaeological Site;Hangzhou
+1132;Mozu-Furuichi Kofungun;Sakai
+1133;Jodrell Bank Observatory;Cheshire
+1134;Writing-on-Stone / Ćsīnai˘pi;Milk River
+1135;Krzemionki prehistoric flint mines;Krzemionki
+1136;Ancient ferrous metallurgy sites;Bobo-Dioulasso
+1137;French Austral Lands and Seas;Kerguelen Islands
+1138;Vatnajökull National Park;Skaftafell
+1139;Jaipur City ;Jaipur
+1140;Migratory Bird Sanctuaries China;Zhejiang
+1141;Danube Limes;Vienna
+1142;Ombilin Coal Mining Heritage of Sawahlunto;Sawahlunto
+1143;Lençóis Maranhenses National Park;Barreirinhas
+1144;Church of Atlântida;Atlântida
+1145;Great Spa Towns of Europe;Carlsbad
+1146;Mathildenhöhe Darmstadt;Darmstadt
+1147;Colchic Rainforests and Wetlands;Batumi
+1148;Paseo del Prado and Buen Retiro;Madrid
+1149;Himā Cultural area;Najran
+1150;Sítio Roberto Burle Marx;Rio de Janeiro
+1151;Deer Stone Monuments;Khövsgöl
+1152;Arslantepe Mound;Malatya
+1153;Padua’s fourteenth-century fresco cycles;Padua
+1154;Chankillo Archaeoastronomical Complex;Casma
+1155;Cordouan Lighthouse;Le Verdon-sur-Mer
+1156;Lower German Limes;Cologne
+1157;Jomon Prehistoric Sites;Hokkaido
+1158;The Slate Landscape of Northwest Wales;Blaenau Ffestiniog
+1159;Chinchorro Culture;Arica
+1160;Nice;Nice
+1161;ShUM Sites;Speyer
+1162;Badain Jaran Desert;Badain Jaran
+1163;Djerba;Houmt Souk
+1164;Gedeo Cultural landscape;Dilla
+1165;Plečnik's Ljubljana;Ljubljana
+1166;Dholavira: A Harappan City;Dholavira
+1167;Hawraman/Uramanat;Hawraman
+1168;Sudanese style mosques;Grand-Bassam
+1169;The Porticoes of Bologna;Bologna
+1170;Ivindo National Park;Mouila
+1171;Petroglyphs of the Lake Onega and the White Sea;Petrozavodsk
+1172;Jewish-Medieval heritage of Erfurt;Erfurt
+1173;Northern Martinique;Saint-Pierre
+1174;Kuldiga;Kuldīga
+1175;Viking Age Ring Fortresses;Ring Fortresses
+1176;Modernist Kaunas;Kaunas
+1177;Si Thep;Si Thep
+1178;Tak'alik Ab'aj;El Asintal
+1179;Ancient Tea Plantations of Pu'er;Pu'er
+1180;Gaya Tumuli;Gaya
+1181;Koh Ker;Koh Ker
+1182;Persian Caravanserai;Yazd
+1183;Gordion;Polatlı
+1184;Sacred Ensembles of the Hoysala;Hampi
+1185;Yogyakarta;Yogyakarta
+1186;Vjetrenica Cave;Vjetrenica
+1187;Silk Roads: Zarafshan-Karakum Corridor;Bukhara
+1188;Nelson Mandela Legacy Sites;Qunu
+1189;Astronomical Observatories of Kazan Federal University;Kazan
+1190;Jodensavanne;Jodensavanne
+1191;ESMA Site Museum;Buenos Aires
+1192;Eisinga Planetarium;Franeker
+1193;Tugay forests;Dushanbe
+1194;Anticosti;Anticosti
+1195;Ancient Jericho;Jericho
+1196;Cultural Landscape of Kenozero Lake;Kenozero
+1197;Hopewell;Hopewell
+1198;Evaporitic Karst and Caves;Matera
+1199;Cold winter deserts of Turan;Turan
+1200;Wooden Hypostyle Mosques of Medieval Anatolia;Konya
+1201;Zagori Cultural Landscape;Ioannina
+1202;Khinalig;Khinalig
+1203;Nyungwe National Park;Kigali
+1204;Sado Island Gold Mines;Sado
+1205;'Uruq Bani Ma'arid;Al-Khobar
+1206;Ancient Kingdom of Saba;Marib
+1207;Rachid Karami International Fair-Tripoli;Tripoli
+1208;Odesa;Odesa
+1209;Schwerin Residence Ensemble;Schwerin
+1210;Marquesas Islands;Nuku Hiva
+1211;Via Appia;Rome
+1212;Moidams;Kolkata
+1213;Al-Faw;Al-Faw
+1214;The Royal Court of Tiébélé;Tiébélé
+1215;Beijing Central Axis;Beijing
+1216;Hegmataneh;Hamedan
+1217;Dacian Limes;Alba Iulia
+1218;Gedi;Gedi
+1219;Umm Al-Jimāl;Umm Al-Jimāl
+1220;The Flow Country;Thurso;
+1221;The Pleistocene Occupation Sites of South Africa;Sterkfontein;
+1222;Tell Umm Amer;Tell Umm Amer;
